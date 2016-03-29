@@ -1,0 +1,17 @@
+var chapters = [
+  { topic: "chapter", section: "1", title: "Overview of Oracle Database Installation", anchor: "BABHDHHA", file: "intro.htm" },
+  { topic: "chapter", section: "2", title: "Oracle Database Preinstallation Requirements", anchor: "NTDBI002", file: "reqs.htm" },
+  { topic: "chapter", section: "3", title: "Oracle Grid Infrastructure", anchor: "NTDBI999", file: "oraclerestart.htm" },
+  { topic: "chapter", section: "4", title: "Installing Oracle Database", anchor: "NTDBI003", file: "install.htm" },
+  { topic: "chapter", section: "5", title: "Oracle Database Postinstallation Tasks", anchor: "NTDBI004", file: "postcfg.htm" },
+  { topic: "chapter", section: "6", title: "Getting Started with Oracle Database", anchor: "NTDBI005", file: "startrdb.htm" },
+  { topic: "chapter", section: "7", title: "Removing Oracle Database Software", anchor: "NTDBI006", file: "deinstall.htm" },
+  { topic: "appendix", section: "A", title: "Installing Java Access Bridge", anchor: "NTDBI007", file: "jbridge.htm" },
+  { topic: "appendix", section: "B", title: "Optimal Flexible Architecture", anchor: "CBBEDHEB", file: "ofa.htm" },
+  { topic: "appendix", section: "C", title: "Installing and Configuring Oracle Database Using Response Files", anchor: "CHDICDJA", file: "advance.htm" },
+  { topic: "appendix", section: "D", title: "Configuring Oracle Database Globalization Support", anchor: "CEGEAADF", file: "gblsupp.htm" },
+  { topic: "appendix", section: "E", title: "Managing Oracle Database Port Numbers", anchor: "NTDBI011", file: "ports.htm" },
+  { topic: "appendix", section: "F", title: "Troubleshooting the Oracle\u00A0Database\u00A0Installation", anchor: "BABFDJDB", file: "ts.htm" },
+  { topic: "appendix", section: "G", title: "Frequently Asked Questions About Installation", anchor: "NTDBI013", file: "faq.htm" },
+  { topic: "glossary", section: "", title: "Glossary", anchor: "CBAJADDD", file: "glossary.htm" },
+  { } ];

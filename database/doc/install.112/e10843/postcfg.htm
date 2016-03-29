@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-03-23T20:31:35Z" />
+<meta name="doctitle" content="Oracle&reg; Database Installation Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10843-03" />
+<meta name="docid" content="NTDBI" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="install.htm" title="Previous" type="text/html" />
+<link rel="Next" href="startrdb.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10843.pdf" title="PDF version" type="application/pdf" />
+<title>Oracle Database Postinstallation Tasks</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Installation Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10843-03</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="install.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="startrdb.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10843.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CEGGCJGH" name="CEGGCJGH"></a><a id="i1006313" name="i1006313"></a>
+<h1 class="chapter"><span class="secnum">5</span> <a name="NTDBI004" id="NTDBI004"></a>Oracle Database Postinstallation Tasks</h1>
+<p><a id="ABC3985940" name="ABC3985940"></a><a id="ABC3985940SRI1" name="ABC3985940SRI1"></a>This chapter describes the following postinstallation configuration tasks:</p>
+<ul>
+<li>
+<p><a href="#i1009930">Installing the Latest Patch Set Release</a></p>
+</li>
+<li>
+<p><a href="#i1010414">Validating Invalid PL/SQL Modules</a></p>
+</li>
+<li>
+<p><a href="#BABIDHJB">Configuring Secure Sockets Layer</a></p>
+</li>
+<li>
+<p><a href="#BJFGIBJA">Postinstallation Tasks for SQL Developer</a></p>
+</li>
+<li>
+<p><a href="#CEGCCBAC">Configuring Oracle Components</a></p>
+</li>
+<li>
+<p><a href="#BCGFCJJE">Create a Fast Recovery Area Disk Group</a></p>
+</li>
+<li>
+<p><a href="#BCGEHAJD">Enabling and Disabling Database Options</a></p>
+</li>
+</ul>
+<a id="i1009930" name="i1009930"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.1</span> Installing the Latest Patch Set Release<a id="sthref432" name="sthref432"></a></h2>
+<p>Oracle recommends installing the latest patch set release after successful installation of Oracle Database.</p>
+<p>You must register online before using My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>). After logging in to My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>), select the <span class="bold">Patches and Updates</span> tab from the top of the screen.</p>
+<p>To find and download patches:</p>
+<ol>
+<li>
+<p>Go to the My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>) Web site at</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="https://support.oracle.com/">https://support.oracle.com/</a>
+</pre></li>
+<li>
+<p>Log in to My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>).</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you are not an My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>) registered user, then click <span class="bold">Register here</span> for New user and follow the registration instructions.</div>
+</li>
+<li>
+<p>Click <span class="bold">Patches and Updates</span> on the main page.</p>
+</li>
+<li>
+<p>Select <span class="bold">Simple Search</span>.</p>
+</li>
+<li>
+<p>Specify the following information, then click <span class="bold">Go</span>:</p>
+<ul>
+<li>
+<p>In the <span class="bold">Search By</span> field, select <span class="bold">Product or Family</span>, then specify RDBMS Server.</p>
+</li>
+<li>
+<p>In the <span class="bold">Release</span> field, specify the current release number.</p>
+</li>
+<li>
+<p>In the <span class="bold">Patch Type</span> field, specify Patchset/Minipack</p>
+</li>
+<li>
+<p>In the <span class="bold">Platform or Language</span> field, select your platform.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Find the latest patch set for Oracle Database using My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>).</p>
+</li>
+<li>
+<p>From the list of available patches, select a patch to download.</p>
+<p>Patch sets for Oracle databases are identified as <code><span class="codeinlineitalic">x</span></code>.<code><span class="codeinlineitalic">x</span></code>.<code><span class="codeinlineitalic">x</span></code> PATCH SET FOR ORACLE DATABASE SERVER.</p>
+</li>
+<li>
+<p>Review the README file before proceeding with the download.</p>
+<p>Each patch has a README file with installation requirements and instructions. Some patches install with Oracle Universal Installer; others require special procedures. Oracle recommends that you always read the README file before proceeding.</p>
+</li>
+<li>
+<p>Download and install the patch.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="i1010414" name="i1010414"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.2</span> Validating Invalid PL/SQL Modules<a id="sthref433" name="sthref433"></a><a id="sthref434" name="sthref434"></a><a id="sthref435" name="sthref435"></a></h2>
+<p>Oracle recommends running the <code>utlrp.sql</code> script after creating or upgrading a database. This script recompiles all PL/SQL modules that may be in an INVALID state, including packages, procedures, types, and so on. This step is optional, but recommended so that the performance cost of recompilation is incurred during the installation rather than in the future.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+There should be no other data definition language (DDL) statements running on the database while the script is running, and packages <code>STANDARD</code> and <code>DBMS_STANDARD</code> must already be valid.</div>
+<ol>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; sqlplus /nolog
+</pre></li>
+<li>
+<p>Connect to the database with the <code>SYS</code> account:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT SYS AS SYSDBA
+Enter password: <span class="italic">SYS_password</span> 
+</pre></li>
+<li>
+<p>Start the database (if necessary):</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP
+</pre></li>
+<li>
+<p>Run the <code>utlrp.sql</code> script, which by default is located in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\rdbms\admin\utlrp.sql</code>. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; @?\rdbms\admin\utlrp.sql
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABIDHJB" name="BABIDHJB"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.3</span> Configuring Secure Sockets Layer<a id="sthref436" name="sthref436"></a><a id="sthref437" name="sthref437"></a></h2>
+<p>Oracle highly recommends you configure and use a Secure Sockets Layer (SSL) to ensure that passwords and other sensitive data are not transmitted in clear text in HTTP requests.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>"Using SSL" and "Enabling SSL" in <span class="italic"><a class="olink ASOAG" href="http://www.oracle.com/pls/db112/lookup?id=ASOAG">Oracle Database Advanced Security Administrator's Guide</a></span> for more information about configuring and using SSL</p>
+</li>
+<li>
+<p>"SSL Usage Issues" in <span class="italic"><a class="olink ASOAG074" href="http://www.oracle.com/pls/db112/lookup?id=ASOAG074">Oracle Database Advanced Security Administrator's Guide</a></span> for more information about SSL usage issues</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="BJFGIBJA" name="BJFGIBJA"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.4</span> Postinstallation Tasks for SQL Developer</h2>
+<p>This section describes tasks that you must complete after you install the software:</p>
+<ul>
+<li>
+<p><a href="#BJFGAACH">Migrating User Settings from Release 1.0</a></p>
+</li>
+<li>
+<p><a href="#BJFIHBEF">Migrating Information from Previous Releases</a></p>
+</li>
+<li>
+<p><a href="#BJFDCFDC">Location of User-Related Information</a></p>
+</li>
+</ul>
+<a id="BJFGAACH" name="BJFGAACH"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.4.1</span> Migrating User Settings from Release 1.0</h3>
+<p>The first time you start SQL Developer after installing it or after adding any extensions, you are asked to migrate your user settings from a previous release. (This occurs regardless of whether there was a previous release on your system.)</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Migration of user settings is supported only from SQL Developer Release 1.0 to Release 1.1. It is <span class="italic">not</span> supported for migration from a pre-release version of 1.1 to release 1.1.</div>
+<p>These settings refer to database connections, reports, and certain SQL Developer user preferences that you set in a previous version by clicking <span class="bold">Tools</span> and then <span class="bold">Preferences</span>. However, some user preferences are not saved, and you must re-specify these using the new release.</p>
+<p>To migrate user settings from SQL Developer Release 1.0:</p>
+<ol>
+<li>
+<p>Install Oracle SQL Developer.</p>
+</li>
+<li>
+<p>When you start SQL Developer Release 1.1, click <span class="bold">Yes</span> when asked to migrate settings from a previous release.</p>
+</li>
+<li>
+<p>In the dialog box that is displayed, do <span class="italic">not</span> accept the default location for the settings. Instead, specify the location of your release 1.0 settings, which might be a folder whose path ends with <code>sqldeveloper\jdev\system</code>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BJFIHBEF" name="BJFIHBEF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.4.2</span> Migrating Information from Previous Releases</h3>
+<p>If you have used a previous release of SQL Developer or a pre-release version of the current release, you may want to preserve database connections that you have been using. To preserve database connections, save your existing database connections in an XML file. To save the connections, right-click the Connections node in the Connections Navigator and select <span class="bold">Export Connections</span>. After you complete the installation described in this guide, you can use those connections by right-clicking the Connections node in the Connections Navigator and selecting <span class="bold">Import Connections</span>.</p>
+<p>If you want to use any user-defined reports or the SQL history from a previous version, see <a href="#BJFDCFDC">"Location of User-Related Information"</a> for information about where these are located. If you want to use any user-defined reports or the SQL history from release 1.0 with both releases 1.0 and 1.1, you must save them before using release 1.1, because release 1.1 modifies the files to a format that is incompatible with release 1.0.</p>
+<p>SQL Developer preferences (specified by clicking Tools and then Preferences) from a pre-release version of the current release cannot currently be saved and reused; you must re-specify any desired preferences.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BJFDCFDC" name="BJFDCFDC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.4.3</span> Location of User-Related Information</h3>
+<p>SQL Developer stores user-related information in several places, with the specific location depending on the operating system and certain environment specifications. User-related information includes user-defined reports, user-defined snippets, SQL Worksheet history, and SQL Developer user preferences.</p>
+<p>SQL Developer user preferences are stored under the installation directory. To preserve preferences when upgrading to a more recent version of the same SQL Developer release, but <span class="italic">not</span> to upgrade from release 1.0 to 1.1, use the Check for Updates feature (click <span class="bold">Help,</span> then <span class="bold">Check for Updates</span>) to upgrade your system.</p>
+<p>This user-related information is stored in or under the <code>HOME</code> environment variable location, if defined; otherwise the <code>SQLDEVELOPER_USER_DIR</code> location, if defined; otherwise as indicated in the following table.</p>
+<p>The table shows the typical default locations (under a directory or in a file) for specific types of resources on different operating systems. (Note the period in the name of any directory or folder named <code>.sqldeveloper</code>.)</p>
+<div class="tblformal"><a id="sthref438" name="sthref438"></a><a id="sthref439" name="sthref439"></a>
+<p class="titleintable">Table 5-1 Default Locations for User-Related Information</p>
+<table class="Formal" title="Default Locations for User-Related Information" summary="Default locations for user-related information" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="33%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Resource Type</th>
+<th align="left" valign="bottom" id="r1c2-t6">Windows Systems</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p>User-defined reports</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p><code>C:\Documents and Settings\</code><code><span class="codeinlineitalic">user-name</span></code><code>\.sqldeveloper\UserReports.xml</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p>User-defined snippets</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p><code>C:\Documents and Settings\</code><code><span class="codeinlineitalic">user-name</span></code><code>\.sqldeveloper\UserReports.xml</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p>SQL history</p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p><code>C:\Documents and Settings\</code><code><span class="codeinlineitalic">user-name</span></code><code>\.sqldeveloper\SqlHistory.xml</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p>SQL Worksheet archive files</p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p><code>C:\Documents and Settings\</code><code><span class="codeinlineitalic">user-name</span></code><code>\.sqldeveloper\tmp\</code></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t6" headers="r1c1-t6">
+<p>SQL Developer user preferences</p>
+</td>
+<td align="left" headers="r6c1-t6 r1c2-t6">
+<p><code><span class="codeinlineitalic">sqldeveloper_install</span></code><code>\sqldeveloper\sqldeveloper\system\</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>SQL Worksheet archive files contain SQL statements that you have entered. These files begin with <span class="italic">sqldev</span> and then have a random number (for example, <code>sqldev14356.sql</code>). If you close SQL Developer with a SQL Worksheet open that contains statements, then you are prompted to save these files.</p>
+<p>To specify a nondefault <code>SQLDEVELOPER_USER_DIR</code> location, do either of the following:</p>
+<ul>
+<li>
+<p>Set the <code>SQLDEVELOPER_USER_DIR</code> environment variable to specify another directory path.</p>
+</li>
+<li>
+<p>Edit the <code><span class="codeinlineitalic">sqldeveloper_install</span></code><code>\sqldeveloper\sqldeveloper\bin\sqldeveloper.conf</code> file and substitute the desired directory path for <code>SQLDEVELOPER_USER_DIR</code> in the following line:</p>
+<pre xml:space="preserve" class="oac_no_warn">SetUserHomeVariable SQLDEVELOPER_USER_DIR
+</pre></li>
+</ul>
+<p>If you want to prevent other users from accessing your user-specific SQL Developer information, you must ensure that the appropriate permissions are set on the directory where that information is stored or on a directory above it in the path hierarchy. For example, you may want to ensure that the <code>sqldeveloper</code> folder and the <code><span class="codeinlineitalic">user-name</span></code><code>\.sqldeveloper</code> folder under <code>Documents and Settings</code> are not sharable.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGCCBAC" name="CEGCCBAC"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.5</span> Configuring Oracle Components</h2>
+<p>Many Oracle products and options must be configured before you use them for the first time. Before using individual Oracle products or options, refer to the appropriate manual in the product documentation library.</p>
+<p>This section contains these topics:</p>
+<ul>
+<li>
+<p><a href="#BABBADDE">Direct NFS Client</a></p>
+</li>
+<li>
+<p><a href="#CEGHHCJC">Configuring Oracle Messaging Gateway</a></p>
+</li>
+<li>
+<p><a href="#BABJIGEC">Configuring Oracle Administration Assistant for Windows</a></p>
+</li>
+<li>
+<p><a href="#CEGHBCCD">Configuring Oracle Counters for Windows Performance Monitor</a></p>
+</li>
+<li>
+<p><a href="#CEGGGFHF">Configuring Oracle Label Security</a></p>
+</li>
+<li>
+<p><a href="#BABDJCGH">Configuring Oracle Database Vault</a></p>
+</li>
+<li>
+<p><a href="#BABDJIAG">Configuring Oracle Net Services</a></p>
+</li>
+<li>
+<p><a href="#BABEFGIC">Installing Oracle Text Supplied Knowledge Bases</a></p>
+</li>
+<li>
+<p><a href="#BCGBAAAI">Installing Oracle Text Filtering Component</a></p>
+</li>
+<li>
+<p><a href="#CEGBJIHD">Configuring or Reinstalling Oracle XML DB</a></p>
+</li>
+<li>
+<p><a href="#CEGGIACF">Configuring PL/SQL External Procedures</a></p>
+</li>
+<li>
+<p><a href="#CEGGAJHA">Configuring Shared Server Support</a></p>
+</li>
+<li>
+<p><a href="#BABFAEIG">Setting Credentials for the Job System to Work with Enterprise Manager</a></p>
+</li>
+<li>
+<p><a href="#BABGIHAF">Configuring Oracle Database to Communicate with Automatic Storage Management</a></p>
+</li>
+<li>
+<p><a href="#BABJDDBD">Configuring Databases to Use Oracle Enterprise Manager Database Control</a></p>
+</li>
+<li>
+<p><a href="#BABIFCEC">Installing Oracle Database Examples</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>Chapter 4, "Configuration Tasks When Installing from the Database" in <span class="italic"><a class="olink HTMIG203" href="../../install.112/e13366/db_install.htm#HTMIG203">Oracle Application Express Installation Guide</a></span></p>
+</li>
+<li>
+<p>"Post-installation Database Configuration" section in <a class="olink CCRIA" href="http://www.oracle.com/pls/db112/lookup?id=CCRIA"><span class="italic">Oracle Configuration Manager Installation and Administration Guide</span></a> for information about postinstallation tasks for Oracle Configuration Manager</p>
+</li>
+</ul>
+</div>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You need only perform postinstallation tasks for components that you intend to use.</div>
+<a id="BABBADDE" name="BABBADDE"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.5.1</span> <a name="NTDBI0451" id="NTDBI0451"></a>Direct NFS Client</h3>
+<p>With Oracle Database 11<span class="italic">g</span>, you can store data files on a supported NFS system. You can configure Oracle Database to access NFS V3 servers directly using an Oracle internal Direct NFS client. If Oracle Database cannot open an NFS server using Direct NFS, then an informational message is logged into the Oracle alert and trace files indicating that Direct NFS could not be established.</p>
+<p>The Oracle files resident on the NFS server that are served by the Direct NFS Client can also be accessed through a third party NFS client. Management of Oracle data files created with Direct NFS should be done according to the guidelines specified in <span class="italic"><a class="olink ADMIN012" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN012">Oracle Database Administrator's Guide</a></span>. The database files accessed through Direct NFS Client should also be mounted using other means, such as CIFS or NFS. This ensures that the kernel input and output interface can access these files.</p>
+<p>Some NFS file servers require NFS clients to connect using reserved ports. If your filer is running with reserved port checking, then you must disable it for Direct NFS to operate. To disable reserved port checking, consult your NFS file server documentation.</p>
+<p>Direct NFS can use up to four network paths defined for an NFS server. The Direct NFS client performs load balancing across all specified paths. If a specified path fails, then Direct NFS reissues I/O commands over any remaining paths.</p>
+<p>Direct NFS requires an NFS server supporting NFS read/write buffers of at least 16384 bytes.</p>
+<p>Direct NFS issues writes at <code>wtmax</code> granularity to the NFS server. Direct NFS does not serve an NFS server with a <code>wtmax</code> less than 16384. Oracle recommends that you use the value 32768.</p>
+<p>Use the following views for Direct NFS management:</p>
+<ul>
+<li>
+<p><span class="bold">v$dnfs_servers</span><span class="bold">:</span> Shows a table of servers accessed using Direct NFS.</p>
+</li>
+<li>
+<p><span class="bold">v$dnfs_files</span><span class="bold">:</span> Shows a table of files currently open using Direct NFS.</p>
+</li>
+<li>
+<p><span class="bold">v$dnfs_channels</span><span class="bold">:</span> Shows a table of open network paths (or channels) to servers for which Direct NFS is providing files.</p>
+</li>
+<li>
+<p><span class="bold">v$dnfs_stats:</span> Shows a table of performance statistics for Direct NFS.</p>
+</li>
+</ul>
+<p>The following sections elaborate on enabling, disabling, checking the buffer size for a Direct NFS Client:</p>
+<ul>
+<li>
+<p><a href="#CHDFGFDC">Enable Direct NFS Client</a></p>
+</li>
+<li>
+<p><a href="#BCGJGIBA">Disable Direct NFS Client</a></p>
+</li>
+</ul>
+<a id="CHDFGFDC" name="CHDFGFDC"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.5.1.1</span> Enable Direct NFS Client</h4>
+<p>To enable Direct NFS Client, a new Oracle specific file <code>oranfstab</code> can be added to <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs</code>. When <code>oranfstab</code> is placed in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs</code>, its entries are specific to a single database.</p>
+<p>Direct NFS looks for the mount point entries in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs\oranfstab</code>. It uses the first matched entry as the mount point.</p>
+<p>Complete the following procedure to enable Direct NFS:</p>
+<ol>
+<li>
+<p>Create an <code>oranfstab</code> file with the following attributes for each NFS server to be accessed using Direct NFS:</p>
+<ul>
+<li>
+<p>Server: The NFS server name.</p>
+</li>
+<li>
+<p>Path: Up to 4 network paths to the NFS server, specified either by IP address, or by name, as displayed using the <code>ifconfig</code> command on the NFS server.</p>
+</li>
+<li>
+<p>Local: Up to 4 network interfaces on the database host, specified by IP address, or by name, as displayed using the <code>ipconfig</code> command on the database host.</p>
+</li>
+<li>
+<p>Export: The exported path from the NFS server. Use UNIX-style path.</p>
+</li>
+<li>
+<p>Mount: The corresponding local mount point for the exported volume. Use WINDOWS-style path.</p>
+</li>
+<li>
+<p>mnt_timeout: Specifies (in seconds) the time for which Direct NFS client should wait for a successful mount before timing out. This parameter is optional and the default timeout is 10 minutes.</p>
+</li>
+</ul>
+<p>The following is an example of an <code>oranfstab</code> file with two NFS server entries:</p>
+<pre xml:space="preserve" class="oac_no_warn">server: MyDataServer1
+local: 132.34.35.10
+path: 132.34.35.12
+local: 132.34.55.10
+path: 132.34.55.12
+export: /vol/oradata1 mount: C:\APP\ORACLE\ORADATA\ORCL
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">server: MyDataServer2
+local: LocalInterface1
+path: NfsPath1
+local: LocalInterface2
+path: NfsPath2
+local: LocalInterface3
+path: NfsPath3
+local: LocalInterface4
+path: NfsPath4
+export: /vol/oradata2 mount: C:\APP\ORACLE\ORADATA\ORCL2
+export: /vol/oradata3 mount: C:\APP\ORACLE\ORADATA\ORCL3
+</pre>
+<p>As a rule, a mount point specified in <code>oranfstab</code> file represents local path where the database files reside normally, that is, without Direct NFS being enabled. For example, if a database that does not use Direct NFS would have kept its files in <code>C:\app\oracle\oradata\orcl</code> directory, then <code>C:\app\oracle\oradata\orcl</code> should be specified as a virtual mount point in the corresponding <code>oranfstab</code> file.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+On Windows platforms, two optional parameters can be specified in <code>oranfstab</code> file:
+<ul>
+<li>
+<p><code>uid:</code> UNIX User ID to be used by Direct NFS</p>
+</li>
+<li>
+<p><code>gid:</code> UNIX Group ID to be used by Direct NFS</p>
+</li>
+</ul>
+</div>
+<p>The Direct NFS Client uses the <code>uid</code> or <code>gid</code> value to access all NFS servers listed in <code>oranfstab.</code> Direct NFS ignores <code>uid</code> or <code>gid</code> value of <code>0.</code> If neither <code>uid</code> nor <code>gid</code> is specified, then a default of <code>uid:65534</code>, <code>gid:65534</code> is used by the Direct NFS Client. The default value often corresponds to <code>user:nobody</code> and <code>group:nogroup</code> on the NFS server.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The exported path from the NFS server must be accessible for read, write, and execute operations by the user with the <code>uid, gid</code> specified in <code>oranfstab</code>. If neither uid nor gid is listed, then the exported path must be accessible by the user with the <code>uid:65534, gid:65534</code>.</div>
+</li>
+<li>
+<p>Oracle Database uses an ODM library, <code>oranfsodm11.dll</code>, to enable Direct NFS. To replace the standard ODM library, <code>oraodm11.dll</code>, with the ODM NFS library, <code>oranfsodm11.dll,</code> complete the following steps:</p>
+<ol>
+<li>
+<p>Change directory to <code><span class="codeinlineitalic">ORACLE_HOME\</span></code><code>bin</code>.</p>
+</li>
+<li>
+<p>Shutdown the Oracle database.</p>
+</li>
+<li>
+<p>Enter the following commands:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; copy oraodm11.dll oraodm11.dll.stub
+<span class="italic">DRIVE_LETTER</span>:\&gt; copy /Y oranfsodm11.dll oraodm11.dll 
+</pre></li>
+</ol>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BCGJGIBA" name="BCGJGIBA"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.5.1.2</span> Disable Direct NFS Client</h4>
+<p>Use one of the following methods to disable the Direct NFS client:</p>
+<ul>
+<li>
+<p>Remove the <code>oranfstab</code> file.</p>
+</li>
+<li>
+<p>Restore the stub <code>oraodm11.dll</code> file by reversing the process you completed in <a href="#CHDFGFDC">"Enable Direct NFS Client"</a>.</p>
+</li>
+<li>
+<p>Remove the specific NFS server or export paths in the <code>oranfstab</code> file.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref440" name="sthref440"></a>
+<h4 class="sect3"><span class="secnum">5.5.1.3</span> ORADNFS</h4>
+<p>ORADNFS is a utility which enables the database administrators to perform basic file operations over Direct NFS Client on Microsoft Windows platforms.</p>
+<p>ORADNFS is a multi-call binary, a single binary that acts like several utilities. This allows ORADNFS to be smaller since all the built-in commands can leverage DNFS code for many common operations. ORADNFS is run by issuing a command as an argument on the command line.</p>
+<p>For example, <code>C:\&gt; ORADNFS help</code> causes ORADNFS to print a list of built-in commands, and <code>C:\&gt; ORADNFS ls C:\ORACLE\ORADATA\ORCL</code> causes ORADNFS to behave as an <code>ls</code> command of <code>C:\ORACLE\ORADATA\ORCL</code> remote directory, where <code>C:\ORACLE\ORADATA</code> is a DNFS virtual mount point specified in the <code>oranfstab</code> configuration file.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>A valid copy of the oranfstab configuration file must be present in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs</code> directory for ORADNFS to operate.</p>
+</li>
+<li>
+<p>The user must be a member of the local ORA_DBA group to execute ORADNFS.</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGHHCJC" name="CEGHHCJC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.2</span> Configuring Oracle Messaging Gateway</h3>
+<p><a id="sthref441" name="sthref441"></a><a id="sthref442" name="sthref442"></a><a id="sthref443" name="sthref443"></a>Oracle Messaging Gateway, an Oracle Database Advanced Queuing feature, requires additional configuration after you install Oracle Database if you plan to use Oracle Database Advanced Queuing.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Loading and Setting Up Oracle Messaging Gateway" in <span class="italic"><a class="olink ADQUE1800" href="http://www.oracle.com/pls/db112/lookup?id=ADQUE1800">Oracle Streams Advanced Queuing User's Guide</a></span></div>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle Messaging Gateway is not supported on Windows x64.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABJIGEC" name="BABJIGEC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.3</span> Configuring Oracle Administration Assistant for Windows</h3>
+<p><a id="sthref444" name="sthref444"></a><a id="sthref445" name="sthref445"></a>Oracle Administration Assistant for Windows requires the Microsoft Management Console and HTML Help 1.2 or later to run. Microsoft Management Console (MMC) version 2.0 of MMC ships with Windows 2003 and Windows XP; version 3.0 of MMC is available with Windows Vista and Windows Server 2008. Oracle recommends the latest MMC version available.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Microsoft documentation at
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://www.microsoft.com/">http://www.microsoft.com/</a>
+</pre></div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGHBCCD" name="CEGHBCCD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.4</span> Configuring Oracle Counters for Windows Performance Monitor</h3>
+<p>Before using <a id="sthref446" name="sthref446"></a><a id="sthref447" name="sthref447"></a>Oracle Counters for Windows Performance Monitor to view Oracle-specific counters, you must specify the <code>SYSTEM</code> password using the <code>Operfcfg.exe</code> executable located in the <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\bin</code> directory.</p>
+<p>To set the system password, enter the following:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; <span class="italic">ORACLE_HOME</span>\bin\operfcfg.exe -U SYSTEM -P <span class="italic">Password</span> -D <span class="italic">TNS_Alias_for_database</span>
+ 
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>My Oracle Support (formerly Oracle<span class="italic">MetaLink</span>) Note 106375.1 for more details about setting credentials for Windows Performance Monitor</p>
+</li>
+<li>
+<p><span class="italic"><a class="olink NTQRF" href="../../win.112/e10845/toc.htm">Oracle Database Platform Guide for Microsoft Windows</a></span> for additional information about Oracle Counters for Windows Performance Monitor</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGGGFHF" name="CEGGGFHF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.5</span> Configuring Oracle Label Security</h3>
+<p><a id="sthref448" name="sthref448"></a><a id="sthref449" name="sthref449"></a>If you installed Oracle Label Security, you must configure it in a database before you use it. You can configure Oracle Label Security with or without Oracle Internet Directory integration. If you configure Oracle Label Security without Oracle Internet Directory integration, you cannot configure it to use Oracle Internet Directory at a later stage.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+To configure Oracle Label Security with Oracle Internet Directory integration, Oracle Internet Directory must be installed in your environment and the Oracle database must be registered in the directory.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink OLSAG" href="http://www.oracle.com/pls/db112/lookup?id=OLSAG">Oracle Label Security Administrator's Guide</a></span> for more information about Oracle Label Security enabled with Oracle Internet Directory</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABDJCGH" name="BABDJCGH"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.6</span> Configuring Oracle Database Vault</h3>
+<p><a id="sthref450" name="sthref450"></a>If you installed Oracle Database Vault, you must register it in a database and create the Database Vault Owner and, optionally, Database Vault Account Manager administrative accounts before you can use it.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink DVADM30031" href="http://www.oracle.com/pls/db112/lookup?id=DVADM30031">Oracle Database Vault Administrator's Guide</a></span> for more information about registering Oracle Database Vault</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABDJIAG" name="BABDJIAG"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.7</span> <a id="sthref451" name="sthref451"></a><a id="sthref452" name="sthref452"></a>Configuring Oracle Net Services</h3>
+<p><a id="sthref453" name="sthref453"></a><a id="sthref454" name="sthref454"></a>If you have a previous release of Oracle software installed on this system, you can copy information from the Oracle Net <code>tnsnames.ora</code> and <code>listener.ora</code> configuration files from the previous release to the corresponding files for the new release.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The default location for the <code>tnsnames.ora</code> and <code>listener.ora</code> files is the <code><span class="codeinlineitalic">ORACLE_BASE\ORACLE_HOME</span></code><code>\network\admin\</code> directory.</div>
+<a id="sthref455" name="sthref455"></a>
+<p class="subhead2">Modifying the listener.ora File</p>
+<p>If you are upgrading from a previous release of Oracle Database, Oracle recommends that you use the current release of Oracle Net listener instead of the listener from the previous release.</p>
+<p>If you have referenced the previous Oracle home directory names in the static listener information, then these directory names must be modified before the <code>listener.ora</code> file can be used in the 11.2 environment.</p>
+<p>To use the listener from the current release, you must copy static service information from the <code><a id="sthref456" name="sthref456"></a><a id="sthref457" name="sthref457"></a>listener.ora</code> file from the previous release to the version of that file used by the new release.</p>
+<p>For any database instances earlier than release 8.0.3, add static service information to the <code>listener.ora</code> file. Oracle Database releases later than release 8.0.3 do not require static service information.</p>
+<a id="sthref458" name="sthref458"></a>
+<p class="subhead2">Modifying the tnsnames.ora File</p>
+<p>Unless you are using a central <code>tnsnames.ora</code> file, copy Oracle Net service names and connect descriptors from the previous release <a id="sthref459" name="sthref459"></a><a id="sthref460" name="sthref460"></a><code>tnsnames.ora</code> file to the version of that file used by the new release.</p>
+<p>If necessary, you can also add connection information for additional database instances to the new file.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEFGIC" name="BABEFGIC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.8</span> Installing Oracle Text Supplied Knowledge Bases</h3>
+<p>An <a id="sthref461" name="sthref461"></a><a id="sthref462" name="sthref462"></a>Oracle Text knowledge base is a hierarchical tree of concepts used for theme indexing, ABOUT queries, and deriving themes for document services. If you plan to use any of these Oracle Text features, you can install two supplied knowledge bases (English and French) from the Oracle Database Examples media.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink CCREF" href="http://www.oracle.com/pls/db112/lookup?id=CCREF">Oracle Text Reference</a></span> for information about creating and extending knowledge bases, such as extending the supplied knowledge bases to accommodate your requirements, or creating your own knowledge bases in languages other than English and French</div>
+</div>
+<!-- class="sect2" -->
+<a id="BCGBAAAI" name="BCGBAAAI"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.9</span> Installing Oracle Text Filtering Component</h3>
+<p>Oracle Text Filtering Technology requires the Visual C++ libraries included in the Visual C++ Redistributable Package provided by Microsoft. You can download the 2005 SP1 Redistributable Package version of the <code>vcredist_x86.exe</code> file from</p>
+<p><code><a href="http://www.microsoft.com/downloads">http://www.microsoft.com/downloads</a></code></p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink CCREF2237" href="http://www.oracle.com/pls/db112/lookup?id=CCREF2237">Oracle Text Reference</a></span> for more information about Oracle Text Filtering Technology</div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGBJIHD" name="CEGBJIHD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.10</span> Configuring or Reinstalling Oracle XML DB</h3>
+<p><a id="sthref463" name="sthref463"></a><a id="sthref464" name="sthref464"></a>See <span class="italic"><a class="olink ADXDB" href="http://www.oracle.com/pls/db112/lookup?id=ADXDB">Oracle XML DB Developer's Guide</a></span> for more information about the following tasks:</p>
+<ul>
+<li>
+<p>Reinstalling Oracle XML DB</p>
+</li>
+<li>
+<p>Configuring or customizing the Oracle XML DB tablespace</p>
+</li>
+<li>
+<p>Configuring FTP, HTTP/WebDAV port numbers</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Appendix A of <span class="italic"><a class="olink ADXDB" href="http://www.oracle.com/pls/db112/lookup?id=ADXDB">Oracle XML DB Developer's Guide</a></span></div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGGIACF" name="CEGGIACF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.11</span> Configuring PL/SQL External Procedures</h3>
+<p><a id="sthref465" name="sthref465"></a><a id="sthref466" name="sthref466"></a>Configuring PL/SQL depends on the network configuration files used. In nearly all cases, configuration is automatic. However, if you are using pre-8.0.3 <code>tnsnames.ora</code> and <code>listener.ora</code> files with your 11<span class="italic">g</span> Release 2 (11.2) database, you must manually configure them.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Developing Applications for Windows" of <span class="italic"><a class="olink NTQRF190" href="../../win.112/e10845/apps.htm#NTQRF190">Oracle Database Platform Guide for Microsoft Windows</a></span></div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGGAJHA" name="CEGGAJHA"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.12</span> Configuring Shared Server Support</h3>
+<p><a id="sthref467" name="sthref467"></a><a id="sthref468" name="sthref468"></a>The default setup for using Shared Server mode depends on how the software has been installed. If you installed Oracle Database through the Enterprise Edition, Standard Edition, or Personal Edition installation types, then shared support was <span class="italic">not</span> configured. If you created your database through Oracle Database Configuration Assistant, then you were offered a choice of shared or dedicated server support.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Postinstallation Configuration Tasks on Windows" of <span class="italic"><a class="olink NTQRF060" href="../../win.112/e10845/config.htm#NTQRF060">Oracle Database Platform Guide for Microsoft Windows</a></span></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABFAEIG" name="BABFAEIG"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.13</span> Setting Credentials for the Job System to Work with Enterprise Manager</h3>
+<p><a id="sthref469" name="sthref469"></a><a id="sthref470" name="sthref470"></a><a id="sthref471" name="sthref471"></a>Windows systems require that you set the correct credentials for the <a id="sthref472" name="sthref472"></a><a id="sthref473" name="sthref473"></a>Jobs system to work properly in Enterprise Manager. By default, the Management Agent service is installed as a <code>LocalSystem</code> user. When submitting jobs, such as stopping or starting the database, the operating system user submitting the job must have the <span class="bold">Log on as a batch job</span> privilege enabled.</p>
+<p>Perform the following steps to establish that privilege for any operating system user who must submit an Enterprise Manager job.</p>
+<ol>
+<li>
+<p>Start the <span class="bold">Local Security Policy</span> tool:</p>
+<ul>
+<li>
+<p><span class="bold">Windows 2003:</span> From the <span class="bold">Start</span> menu, select <span class="bold">Administrative Tools</span>, then <span class="bold">Local Security Policy</span>.</p>
+</li>
+<li>
+<p><span class="bold">Windows XP:</span> From the <span class="bold">Start</span> menu, select <span class="bold">Control Panel</span>, <span class="bold">Administrative Tools</span>, then <span class="bold">Local Security Policy</span>.</p>
+</li>
+<li>
+<p><span class="bold">Windows Vista and Windows Server 2008:</span> From the <span class="bold">Start</span> menu, select <span class="bold">Programs</span>, <span class="bold">Administrative Tools,</span> then <span class="bold">Local Security Policy.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Under the Security Settings list, expand the list to <span class="bold">Local Policies</span>.</p>
+</li>
+<li>
+<p>Under Local Policies, double-click <span class="bold">User Rights Assignment</span>.</p>
+</li>
+<li>
+<p>Under Policy, search for the <span class="bold">Log on as a batch job</span> policy.</p>
+<p>If the Management Agent service is installed as any other user (that is, not <code>LocalSystem</code>), then, in addition to granting the <span class="bold">Log on as a batch job</span> privilege, you must grant the "Windows service" user the following three privileges:</p>
+<ul>
+<li>
+<p><span class="bold">Act as part of the operating system</span></p>
+</li>
+<li>
+<p><span class="bold">Adjust memory quotas for a process</span></p>
+</li>
+<li>
+<p><span class="bold">Replace a process level token</span></p>
+<p>The service under the "Windows service" user runs at the operating system level.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>With each policy, perform the following steps:</p>
+<ol>
+<li>
+<p>Double-click the policy name.</p>
+</li>
+<li>
+<p>In the Properties dialog box, click <span class="bold">Add User or Group</span>.</p>
+</li>
+<li>
+<p>In the Select Users or Groups dialog box, enter the name of the user (for example, <code>jsmith</code>, <code>administrator</code>, and so on.)</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+On Windows Vista and Windows Server 2008, the name of the dialog box is Select Users, Computers, or Groups.</div>
+</li>
+<li>
+<p>Click <span class="bold">Check Names</span> to check that you have entered the name correctly.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to exit the Properties dialog box, then exit Local Security Settings and Administrative Tools.</p>
+</li>
+<li>
+<p>Restart your computer.</p>
+</li>
+</ol>
+<p>If a user exists locally and at the domain level, Windows gives the local user precedence. To use the domain user, qualify the user name with the domain name. For example, to use the user <code>joe</code> in the <code>ACCOUNTS</code> domain specify the user name as <code>ACCOUNTS\joe</code>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGIHAF" name="BABGIHAF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.14</span> Configuring Oracle Database to Communicate with Automatic Storage Management</h3>
+<p><a id="sthref474" name="sthref474"></a><a id="sthref475" name="sthref475"></a><a id="sthref476" name="sthref476"></a>On Windows, Oracle Database installations that use Automatic Storage Management must use Windows native authentication. By default, Windows native authentication is enabled. To ensure that it is, check the <a id="sthref477" name="sthref477"></a><a href="glossary.htm#CHDFBJAI"><span class="xrefglossterm">sqlnet.ora file</span></a>, by default located in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\network\admin</code>, and ensure that it has NTS enabled. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">sqlnet.authentication_services=(NTS)
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink NTQRF" href="../../win.112/e10845/toc.htm">Oracle Database Platform Guide for Microsoft Windows</a></span> for more information about Windows native authentication</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABJDDBD" name="BABJDDBD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.15</span> Configuring Databases to Use Oracle Enterprise Manager Database Control</h3>
+<p><a id="sthref478" name="sthref478"></a><a id="sthref479" name="sthref479"></a>You have the option to configure Oracle Enterprise Manager Database Control automatically when creating a new database using <a id="sthref480" name="sthref480"></a>Database Control Assistant. This lets you administer your entire database using Enterprise Manager Database Control.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink OEMCG" href="http://www.oracle.com/pls/db112/lookup?id=OEMCG">Oracle Enterprise Manager Advanced Configuration</a></span> for information about configuring a database to use Database Control</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABIFCEC" name="BABIFCEC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5.16</span> Installing Oracle Database Examples</h3>
+<p>If you plan to use the following products or features, then download and install the products from the Oracle Database Examples media:</p>
+<ul>
+<li>
+<p>Oracle Database Examples</p>
+</li>
+<li>
+<p>Oracle JDBC Development Drivers</p>
+</li>
+<li>
+<p>Oracle Context Companion</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink EXMPL" href="http://www.oracle.com/pls/db112/lookup?id=EXMPL">Oracle Database Examples Installation Guide</a></span> for detailed information about various Oracle product demonstrations</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGFCJJE" name="BCGFCJJE"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.6</span> Create<a id="sthref481" name="sthref481"></a> a Fast Recovery Area Disk Group</h2>
+<p>During installation, by default you can create one disk group. If you plan to add an Oracle Database for a standalone server, then you should create the fast recovery area for database files.</p>
+<div class="sect2"><a id="sthref482" name="sthref482"></a>
+<h3 class="sect2"><span class="secnum">5.6.1</span> About the Fast Recovery Area and the Fast Recovery Area Disk Group</h3>
+<p>The fast recovery area is a unified storage location for all Oracle Database files related to recovery. Database administrators can define the <code>DB_RECOVERY_FILE_DEST</code> parameter to the path for the fast recovery area to enable on-disk backups, and rapid recovery of data. Enabling rapid backups for recent data can reduce requests to system administrators to retrieve backup tapes for recovery operations.</p>
+<p>When you enable fast recovery in the <code>init.ora</code> file, it writes all RMAN backups, archive logs, control file automatic backups, and database copies to the fast recovery area. RMAN automatically manages files in the fast recovery area by deleting obsolete backups and archive files no longer required for recovery.</p>
+<p>Oracle recommends that you create a fast recovery area disk group. Oracle Clusterware files and Oracle Database files can be placed on the same disk group, and you can also place fast recovery files in the same disk group. However, Oracle recommends that you create a separate fast recovery disk group to reduce storage device contention.</p>
+<p>The fast recovery area is enabled by setting <code>DB_RECOVERY_FILE_DEST</code>. The size of the fast recovery area is set with <code>DB_RECOVERY_FILE_DEST</code>. As a general rule, the larger the fast recovery area, the more useful it becomes. For ease of use, Oracle recommends that you create a fast recovery area disk group on storage devices that can contain at least three days of recovery information. Ideally, the fast recovery area should be large enough to hold a copy of all of your datafiles and control files, the online redo logs, and the archived redo log files needed to recover your database using the datafile backups kept under your retention policy.</p>
+<p>Multiple databases can use the same fast recovery area. For example, assume you have created one fast recovery area disk group on disks with 150 GB of storage, shared by three different databases. You can set the size of the fast recovery for each database depending on the importance of each database. For example, if <code>database1</code> is your least important database, <code>database2</code> is of greater importance and <code>database3</code> is of greatest importance, then you can set different <code>DB_FILE_RECOVERY_DEST_SIZE</code> settings for each database to meet your retention target for each database: 30 GB for <code>database1</code>, 50 GB for <code>database2</code>, and 70 GB for <code>database3</code>.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref483" name="sthref483"></a>
+<h3 class="sect2"><span class="secnum">5.6.2</span> Creating the Fast Recovery Area Disk Group</h3>
+<p>To create a fast recovery file disk group:</p>
+<ol>
+<li>
+<p>Navigate to the Grid home bin directory, and start ASM Configuration Assistant (ASMCA). For example:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; cd \app\oracle\product\11.2.0\grid\bin
+<span class="italic">DRIVE_LETTER</span>:\&gt; asmca
+</pre></li>
+<li>
+<p>ASMCA opens at the Disk Groups tab. Click <span class="bold">Create</span> to create a disk group.</p>
+</li>
+<li>
+<p>The Create Disk Groups window opens.</p>
+<p>In the Disk Group Name field, enter a descriptive name for the fast recovery area group. For example: <code>FRA</code>.</p>
+<p>In the Redundancy section, select the level of redundancy you want to use.</p>
+<p>In the Select Member Disks field, select eligible disks to be added to the fast recovery area, and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>The Diskgroup Creation window opens to inform you when disk group creation is complete. Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Exit</span>.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>"<a class="olink BRADV89424" href="http://www.oracle.com/pls/db112/lookup?id=BRADV89424">Setting the Fast Recovery Area Location and Initial Size</a>" section in <a class="olink BRADV" href="http://www.oracle.com/pls/db112/lookup?id=BRADV"><span class="italic">Oracle Database Backup and Recovery User's Guide</span></a></p>
+</li>
+<li>
+<p><a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG"><span class="italic">Oracle Database Storage Administrator's Guide</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGEHAJD" name="BCGEHAJD"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.7</span> Enabling and Disabling Database Options</h2>
+<p>When you install Oracle Database, certain options are enabled and others are disabled. If you must enable or disable a particular database feature for an Oracle home, then shut down the database and use the <code>chopt</code> tool. See <a href="#BCGJAGHG">Example 5-1</a>.</p>
+<p>The <code>chopt</code> tool is a command-line utility that is located in the <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\bin</code> directory. The syntax for <code>chopt</code> is as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn">chopt [ enable | disable] <span class="italic">db_option</span>
+</pre>
+<p>The possible values for <code><span class="codeinlineitalic">db_option</span></code> described in the following table.</p>
+<div class="inftblinformal">
+<table class="Informal" summary="List of option values for chopt tool" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="26%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t30">Value</th>
+<th align="left" valign="bottom" id="r1c2-t30">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t30" headers="r1c1-t30"><code>dm</code></td>
+<td align="left" headers="r2c1-t30 r1c2-t30">Oracle Data Mining RDBMS Files</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t30" headers="r1c1-t30"><code>dv</code></td>
+<td align="left" headers="r3c1-t30 r1c2-t30">Oracle Database Vault</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t30" headers="r1c1-t30"><code>lbac</code></td>
+<td align="left" headers="r4c1-t30 r1c2-t30">Oracle Label Security</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t30" headers="r1c1-t30"><code>olap</code></td>
+<td align="left" headers="r5c1-t30 r1c2-t30">Oracle OLAP</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t30" headers="r1c1-t30"><code>partitioning</code></td>
+<td align="left" headers="r6c1-t30 r1c2-t30">Oracle Partitioning</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t30" headers="r1c1-t30"><code>rat</code></td>
+<td align="left" headers="r7c1-t30 r1c2-t30">Oracle Real Application Testing</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t30" headers="r1c1-t30"><code>ode_net_2</code></td>
+<td align="left" headers="r8c1-t30 r1c2-t30">Oracle Database Extensions for .NET 2.0</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="example"><a id="BCGJAGHG" name="BCGJAGHG"></a>
+<p class="titleinexample">Example 5-1 Complete Example of Running the Chopt Tool</p>
+<p>To enable the Oracle Label Security option in your Oracle binary files:</p>
+<ol>
+<li>
+<p>Shut down the database with <code>srvctl</code> or SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">srvctl stop database -d <span class="italic">myDb</span>
+</pre></li>
+<li>
+<p>Stop the database service, <code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>, using the Services program in Control Panel.</p>
+</li>
+<li>
+<p>Run the following commands:</p>
+<pre xml:space="preserve" class="oac_no_warn">cd <span class="italic">%ORACLE_HOME%</span>/bin
+chopt enable lbac
+</pre></li>
+<li>
+<p>Start the database service, <code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>, using the Services program in Control Panel.</p>
+</li>
+<li>
+<p>Start up the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">srvctl start database -d <span class="italic">myDb</span>
+</pre></li>
+</ol>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="install.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="startrdb.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

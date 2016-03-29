@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^/log/$ /log/index.php
+RewriteRule ^/login/$ /login/index.php
+
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^login/?=fail$ /login/index.php?status=fail

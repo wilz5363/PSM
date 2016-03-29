@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-15T18:13:37Z" />
+<meta name="doctitle" content="Oracle&reg; Real Application Clusters Installation Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10818-02" />
+<meta name="docid" content="RIWIN" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="params.htm" title="Previous" type="text/html" />
+<link rel="Next" href="undrstnd.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10818.pdf" title="PDF version" type="application/pdf" />
+<title>Configuring Server Pools and Enterprise Manager Database Control</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Real Application Clusters Installation Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10818-02</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="params.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="undrstnd.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10818.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="RIWIN1035" name="RIWIN1035"></a><a id="sthref255" name="sthref255"></a>
+<h1 class="chapter"><span class="secnum">6</span> Configuring Server Pools and Enterprise Manager Database Control</h1>
+<p><a id="sthref256" name="sthref256"></a>This chapter describes server pool and Enterprise Manager Database Control configuration in Oracle Real Application Clusters (Oracle RAC) environments.</p>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BHBBGEIE">Understanding Server Pools</a></p>
+</li>
+<li>
+<p><a href="#BHBGJGBI">Configuring Enterprise Manager Database Control</a></p>
+</li>
+</ul>
+<a id="BHBBGEIE" name="BHBBGEIE"></a><a id="RIWIN1036" name="RIWIN1036"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">6.1</span> Understanding Server Pools</h2>
+<p>Server pools are logical divisions of a cluster into pools of servers, which are allocated to host databases or other applications. Server pools are managed using <code>crsctl</code> and <code>srvctl</code> commands.</p>
+<p>Each server pool name must be unique within the cluster. You cannot have two server pools using the same name.</p>
+<p>There are two styles of server pool management:</p>
+<ul>
+<li>
+<p><span class="bold">Administrator-managed</span>: Database administrators define on which servers a database resource should run, and place resources manually as needed. This is the management strategy used in previous releases.</p>
+</li>
+<li>
+<p><span class="bold">Policy managed</span>: Database administrators specify in which server pool (excluding generic or free) the database resource will run. Oracle Clusterware is responsible for placing the database resource on a server within that server pool.</p>
+<p>The server pool name is a required attribute. You can also provide values for the following attributes; if you do not specify them, then they are set to the default value:</p>
+<ul>
+<li>
+<p><span class="bold">MIN_SIZE</span>: Minimum number of servers on which you want a resource to run. The default is <code>0</code>.</p>
+</li>
+<li>
+<p><span class="bold">MAX_SIZE</span>: Maximum number of servers on which you want a resource to run. The default is <code>-1</code>, which indicates that resources can run on all available nodes in the cluster.</p>
+</li>
+<li>
+<p><span class="bold">IMPORTANCE</span>: The relative importance of the server pool, used to determine how to reconfigure servers when a node joins or leaves the cluster. The default is <code>0</code>.</p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<a id="sthref257" name="sthref257"></a><a id="sthref258" name="sthref258"></a><a id="sthref259" name="sthref259"></a>Clients accessing Oracle Database 11<span class="italic">g</span> release 2 and later databases that are policy-managed should access the database using the single client access name (SCAN). This is recommended because policy-managed databases can run on different servers at different times.</div>
+</li>
+</ul>
+<a id="RIWIN1037" name="RIWIN1037"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref260" name="sthref260"></a>
+<h3 class="sect2"><span class="secnum">6.1.1</span> Policy-based Cluster and Capacity Management</h3>
+<p>Using policy-based server pool management, database administrators define resource requirements for the workload, including the following:</p>
+<ul>
+<li>
+<p>Defining the number of servers or instances preferred for the application. Oracle Clusterware automatically allocates resources up to the number specified, so long as they are physically available, and relocates a resource to another node as necessary.</p>
+</li>
+<li>
+<p>Defining the number of instances required to support the application.</p>
+</li>
+</ul>
+<p>Resources are no longer defined as belonging to a specific instance or node. Instead, the priority of resource requirements is defined.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink RACAD" href="http://www.oracle.com/pls/db112/lookup?id=RACAD"><span class="italic">Oracle Real Application Clusters Administration and Deployment Guide</span></a> for more information about policy-based management and server pools</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BHBGJGBI" name="BHBGJGBI"></a><a id="RIWIN1038" name="RIWIN1038"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">6.2</span> Configuring <a id="sthref261" name="sthref261"></a>Enterprise Manager Database Control</h2>
+<p><a id="sthref262" name="sthref262"></a><a id="sthref263" name="sthref263"></a>You can use DBCA, which provides a graphical user interface to configure your Oracle RAC database. However, if you want to use a command line interface to configure your database to use Database Control, then you can use the Enterprise Manager Configuration Assistant (EMCA) utility.</p>
+<p>The following sections describe how Oracle Enterprise Manager Database Control can be configured after installation:</p>
+<ul>
+<li>
+<p><a href="#CACIAIFG">Understanding EMCA with Oracle RAC</a></p>
+</li>
+<li>
+<p><a href="#BHBCICBI">Using DBCA to Configuring an Existing Database to Use Database Control</a></p>
+</li>
+<li>
+<p><a href="#BHBJIIDC">Configuring Database Control After Installation Using EMCA</a></p>
+</li>
+<li>
+<p><a href="#BABHEBCH">Reconfiguring Existing Database Control Configurations on Remote Nodes</a></p>
+</li>
+<li>
+<p><a href="#CHDDACHF">Updating Database Control Configuration When Adding and Removing Nodes</a></p>
+</li>
+<li>
+<p><a href="#CACBFHBB">Using an Input File for EMCA Parameters</a></p>
+</li>
+<li>
+<p><a href="#BABCIIBD">Specifying the Ports Used By Database Control</a></p>
+</li>
+<li>
+<p><a href="#CACIHHBG">EMCA Troubleshooting Tips</a></p>
+</li>
+</ul>
+<a id="CACIAIFG" name="CACIAIFG"></a><a id="RIWIN1039" name="RIWIN1039"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.1</span> Understanding EMCA with Oracle RAC</h3>
+<p>When you use EMCA to configure Enterprise Manager (EM) Database Control for Oracle RAC, you configure Database Control for each instance in the cluster. However, by default, the Database Control console starts only on the local node. On every other node of the cluster, only the Enterprise Manager agent starts. This is because the Database Control console opens a number of connections to the database. If an instance of the console is running on every host in the cluster, then you may easily exceed the maximum number of permitted open connections on a 32-node or 64-node environment.</p>
+<p>When Database Control console is started on the local node, on every other node, the commands <code>emctl start dbconsole</code> and <code>emctl stop dbconsole</code> start and stop only the EM agent. Each of the remote agents upload their respective data to the Database Control console running on the local node, where you can monitor and manage all the targets in the cluster.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BHBCICBI" name="BHBCICBI"></a><a id="RIWIN1041" name="RIWIN1041"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.2</span> Using DBCA to Configuring an Existing Database to Use <a id="sthref264" name="sthref264"></a><a id="sthref265" name="sthref265"></a>Database Control</h3>
+<p>The primary method for configuring an existing Oracle Database 11<span class="italic">g</span> release 2 (11.2) database to be managed with Enterprise Manager Database Control is to use <a id="sthref266" name="sthref266"></a><a id="sthref267" name="sthref267"></a>DBCA. You can use DBCA to create a new database or to reconfigure an existing database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Installing Oracle Software and Building the Database" in <a class="olink ADMQS" href="../../server.112/e10897/toc.htm"><span class="italic">Oracle Database 2 Day DBA</span></a> for more information about using DBCA to create a new database instance, and <a class="olink TDPRC" href="http://www.oracle.com/pls/db112/lookup?id=TDPRC"><span class="italic">Oracle Database 2 Day + Real Application Clusters Guide</span></a> for Oracle RAC examples using DBCA</div>
+<p>To use DBCA to reconfigure your database so it can be managed with Database Control:</p>
+<ol>
+<li>
+<p>Log into the database host as an Administrator user.</p>
+</li>
+<li>
+<p><a id="sthref268" name="sthref268"></a>Click <span class="bold">Start</span>, and select <span class="bold">Programs</span>, then <span class="bold">Oracle -</span> <span class="bolditalic">Oracle_home name</span>. In the <span class="bold">Configuration and Migration Tools</span>, folder select <span class="bold">Database Configuration Assistant</span>.</p>
+<p>The DBCA Welcome page appears.</p>
+</li>
+<li>
+<p>Advance to the Operations page and select <span class="bold">Configure Database Options</span>.</p>
+</li>
+<li>
+<p>Advance to the Database page and select the database you want to configure.</p>
+</li>
+<li>
+<p>Advance to the Management Options page and select the following options:</p>
+<ul>
+<li>
+<p><span class="bold">Configure the Database with Enterprise Manager</span></p>
+</li>
+<li>
+<p><span class="bold">Use Database Control for Database Management</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Optionally, select the options for enabling e-mail notifications and enabling daily backups.</p>
+<p>For more information about Enterprise Manager notifications and daily backups, click <span class="bold">Help</span> on the Management Options page.</p>
+</li>
+<li>
+<p>Advance until the Finish button is available.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span> to reconfigure the database so it uses Database Control.</p>
+<p>After DBCA reconfigures the database, a new subdirectory appears in the Oracle home. This directory contains Database Control configuration and state files specific to the database you just configured. For Oracle RAC databases, this directory is named using the following format:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">nodename_dbuniquename</span>
+</pre>
+<p>For example, node <code>node1</code> in the Oracle RAC database <code>myNewDB</code> appears as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn">node1.example.com_myNewDB
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BHBJIIDC" name="BHBJIIDC"></a><a id="RIWIN1042" name="RIWIN1042"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.3</span> Configuring Database Control After Installation Using <a id="sthref269" name="sthref269"></a><a id="sthref270" name="sthref270"></a><a id="sthref271" name="sthref271"></a>EMCA</h3>
+<p>Enterprise Manager Configuration Assistant (EMCA) provides a command line interface for configuring Database Control.</p>
+<div class="infoboxnotewarn">
+<p class="notep1">Caution:</p>
+During configuration of Database Control using EMCA, the database may become unavailable and users may not be able to connect to the database or perform operations on the database.</div>
+<p>To configure Database Control with EMCA:</p>
+<ol>
+<li>
+<p>Set the default Oracle home to the location of the home directory for the database you are modifying. See <a href="undrstnd.htm#CIHEBBBF">"Working with Multiple Oracle Home Directories on Windows"</a> for details.</p>
+</li>
+<li>
+<p>Change directory to the <code><span class="codeinlineitalic">Oracle_home</span></code><code>\bin</code> directory.</p>
+</li>
+<li>
+<p>Start EMCA by entering the following command with any of the optional command-line arguments shown in <a href="emca_ref.htm#CACHCCBC">Table G-1</a> in <a href="emca_ref.htm#CACDBCDI">Appendix G</a>:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">Oracle_home</span>\bin&gt; emca.bat
+</pre>
+<p>Depending upon the arguments you include on the EMCA command line, EMCA prompts you for additional information required to configure Database Control.</p>
+<p><a id="sthref272" name="sthref272"></a><a id="sthref273" name="sthref273"></a><a id="sthref274" name="sthref274"></a>For example, enter the following command to configure Database Control so it will perform automatic daily backups of your database:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">Oracle_home</span>\bin&gt; emca.bat -config dbcontrol db -backup
+</pre></li>
+</ol>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+To configure Database Console for single instance database using Oracle ASM, you do not need to include extra parameters in the EMCA command. Simply run the following command to configure the Database Console and EMCA automatically detects the Oracle ASM instance:
+<pre xml:space="preserve" class="oac_no_warn">emca -config dbcontrol db -repos create
+</pre></div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABHEBCH" name="BABHEBCH"></a><a id="RIWIN1031" name="RIWIN1031"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.4</span> Reconfiguring Existing Database Control Configurations on Remote Nodes</h3>
+<p><a id="sthref275" name="sthref275"></a><a id="sthref276" name="sthref276"></a><a id="sthref277" name="sthref277"></a>If you upgrade an existing Oracle RAC database configured with Database Control to the current release, then the existing Database Control configuration is retained. For example, if you have an Oracle RAC 10<span class="italic">g</span> release 1 database, then the existing Database Control configuration has a Database Console running on each cluster node. If you upgrade this database to Oracle Database 11<span class="italic">g</span> release 2, then the Database Control console will still be started on each individual node.</p>
+<p>If you want to modify the Database Control configuration on all the nodes in the cluster, then use the following command:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -reconfig dbcontrol &#x2013;cluster &#x2013;EM_NODE <span class="italic">nodename</span> -EM_NODE_LIST <span class="italic">NODE_list</span>
+</pre>
+<p>where <code><span class="codeinlineitalic">nodename</span></code> is the public name of the node where the console runs and <code><span class="codeinlineitalic">NODE_list</span></code> is a comma-delimited list of nodes. This command reconfigures the current Database Control setup and performs the following actions in sequence:</p>
+<ol>
+<li>
+<p>Starts a Database Control Console on <code><span class="codeinlineitalic">nodename</span></code>, if one has not been started yet.</p>
+</li>
+<li>
+<p>Redirects the agents monitoring the database instances on the nodes specified by <span class="italic">NODE_list</span> so that they upload their data to the console running on <code><span class="codeinlineitalic">nodename</span></code>. Also, agents monitoring database instances on <code><span class="codeinlineitalic">nodename</span></code> will also upload their data to the local console. Note that if you do not enter the command options <code>-EM_NODE</code> or <code>-EM_NODE_LIST</code> at the command line, then you are prompted for them.</p>
+</li>
+</ol>
+<p><code>-EM_NODE</code> defaults to the local node if not specified when prompted. <code>-EM_NODE_LIST</code> defaults to all nodes where the database is configured.</p>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+If you use the command <code>emca -reconfig dbcontrol -cluster</code> to configure Database Control for Oracle RAC, then check the <code>TNS_ADMIN</code> environment variable on all cluster nodes. If you have a different <code>TNS_ADMIN</code> set for each node, then the listener for the target cannot be configured correctly. In this case, set the same <code>TNS_ADMIN</code> on all cluster nodes before running the <code>emca -reconfig dbcontrol -cluster</code> command.</div>
+<p>You can use this command to start the console on more than one node. For example, on an 8-node cluster with nodes node1, node2, node3, node4, node5, node6, node7, and node8, you can run the following commands in succession:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -reconfig dbcontrol &#x2013;cluster &#x2013;EM_NODE node1 -EM_NODE_LIST node2,node3,node4
+emca -reconfig dbcontrol &#x2013;cluster &#x2013;EM_NODE node5 -EM_NODE_LIST node6,node7,node8
+</pre>
+<p>In this scenario, two Database Control consoles started: one on <code>node1</code> and the other on <code>node5</code>. You can manage and monitor all targets in the cluster from either of these two consoles.</p>
+<p>For information on the current cluster configuration, you can run the following command:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -displayConfig dbcontrol -cluster
+</pre>
+<p>This command prompts for the database unique name for the cluster database. It prints the current configuration to the screen, indicating the nodes that have consoles running on them and the consoles where each agent is uploading.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDACHF" name="CHDDACHF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.5</span> Updating Database Control Configuration When Adding and Removing Nodes</h3>
+<p><a id="sthref278" name="sthref278"></a><a id="sthref279" name="sthref279"></a>On cluster policy managed databases, another common operation is the addition and deletion of cluster nodes. After you add a new node, you can run EMCA to configure Database Control or central agent management for that node using the command <code>emca -addNode db</code>. Running EMCA only configures Enterprise Manager so that you can manage the instance in a way consistent with the rest of the cluster database instances.</p>
+<p>When configuring Enterprise Manager for a new node, run the EMCA command only after you have added the node. Also, run the command from a node in the cluster that already has Enterprise Manager configured for it, because the Enterprise Manager configuration settings on the existing node are propagated to the new node when you run the command. Because the <code>-addNode</code> option can be used only in an Oracle Real Application Clusters environment, you do not need to use the <code>-cluster</code> option on the command line.</p>
+<p>After running the command <code>emca -addNode db</code>, enter the node name and database unique name for the node and database. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">Node name: node2
+Database Unique Name: EM102
+</pre>
+<p><a id="sthref280" name="sthref280"></a><a id="sthref281" name="sthref281"></a>To deconfigure Enterprise Manager for a specific node you are deleting from the cluster, log into a different node from the one you plan to delete, and use the command <code>emca -deleteNode db</code>. Running this command removes the Enterprise Manager configuration so that you will no longer be able to manage the instance with Enterprise Manager on that node. Ensure that you run the EMCA command before you delete the actual cluster node. Because this option can be used only in an Oracle Real Application Clusters environment, you do not need to use the <code>-cluster</code> option on the command line.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="CACBFHBB" name="CACBFHBB"></a><a id="RIWIN1046" name="RIWIN1046"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.6</span> Using an Input File for <a id="sthref282" name="sthref282"></a>EMCA Parameters</h3>
+<p>Instead of answering a series of prompts when you run EMCA, you can use the <code>-respFile</code> argument to specify an input file. The input file you create must be in a format similar to the following example:</p>
+<pre xml:space="preserve" class="oac_no_warn">PORT=1521
+SID=DB
+DBSNMP_PWD=xpE234D
+SYSMAN_PWD=KDOdk432
+</pre>
+<p>After you create an EMCA input file, you can use it on the command line as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">Oracle_home</span>\bin&gt; emca -config dbcontrol db -respFile <span class="italic">input_file_path</span>
+</pre>
+<p>For example, to configure Database Control to perform daily backups and create the Database Control Management Repository, create an input file similar to the one shown in the following example:</p>
+<pre xml:space="preserve" class="oac_no_warn">PORT=1521
+SID=DB
+DBSNMP_PWD=dow3l224
+SYSMAN_PWD=squN3243
+HOST_USER=johnson
+HOST_USER_PWD=diTf32of
+SYS_PWD=qlKj4352
+BACKUP_SCHEDULE=06:30
+</pre>
+<p>When you have created the input file, then enter the following command at the operating system prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">Oracle_home</span>\bin&gt; emca -config dbcontrol db -repos create -backup -respFile
+<span class="italic">input_file_path</span>
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABCIIBD" name="BABCIIBD"></a><a id="RIWIN1047" name="RIWIN1047"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.7</span> Specifying the Ports Used By Database Control</h3>
+<p><a id="sthref283" name="sthref283"></a><a id="sthref284" name="sthref284"></a><a id="sthref285" name="sthref285"></a>When you initially install Oracle RAC 11<span class="italic">g</span> release 2 (11.2) or configure Database Control with EMCA, Database Control uses a set of default system ports. For example, by default, you access Database Control using port 1158 in Oracle Database 11<span class="italic">g</span> release 2 (11.2), as in:</p>
+<pre xml:space="preserve" class="oac_no_warn">http://<span class="italic">host</span>.<span class="italic">domain</span>:1158/em
+</pre>
+<p>This is the default port assigned to Database Control by the Internet Assigned Numbers Authority (IANA). Likewise, the default Database Control Agent port, as assigned by the IANA, is 3938.</p>
+<p>To use ports other than the default ports, use the following EMCA command-line arguments when you initially configure Database Control with EMCA.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You can also use the following EMCA command-line arguments to configure Database Control after you have installed and configured Oracle RAC 11<span class="italic">g</span> release 2 (11.2).</div>
+<p>The following list summarizes the EMCA command-line arguments that control the standard Database Control port assignments:</p>
+<ul>
+<li>
+<p>-DBCONTROL_HTTP_PORT <span class="italic">port_number</span></p>
+<p><a id="sthref286" name="sthref286"></a><a id="sthref287" name="sthref287"></a>This port number is used in the Database Control Console URL. For example, if you set this port to 5570, then you can then display the Database Control Console using the following URL:</p>
+<pre xml:space="preserve" class="oac_no_warn">http://<span class="italic">host</span>.<span class="italic">domain</span>:5570/em
+</pre></li>
+<li>
+<p>-RMI_PORT <span class="italic">port_number</span></p>
+<p>This port number is used by the <a id="sthref288" name="sthref288"></a><a id="sthref289" name="sthref289"></a>Remote Method Invocation (RMI) system, which is part of the J2EE software required by Database Control. The default port can be changed if the user wants to configure a specific port for Database Console. When a port other than the default port (1521) is used, use the -RMI_PORT or -JMS_PORT options along with the emca reconfig command.</p>
+</li>
+<li>
+<p>-JMS_PORT <span class="italic">port_number</span></p>
+<p>This port is used by the OC4J <a id="sthref290" name="sthref290"></a><a id="sthref291" name="sthref291"></a>Java Message Service (JMS), which is part of the J2EE software required by Database Control. The default port can be changed if the user wants to configure a specific port for Database Console. When a port other than the default port (1521) is used, use the -RMI_PORT or -JMS_PORT options along with the emca reconfig command.</p>
+</li>
+<li>
+<p>-AGENT_PORT <span class="italic">port_number</span></p>
+<p><a id="sthref292" name="sthref292"></a><a id="sthref293" name="sthref293"></a>This port is used by the Database Control Management Agent, which is monitoring and administering the database for the Database Control.</p>
+</li>
+</ul>
+<p>Alternatively, you can explicitly assign ports after configuring Database Control using the following command, where <code><span class="codeinlineitalic">arguments</span></code> refers to the command-line arguments listed previously for specifying the ports:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -reconfig ports [-cluster] [<span class="italic">arguments</span>]
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+</div>
+<!-- class="sect2" -->
+<a id="CACIHHBG" name="CACIHHBG"></a><a id="RIWIN1048" name="RIWIN1048"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">6.2.8</span> <a id="sthref294" name="sthref294"></a><a id="sthref295" name="sthref295"></a><a id="sthref296" name="sthref296"></a>EMCA Troubleshooting Tips</h3>
+<p>The following section describes some troubleshooting tips to consider when using EMCA to configure the Database Control:</p>
+<ul>
+<li>
+<p><a href="#CHDEGDIJ">Using EMCA After Changing the Database Listener Port</a></p>
+</li>
+<li>
+<p><a href="#CHDHCHBG">Upgrading Grid Control Agents for Oracle Database 11<span class="italic">g</span> Release 2</a></p>
+</li>
+<li>
+<p><a href="#CHDCHBCA">Using EMCA After Changing the Database Host Name or IP Address</a></p>
+</li>
+<li>
+<p><a href="#CHDCFBFD">Using EMCA When the TNS Configuration Is Changed</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="emca_ref.htm#CACDBCDI">Appendix G, "Enterprise Manager Configuration Assistant (EMCA) Reference"</a></div>
+<a id="BABCBHFB" name="BABCBHFB"></a><a id="RIWIN1049" name="RIWIN1049"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="CHDEGDIJ" name="CHDEGDIJ"></a>
+<h4 class="sect3"><span class="secnum">6.2.8.1</span> Using <a id="sthref297" name="sthref297"></a><a id="sthref298" name="sthref298"></a><a id="sthref299" name="sthref299"></a>EMCA After Changing the Database Listener Port</h4>
+<p>If you change the listener port of the database after you have configured Database Control, then the database status will appear as down. To reconfigure Database Control to use the new listener port, run the EMCA command using the <code>-config dbcontrol db [-cluster]</code> command-line arguments.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHCHBG" name="CHDHCHBG"></a><a id="RIWIN1050" name="RIWIN1050"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">6.2.8.2</span> Upgrading Grid Control Agents for Oracle Database 11<span class="italic">g</span> Release 2</h4>
+<p><a id="sthref300" name="sthref300"></a>When upgrading an Oracle Database 10<span class="italic">g</span> release 1 database instance that was configured for Oracle Enterprise Manager (either Database Control or a Grid Control central agent) to an Oracle Database 11<span class="italic">g</span> release 2 (11.2) database, all Enterprise Manager targets for the upgraded instances are updated automatically. This is because the upgrade involves altering the Oracle Home for the instance, the port numbers, or other target-associated properties.</p>
+<p>If an upgraded target is managed by a Grid Control Agent, then it might not be updated successfully during the upgrade. To update these targets, perform the following steps:</p>
+<ol>
+<li>
+<p>Use Grid Control to access the Home page of the upgraded target.</p>
+</li>
+<li>
+<p>On the Home page for the upgraded target, select <span class="bold">Monitoring Configuration</span>.</p>
+</li>
+<li>
+<p>On the Monitoring Configuration page, update the properties to the correct values as needed, for example, Oracle Home, listener port and so on.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCHBCA" name="CHDCHBCA"></a><a id="RIWIN1051" name="RIWIN1051"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">6.2.8.3</span> Using EMCA After Changing the Database Host Name or IP Address</h4>
+<p><a id="sthref301" name="sthref301"></a><a id="sthref302" name="sthref302"></a><a id="sthref303" name="sthref303"></a>After changing the database host name (including the domain name) or the IP address for a node, you must deconfigure Database Console for that database and then reconfigure it using EMCA with the <code>-repos create</code> flag. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -deconfig dbcontrol db -repos drop
+emca -config dbcontrol db -repos create
+</pre>
+<p>or</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -deconfig dbcontrol db
+emca -config dbcontrol db -repos recreate
+</pre></div>
+<!-- class="sect3" -->
+<a id="CHDCFBFD" name="CHDCFBFD"></a><a id="RIWIN1052" name="RIWIN1052"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">6.2.8.4</span> Using EMCA When the TNS Configuration Is Changed</h4>
+<p><a id="sthref304" name="sthref304"></a><a id="sthref305" name="sthref305"></a><a id="sthref306" name="sthref306"></a>When the <a id="sthref307" name="sthref307"></a><a id="sthref308" name="sthref308"></a><a id="sthref309" name="sthref309"></a>TNS configuration is changed, set the environment variable and then run the following command:</p>
+<pre xml:space="preserve" class="oac_no_warn">emca -config dbcontrol db
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="params.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="undrstnd.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
