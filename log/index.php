@@ -12,7 +12,7 @@ include ROOT_PATH . 'inc/header.php';
 echo '<link rel="stylesheet" href="../libs/css/responsive-calendar.css">';
 include ROOT_PATH . 'inc/navigation.php';
 ?>
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
     <!-- Responsive calendar - START -->
     <div class="responsive-calendar">
         <div class="controls">
@@ -41,6 +41,7 @@ include ROOT_PATH . 'inc/navigation.php';
     <!-- Responsive calendar - END -->
 </div>
 
+<p><div class="logged_badge"></div> Logged </p>
 
 
 

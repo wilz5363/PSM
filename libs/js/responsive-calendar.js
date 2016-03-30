@@ -19,7 +19,7 @@
             var time;
             this.$element = element;
             this.options = options;
-            this.weekDays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+            this.weekDays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
             this.time = new Date();
             this.currentYear = this.time.getFullYear();
             this.currentMonth = this.time.getMonth();
@@ -224,7 +224,7 @@
                     }
                 }
 
-                if (dayType === weekend || dayType === 'sat') {
+                if (dayType === weekend[0] || dayType === weekend[1]) {
                     day.append($("<a class='disabled'>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
                 } else {
                     day.append($("<a>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));

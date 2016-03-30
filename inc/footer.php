@@ -5,15 +5,12 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 <?php if ($section === 'log') {
-    $weekend = 'fri';
-    if($_SESSION['user']==1){
-        $weekend = 'sun';
-    }
+    $weekend = json_encode(array('friday', 'saturday'));
 ?>
     <script></script>
 <script src="../libs/js/responsive-calendar.js"></script>
 <script type="text/javascript">
-    var weekend = "<?= $weekend;?>";
+    var weekend = <?= $weekend;?>;
     $( document ).ready( function() {
   function addLeadingZero(num) {
     if (num < 10) {
@@ -30,7 +27,10 @@
         addLeadingZero( $(this).data('month') )+'-'+
         addLeadingZero( $(this).data('day') );
         window.location.href="daily.php?date="+thisDay;
-    }
+    }, events:{
+          "2016-03-28":{"class": "logged"},
+          "2016-03-27":{"class": "sick_leave"}
+      }
   });
 });
 </script>
