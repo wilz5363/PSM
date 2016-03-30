@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-15T18:13:37Z" />
+<meta name="doctitle" content="Oracle&reg; Real Application Clusters Installation Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10818-02" />
+<meta name="docid" content="RIWIN" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="chklist.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dbcacrea.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10818.pdf" title="PDF version" type="application/pdf" />
+<title>Installing Oracle Database 11g with Oracle Real Application Clusters</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Real Application Clusters Installation Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10818-02</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="chklist.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="dbcacrea.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10818.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIHHEHBF" name="CIHHEHBF"></a><a id="RIWIN1007" name="RIWIN1007"></a>
+<h1 class="chapter"><span class="secnum">2</span> Installing Oracle Database 11<span class="italic">g</span> with Oracle Real Application Clusters</h1>
+<p>This chapter describes phase two of the installation procedures for installing Oracle Database 11<span class="italic">g</span> release 2 (11.2) with Oracle Real Application Clusters (Oracle RAC). Phase one is the completion of installing Oracle Clusterware, as described in <a class="olink CWWIN" href="../../install.112/e10817/toc.htm"><span class="italic">Oracle Grid Infrastructure Installation Guide for Microsoft Windows</span></a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a> for additional information, such as how to open compressed installation files, and other information about setting up files for installation
+<p>Also, during installation, click <span class="bold">Help</span> to find explanations of options and prompts for each installation screen, and <a id="sthref134" name="sthref134"></a><a id="sthref135" name="sthref135"></a>click <span class="bold">Details</span> to see the log file</p>
+</div>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDCEHD">Reviewing Oracle Application Express Requirements</a></p>
+</li>
+<li>
+<p><a href="#CHDFGECG">Selecting an Installation Type</a></p>
+</li>
+<li>
+<p><a href="#BABJGBHB">Selecting an Installation Option</a></p>
+</li>
+<li>
+<p><a href="#BABIFABA">Oracle Database Configuration Type Descriptions</a></p>
+</li>
+<li>
+<p><a href="#CIHJFGIB">Oracle Database Vault Option</a></p>
+</li>
+<li>
+<p><a href="#BABCHHHB">Oracle Configuration Manager Option</a></p>
+</li>
+<li>
+<p><a href="#CIHBJJBD">Selecting a Database Name</a></p>
+</li>
+<li>
+<p><a href="#BABDABHF">Selecting Database Passwords</a></p>
+</li>
+<li>
+<p><a href="#BABDFHFD">Database Security Options</a></p>
+</li>
+<li>
+<p><a href="#i1053175">Actions of OUI and DBCA During Installation</a></p>
+</li>
+<li>
+<p><a href="#BABHBHEE">Installing Oracle Database with Other Languages</a></p>
+</li>
+<li>
+<p><a href="#CIHEGEBC">Installing Oracle Database Vault</a></p>
+</li>
+<li>
+<p><a href="#BABDICEI">Using Oracle Universal Installer to Install Oracle RAC</a></p>
+</li>
+</ul>
+<a id="CHDDCEHD" name="CHDDCEHD"></a><a id="RIWIN1008" name="RIWIN1008"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.1</span> Reviewing Oracle Application Express Requirements<a id="sthref136" name="sthref136"></a></h2>
+<p>With the Oracle Database 11<span class="italic">g</span> release, Oracle Application Express is provided as an Oracle Database option, rather than as an Oracle Application option. If you intend to install Oracle Database after installing Oracle Clusterware, and you have an existing Oracle Database installation that you are upgrading, then review the Oracle Application Express requirements in <a class="olink HTMIG" href="../../install.112/e13366/toc.htm"><span class="italic">Oracle Application Express Installation Guide</span></a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDFGECG" name="CHDFGECG"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.2</span> Selecting an Installation Type</h2>
+<p><a id="sthref137" name="sthref137"></a>When you run OUI, you can select the <span class="bold">Typical</span> or the <span class="bold">Advanced</span> Install type.</p>
+<p>The <a id="sthref138" name="sthref138"></a>Typical install type installs a default configuration of Oracle Database, with basic configuration choices. Oracle recommends that most users select Typical as their installation type.</p>
+<p>The <a id="sthref139" name="sthref139"></a>Advanced installation type is for customized installations, and should be used only when you have a specific requirement for it, such as adding specific components to your installation, requiring different passwords for the SYS, SYSMAN, SYSTEM and DBSNMP accounts, using a different database character set than is in use on your servers, changing product languages, or other nonstandard configurations.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABJGBHB" name="BABJGBHB"></a><a id="RIWIN1009" name="RIWIN1009"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.3</span> Selecting an Installation Option</h2>
+<p>This section describes Oracle Universal Installer (OUI) features that you should understand before beginning the Oracle RAC installation process.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="cvrt2rac.htm#BABBAHCH">Appendix C, " Converting to Oracle Real Application Clusters from Single-Instance Oracle Databases"</a> for information about how to convert single-instance databases to Oracle RAC</div>
+<p>On the Select Installation Option page, you are given the following options:</p>
+<ul>
+<li>
+<p>Create and Configure a Database: Provides you with the option to create a database using a preconfigured database template designed for particular system load demands, such as an online transaction processing (OLTP) database, or a decision support or data warehouse database.</p>
+<p>If you select the Oracle Automatic Storage Management option for storage, then you must have installed Oracle Automatic Storage Management (Oracle ASM) as part of the Grid Infrastructure installation. If you did not select Oracle ASM as the storage option for the Oracle Clusterware files, then you must first use Oracle ASM Configuration Assistant (ASMCA) from the Grid home to configure Oracle ASM, create an Oracle ASM instance, and create a disk group to use for your Oracle Database storage.</p>
+</li>
+<li>
+<p>Install database software only: Installs Oracle Database software; you must complete database configuration later.</p>
+</li>
+<li>
+<p>Upgrade an existing database: Upgrades an existing database to Oracle Database 11<span class="italic">g</span> Release 2 (11.2).</p>
+</li>
+</ul>
+<p>If you are installing Oracle Database software, then Oracle recommends that you use one of the preconfigured database options, or select the <span class="bold">Advanced</span> option on the Select Configuration page, and configure a customized starter database. See <a href="#BABIFABA">"Oracle Database Configuration Type Descriptions"</a> for more information about the different preconfigured database options.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+If you have an existing <a id="sthref140" name="sthref140"></a><a id="sthref141" name="sthref141"></a><a id="sthref142" name="sthref142"></a>Oracle installation, then document version numbers, patches, and other configuration information, and review upgrade procedures for your existing installation. Review <a class="olink UPGRD" href="http://www.oracle.com/pls/db112/lookup?id=UPGRD"><span class="italic">Oracle Database Upgrade Guide</span></a> before proceeding with installation, to decide how you want to proceed.
+<p>For late-breaking updates and best practices about pre-upgrade, post-upgrade steps, compatibility, and interoperability discussions, refer to "Oracle Upgrade Companion." The "Oracle Upgrade Companion" is available through Note 785351.1 on My Oracle Support:</p>
+<p><code><a href="https://support.oracle.com/">https://support.oracle.com/</a></code></p>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABIFABA" name="BABIFABA"></a><a id="RIWIN1010" name="RIWIN1010"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.4</span> Oracle Database Configuration Type Descriptions</h2>
+<p><a id="sthref143" name="sthref143"></a>When you run OUI, you can select the <a id="sthref144" name="sthref144"></a><span class="bold">General Purpose</span>/<span class="bold">Transaction Processing<a id="sthref145" name="sthref145"></a></span>, <span class="bold">Data Warehouse</span>, <a id="sthref146" name="sthref146"></a>or <a id="sthref147" name="sthref147"></a><a id="sthref148" name="sthref148"></a><span class="bold">Advanced</span> database configuration type.</p>
+<p>For the first three configuration types, you can complete additional procedures that are described later in this chapter. If you select Advanced configuration, then you can use Database Configuration Assistant (DBCA) to create the database as described in <a href="dbcacrea.htm#BGBIJGDA">Chapter 3, "Creating Oracle Real Application Clusters Databases with Database Configuration Assistant"</a>. Oracle recommends that you use DBCA to create your database.</p>
+<a id="i1053140" name="i1053140"></a><a id="RIWIN1011" name="RIWIN1011"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">2.4.1</span> General Purpose and Transaction Processing, and Data Warehouse Configuration Types</h3>
+<p><a id="sthref149" name="sthref149"></a>The General Purpose and Transaction Processing type and the Data Warehouse configuration type use preconfigured database templates optimized for each type of database.</p>
+<p>During installation, if you select one of the preconfigured database templates, then OUI starts Oracle Network Configuration Assistant (NETCA) and DBCA, and installs the preconfigured database without further input. During database installation, OUI displays a progress indicator.</p>
+<p>DBCA processing for these two configuration types creates a starter database, and configures the Oracle network services.</p>
+<p>If you select Advanced configuration, then you must enter specific information as described in the next section.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1053162" name="i1053162"></a><a id="RIWIN1012" name="RIWIN1012"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">2.4.2</span> Using the Advanced Database Configuration Type</h3>
+<p>Use the Advanced database configuration type to address specific requirements, such as selecting specific components to add or remove from the installation, creating a database in a nondefault character set, or adding translation of product user interface into languages other than English. By default, the installation configures the character set of a new database based on the language of the operating system.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NLSPG" href="http://www.oracle.com/pls/db112/lookup?id=NLSPG"><span class="italic">Oracle Database Globalization Support Guide</span></a> for detailed information on character sets and language configuration<a id="sthref150" name="sthref150"></a><a id="sthref151" name="sthref151"></a><a id="sthref152" name="sthref152"></a></div>
+<p>The following sections provides more detail about OUI and DBCA processing when creating an Oracle RAC database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a> for information about configuring globalization</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABHBHEE" name="BABHBHEE"></a><a id="RIWIN1013" name="RIWIN1013"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">2.4.3</span> Installing Oracle Database with Other Languages</h3>
+<p>If you want to use languages other than the default (English), either for the database or for applications running on the database, then you must use the Advanced Installation method.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NLSPG" href="http://www.oracle.com/pls/db112/lookup?id=NLSPG"><span class="italic">Oracle Database Globalization Support Guide</span></a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHJFGIB" name="CIHJFGIB"></a><a id="RIWIN1014" name="RIWIN1014"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.5</span> Oracle Database Vault Option<a id="sthref153" name="sthref153"></a><a id="sthref154" name="sthref154"></a></h2>
+<p>Oracle Database Vault requires the following:</p>
+<ul>
+<li>
+<p>An Oracle Database Enterprise Edition installation (cannot be used with Oracle Standard Edition)</p>
+</li>
+<li>
+<p>Setting the initialization parameter <code>db_block_size</code> for the database to 4096 or higher. You can specify the initial value for this parameter during installation.</p>
+</li>
+<li>
+<p>Oracle Enterprise Manager Console</p>
+</li>
+<li>
+<p>Oracle Clusterware</p>
+</li>
+<li>
+<p>The password file authentication parameter, <code>REMOTE_LOGIN_PASSWORDFILE</code>, must have been set to <code>EXCLUSIVE</code> or <code>SHARED</code> for the database. You can specify the initial value for this parameter during installation, or in the Oracle Database initialization file.</p>
+<p>To create and manage password files, use the <code>orapwd</code> utility.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink ADMIN" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN"><span class="italic">Oracle Database Administrator's Guide</span></a> for more information on creating and maintaining a password file</div>
+</li>
+</ul>
+<p><a id="sthref155" name="sthref155"></a>You can install Oracle Database Vault more than once on the same system, in different Oracle homes.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABCHHHB" name="BABCHHHB"></a><a id="RIWIN1015" name="RIWIN1015"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.6</span> Oracle Configuration Manager Option<a id="sthref156" name="sthref156"></a><a id="sthref157" name="sthref157"></a></h2>
+<p>During installation, you are prompted to provide information needed to enable Oracle Configuration Manager. This option enables you to associate information about your Oracle RAC configuration with your My Oracle Support (formerly Oracle<span class="italic">Metalink</span>) account. In the event that you need to place a service request with Oracle Support, that configuration information can help to provide a more rapid resolution to the service issue.</p>
+<p>You can enable Oracle Configuration Manager during or after installation, or choose not to enable it. To enable it during installation, you must have the following information available from your Oracle Support service agreement:</p>
+<ul>
+<li>
+<p>Customer Support Identification Number (CSI) that identifies your organization</p>
+</li>
+<li>
+<p>My Oracle Support e-mail address/username</p>
+</li>
+<li>
+<p>Password</p>
+</li>
+<li>
+<p>Name of the country associated with your company</p>
+</li>
+</ul>
+<p>In addition, you are prompted for server proxy information, if the host system does not have a direct connection to the Internet.</p>
+<p>Refer to My Oracle Support (<code><a href="https://support.oracle.com">https://support.oracle.com</a></code>) if you encounter registration failures and are uncertain that the correct country code has been specified. You can find the country associated with your My Oracle Support account by selecting the menu option <span class="bold">More</span>, then selecting <span class="bold">Settings</span>. In the Settings menu, select <span class="bold">Accounts &amp; Privileges</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink CCRIA" href="http://www.oracle.com/pls/db112/lookup?id=CCRIA"><span class="italic">Oracle Configuration Manager Installation and Administration Guide</span></a> for further information</div>
+</div>
+<!-- class="sect1" -->
+<a id="CIHBJJBD" name="CIHBJJBD"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.7</span> Selecting a Database Name</h2>
+<p><a id="sthref158" name="sthref158"></a><a id="sthref159" name="sthref159"></a><a id="sthref160" name="sthref160"></a><a id="sthref161" name="sthref161"></a>The global database name can be up to 30 characters in length, and must begin with an alphabetic character. The domain portion of the global database name can be no more than 128 characters and can contain only the characters a-z, A-Z, 0-9, the dash or minus sign (-), or a period (.). Domain names using underscores (_) are not allowed.</p>
+<p>The system identifier (SID) for each database must begin with an alphabetic character, and is limited by the installer to 12 alphanumeric characters in length. For Oracle RAC databases, the SID prefix, which is the first 8 characters of the SID, must be unique for each database. The SID and SID prefix can only contain alphanumeric characters and cannot contain underscore (_), dollar ($), and pound (#) characters.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABDABHF" name="BABDABHF"></a><a id="RIWIN1017" name="RIWIN1017"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.8</span> Selecting Database Passwords<a id="sthref162" name="sthref162"></a><a id="sthref163" name="sthref163"></a><a id="sthref164" name="sthref164"></a><a id="sthref165" name="sthref165"></a><a id="sthref166" name="sthref166"></a><a id="sthref167" name="sthref167"></a></h2>
+<p>Apply the following guidelines when specifying passwords:</p>
+<ul>
+<li>
+<p>Passwords must be between 8 and 30 characters long.</p>
+</li>
+<li>
+<p>Passwords must be from the ASCII character set.</p>
+</li>
+<li>
+<p>Passwords must not start with a numeral.</p>
+</li>
+<li>
+<p>Passwords must not be the same as the user name.</p>
+</li>
+<li>
+<p>Passwords must not be Oracle reserved words.</p>
+</li>
+<li>
+<p>The <code>SYS</code> account password must not be <code>change_on_install</code>.</p>
+</li>
+<li>
+<p>The <code>SYSTEM</code> account password must not be <code>manager</code>.</p>
+</li>
+<li>
+<p>The <code>SYSMAN</code> account password must not be <code>sysman</code>.</p>
+</li>
+<li>
+<p>The <code>DBSNMP</code> account password must not be <code>dbsnmp</code>.</p>
+</li>
+<li>
+<p>If you choose to use the same password for all the accounts, then that password must not be <code>change_on_install</code>, <code>manager</code>, <code>sysman</code>, or <code>dbsnmp</code>.</p>
+</li>
+<li>
+<p>Passwords should have at least 1 alphabetic, 1 numeric, and 1 punctuation mark character</p>
+</li>
+<li>
+<p>Passwords should not be simple or obvious words, such as welcome, account, database, oracle, or user.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABDFHFD" name="BABDFHFD"></a><a id="RIWIN1016" name="RIWIN1016"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.9</span> Database Security Options<a id="sthref168" name="sthref168"></a><a id="sthref169" name="sthref169"></a></h2>
+<p><a id="sthref170" name="sthref170"></a>During installation, you are prompted to select a database security configuration.The Secure Configuration option configures the database with database auditing options, and password policy and expiration settings.</p>
+<p>For new database installations, the default configuration for Oracle Database 11<span class="italic">g</span> release 2 (11.2) includes the Secure Configuration option. If you want to disable these enhanced security controls, then you can check the <span class="bold">Disable security settings</span> box. Oracle Database is then installed with default security options for Oracle Database 10<span class="italic">g</span> release 2. After installation, you can change security settings by starting DBCA and modifying the security settings. You can enable or disable auditing or password security settings, or revert to a previous security setting.</p>
+<p>For database upgrades, the upgraded database retains your existing database security configuration to ensure compatibility with existing applications. After installation, you can use DBCA to enable or disable the Secure Configuration auditing or password security settings for testing.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle strongly recommends configuring your database with the Secure Configuration option either during installation, or after installation using command line DBCA.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink LADBI003" href="http://www.oracle.com/pls/db112/lookup?id=LADBI003"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a> for more information about enabling and disabling the database security option</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1053175" name="i1053175"></a><a id="RIWIN00003" name="RIWIN00003"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.10</span> Actions of OUI and DBCA During Installation</h2>
+<p>After installing the Oracle Database software, OUI runs DBCA to create your database, in accordance with Optimal Flexible Architecture (OFA) guidelines<a id="sthref171" name="sthref171"></a><a id="sthref172" name="sthref172"></a>. An installation created following OFA guidelines means that DBCA creates your database files, including the default server parameter file (SPFILE), using standard file naming and file placement practices.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+<a id="sthref173" name="sthref173"></a><a id="sthref174" name="sthref174"></a>Oracle Net Configuration Assistant (NetCA) is run as part of an Oracle Grid Infrastructure installation.</div>
+<p><a id="sthref175" name="sthref175"></a><a id="sthref176" name="sthref176"></a>The primary phases of DBCA processing are the following:</p>
+<ul>
+<li>
+<p>Create the database.</p>
+</li>
+<li>
+<p>Configure the Oracle network services, if necessary.</p>
+</li>
+<li>
+<p>Start the listeners and database instances.</p>
+</li>
+</ul>
+<p>You can also use DBCA in standalone mode to create or delete a database, or to switch database management from Oracle Enterprise Manager Database Control to Oracle Enterprise Manager Grid Control.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NETAG" href="http://www.oracle.com/pls/db112/lookup?id=NETAG"><span class="italic">Oracle Database Net Services Administrator's Guide</span></a> if you experience problems (for example, with the listener configuration), and for further information about Lightweight Directory Access Protocol (LDAP) support</div>
+<a id="RIWIN1018" name="RIWIN1018"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref177" name="sthref177"></a>
+<h3 class="sect2"><span class="secnum">2.10.1</span> Managing Database Services After Installation</h3>
+<p><a id="sthref178" name="sthref178"></a>Note that with Oracle Database 11<span class="italic">g</span> release 1 (11.1) and later releases, you can no longer manage database services for Oracle RAC databases using DBCA. You must use <code>srvctl</code>, Oracle Enterprise Manager DB Control or Enterprise Manager Grid Control for all administration and monitoring of database services for an Oracle RAC database. <a id="sthref179" name="sthref179"></a></p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink TDPRC307" href="http://www.oracle.com/pls/db112/lookup?id=TDPRC307"><span class="italic">Oracle Database 2 Day + Real Application Clusters Guide</span></a> for service management using Oracle Enterprise Manager</div>
+</div>
+<!-- class="sect2" -->
+<a id="RIWIN1019" name="RIWIN1019"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref180" name="sthref180"></a>
+<h3 class="sect2"><span class="secnum">2.10.2</span> Installing Older NLS Compatibility Definition Files</h3>
+<p><a id="sthref181" name="sthref181"></a><a id="sthref182" name="sthref182"></a>In Oracle Database 10<span class="italic">g</span> and later releases, some database language and territory definition files have been updated to better reflect locale conventions used in associated locales.</p>
+<p>If the resulting changes in default NLS parameter values render your existing applications, inoperative, then you can revert the changes by installing Oracle9<span class="italic">i</span> compatibility definition files. To install Oracle9<span class="italic">i</span> files in place of Oracle11<span class="italic">g</span> files, you must run OUI from a command line, as described in <a href="#BABDICEI">"Using Oracle Universal Installer to Install Oracle RAC"</a>, and use the following statement to set the <code>b_cr9idata</code> variable to <code>true</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">setup.exe oracle.rsf.nlsrtl_rsf:b_cr9idata=true
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NLSPG" href="http://www.oracle.com/pls/db112/lookup?id=NLSPG"><span class="italic">Oracle Database Globalization Support Guide</span></a> for additional information about updates to the Oracle Database language and territory definition files</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHEGEBC" name="CIHEGEBC"></a><a id="RIWIN1022" name="RIWIN1022"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.11</span> Installing Oracle Database Vault</h2>
+<p>To install Oracle Database Vault, you must select the Advanced installation option for Oracle Database Enterprise Edition. After the Oracle Database Vault software has been installed, you configure Oracle Database Vault using DBCA. Oracle Database Vault is not configured by default.</p>
+<p>To install Oracle Database Vault while installing Oracle RAC:</p>
+<ol>
+<li>
+<p>Start Oracle Universal Installer, and select <span class="bold">Advanced installation</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Enterprise Edition</span>, and then select <span class="bold">Options</span>.</p>
+</li>
+<li>
+<p>In addition to the default installation components, select <span class="bold">Oracle Label Security (OLS)</span> and <span class="bold">Oracle Database Vault</span>.</p>
+</li>
+<li>
+<p>Continue the rest of the installation process as you normally would.</p>
+</li>
+</ol>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You must set the database initialization parameter <code>db_block_size</code> to 4096 or higher. You can configure this parameter during installation of Oracle RAC.</div>
+<p>After you have installed Oracle RAC with the Oracle Database Vault option you must complete the configuration of Oracle Database Vault, as described in the <a class="olink DVADM" href="http://www.oracle.com/pls/db112/lookup?id=DVADM"><span class="italic">Oracle Database Vault Administrator's Guide</span></a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABDICEI" name="BABDICEI"></a><a id="RIWIN1023" name="RIWIN1023"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">2.12</span> Using Oracle Universal Installer to Install Oracle RAC</h2>
+<p>Perform the following procedures to install the Oracle Database 11<span class="italic">g</span> release 2 (11.2) software with Oracle RAC using Oracle Universal Installer (OUI):</p>
+<ol>
+<li>
+<p>Login to Windows as a user with Administrative privileges.</p>
+</li>
+<li>
+<p>Verify that you have administrative privileges on the other nodes. To do this, enter the following command for each node that is a part of the cluster where <span class="italic">node_name</span> is the name of the remote node:</p>
+<pre xml:space="preserve" class="oac_no_warn">net use \\<span class="italic">node_name</span>\C$
+</pre></li>
+<li>
+<p>Start the <code>setup.exe</code> command from the base directory of the Oracle Database 11<span class="italic">g</span> release 2 (11.2) installation media, and select the database type that you want to install.</p>
+</li>
+<li>
+<p>Provide information when prompted by OUI. If you need assistance during installation, then click <span class="bold">Help</span>. If you encounter problems during installation, then click <span class="bold">Details</span> to see the log file. The log file can also be found in the Oracle Inventory directory with a name that includes the timestamp (<code><span class="codeinlineitalic">date_time</span></code>) of the install process, as shown in this example:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\Program Files\Oracle\Inventory\logs\installActions<span class="italic">date_time</span>.log 
+</pre>
+<p>In the preceding syntax example, the variables <code><span class="codeinlineitalic">date</span></code> and <code><span class="codeinlineitalic">time</span></code> represents the date and the time of the log file.</p>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+The Oracle home name and path that you provide during database installation <span class="italic">must be</span> <span class="italic">different</span> from the home that you used during Oracle Grid Infrastructure installation. <span class="bold">Do not</span> install Oracle Database 11<span class="italic">g</span> with Oracle RAC software into the same home in which you installed Oracle Grid Infrastructure software.
+<p>If you are <a id="sthref183" name="sthref183"></a>upgrading a database, then you must use the same type of Oracle home. For example, you should not change from local Oracle homes to a shared Oracle home.</p>
+<p>Note that because Oracle ASM is part of the Grid Infrastructure home, it cannot be upgraded during an Oracle RAC installation.</p>
+</div>
+</li>
+</ol>
+<p>When you have completed the second and final phase of the installation, proceed to <a href="postinst.htm#BABHHEHG">Chapter 4, "Oracle Real Application Clusters Postinstallation Procedures"</a> to perform the postinstallation tasks.</p>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+After installation is completed and you have created the database, if you decide that you want to install additional Oracle Database 11<span class="italic">g</span> release 2 (11.2) products in the database, then you must stop <span class="italic">all</span> processes running in the Oracle home before you attempt to install the additional products. For the Oracle Universal Installer to relink certain executables and libraries, all database processes must be stopped. Refer to <a href="procstop.htm#BABEHGJG">Appendix E, "How to Stop Processes in an Existing Oracle Real Application Clusters Database"</a> for additional information.</div>
+<p>The following is a list of additional information to note about installation:</p>
+<ul>
+<li>
+<p>On the Select Database Management Option page, if you have already completed the Grid Control Management Agent installation, then you can select either Grid or Local Database control. Otherwise, only Local Database control for database management is supported for Oracle RAC. When you use the local Database Control, you can choose the e-mail option for alerts and enter the outgoing SMTP server name and e-mail address.</p>
+<p>If you perform an installation that does not include Oracle Enterprise Manager (for example, a customized software install without Oracle Enterprise Manager, an installation with no Oracle Enterprise Manager configuration, or a database creation with your own scripts), then you can configure Oracle Enterprise Manager later using OUI, DBCA, or the Oracle Enterprise Manager Configuration Assistant (EMCA) utility.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="chklist.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="dbcacrea.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

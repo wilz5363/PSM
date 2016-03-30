@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-15T18:13:37Z" />
+<meta name="doctitle" content="Oracle&reg; Real Application Clusters Installation Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10818-02" />
+<meta name="docid" content="RIWIN" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="rem_orcl.htm" title="Previous" type="text/html" />
+<link rel="Next" href="scripts.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10818.pdf" title="PDF version" type="application/pdf" />
+<title>Troubleshooting the Oracle Real Application Clusters Installation</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Real Application Clusters Installation Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10818-02</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="rem_orcl.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="scripts.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10818.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIACEGFJ" name="CIACEGFJ"></a><a id="RIWIN1076" name="RIWIN1076"></a>
+<h1 class="appendix"><span class="secnum">A</span> Troubleshooting the Oracle Real Application Clusters Installation</h1>
+<p>This appendix provides troubleshooting information for installing Oracle Real Application Clusters (Oracle RAC).</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+The Oracle Database 11<span class="italic">g</span> release 2 (11.2) Oracle Real Application Clusters documentation set included with the installation media in the Documentation directory:
+<ul>
+<li>
+<p><a class="olink RACAD" href="http://www.oracle.com/pls/db112/lookup?id=RACAD"><span class="italic">Oracle Real Application Clusters Administration and Deployment Guide</span></a></p>
+</li>
+<li>
+<p><a class="olink CWADD" href="http://www.oracle.com/pls/db112/lookup?id=CWADD"><span class="italic">Oracle Clusterware Administration and Deployment Guide</span></a></p>
+</li>
+</ul>
+</div>
+<p>This appendix contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABDAIHD">General Installation Issues</a></p>
+</li>
+<li>
+<p><a href="#BABFHJEI">Oracle RAC Installation Error Messages</a></p>
+</li>
+<li>
+<p><a href="#BABJCHEH">Performing Cluster Diagnostics During Oracle RAC Installations</a></p>
+</li>
+<li>
+<p><a href="#BABJCEBJ">Resolving Oracle RAC Installation Errors</a></p>
+</li>
+<li>
+<p><a href="#BABCACHH">Troubleshooting Configuration Assistant Errors</a></p>
+</li>
+<li>
+<p><a href="#BABEIJHF">Silent or Noninteractive Installation Response File Error Handling</a></p>
+</li>
+<li>
+<p><a href="#BABEFEBI">"Cleaning Up After a Failed Installation"</a></p>
+</li>
+</ul>
+<a id="BABDAIHD" name="BABDAIHD"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.1</span> General Installation Issues</h2>
+<p>The following is a list of examples of types of errors that can occur during installation. It contains the following issues:</p>
+<ul>
+<li>
+<p><a href="#BABGGDFG">Nodes unavailable for selection from the OUI Node Selection screen</a></p>
+</li>
+<li>
+<p><a href="#BABBBDJA">Node <span class="italic">nodename</span> is unreachable</a></p>
+</li>
+<li>
+<p><a href="#BABIBIHF">Time stamp is in the future</a></p>
+</li>
+<li>
+<p><a href="#BABCGEEG">Administrative user unable to log in to SQL*Plus using the SYSDBA role</a></p>
+</li>
+</ul>
+<div class="msgset"><a id="BABGGDFG" name="BABGGDFG"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref401" name="sthref401"></a>Nodes unavailable for selection from the OUI Node Selection screen<a id="sthref402" name="sthref402"></a></span> <!-- class="msg" --></dt>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Oracle Clusterware is either not installed, or the Oracle Clusterware services are not up and running.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Install Oracle Clusterware, or review the status of your Oracle Clusterware. Consider restarting the nodes, as doing so may resolve the problem.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="BABBBDJA" name="BABBBDJA"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref403" name="sthref403"></a>Node <span class="italic">nodename</span> is unreachable<a id="sthref404" name="sthref404"></a></span> <!-- class="msg" --></dt>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unavailable IP host</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Attempt the following:
+<ol>
+<li>
+<p>Run the command <code>ipconfig /all</code>. Compare the output of this command with the contents of the <code>C:\WINDOWS\system32\drivers\etc\hosts</code> file to ensure that the node IP is listed.</p>
+</li>
+<li>
+<p>Run the command <code>nslookup</code> to see if the host is reachable.</p>
+</li>
+</ol>
+</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="BABIBIHF" name="BABIBIHF"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref405" name="sthref405"></a>Time stamp is in the future<a id="sthref406" name="sthref406"></a></span> <!-- class="msg" --></dt>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more nodes has a different clock time than the local node. If this is the case, then you may see output similar to the following:
+<pre xml:space="preserve" class="oac_no_warn">time stamp 2019-04-04 14:49:49 is 106 s in the future
+</pre></div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Ensure that all member nodes of the cluster have the same clock time.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="BABCGEEG" name="BABCGEEG"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref407" name="sthref407"></a>Administrative user unable to log in to SQL*Plus using the SYSDBA role</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> When you install Oracle Database on Microsoft Windows, Oracle Universal Installer creates a Windows local group called <code>ORA_DBA</code>, and then adds your Windows username to it. Members of <code>ORA_DBA</code> automatically receive the SYSDBA privilege. However, for cluster installations, Oracle Universal Installer does not add the user to <code>ORA_DBA</code> if they have performed the installation remotely. As a result, this user cannot log in to SQL*Plus using the SYSDBA role</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Manually add remote users to <code>ORA_DBA</code>.
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink ADMIN00102" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN00102"><span class="italic">Oracle Database Administrator's Guide</span></a> for information about connecting to the database using SQL*Plus</div>
+</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect1" -->
+<a id="BABFHJEI" name="BABFHJEI"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.2</span> Oracle RAC Installation Error Messages</h2>
+<p><a id="sthref408" name="sthref408"></a><a id="sthref409" name="sthref409"></a>Oracle Real Application Clusters Management Tools Error Messages are in <span class="italic">Oracle Real Application Clusters Administration and Deployment Guide</span>.</p>
+<p>Note that the user performing the Oracle RAC installation must have Administrator privileges or the installation will fail</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABJCHEH" name="BABJCHEH"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.3</span> Performing Cluster Diagnostics During Oracle RAC Installations<a id="sthref410" name="sthref410"></a></h2>
+<p>When installing Oracle RAC, if Oracle Universal Installer (OUI) does not display the Node Selection page, then perform <a id="sthref411" name="sthref411"></a><a id="sthref412" name="sthref412"></a>clusterware diagnostics by running the <code><a id="sthref413" name="sthref413"></a>olsnodes</code> <code>-v</code> command from the binary directory in your Oracle Clusterware home <span class="italic">CRS_home</span><code>\bin</code>) and analyzing its output. Refer to Oracle Clusterware documentation if the detailed output indicates that your clusterware is not running.</p>
+<p>In addition, use the following command syntax to check the integrity of the Cluster Manager:</p>
+<pre xml:space="preserve" class="oac_no_warn">cluvfy comp clumgr -n <span class="italic">node_list</span> -verbose
+</pre>
+<p>In the preceding syntax example, the variable <code><span class="codeinlineitalic">node_list</span></code> is the list of nodes in your cluster, separated by commas.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABJCEBJ" name="BABJCEBJ"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.4</span> Resolving Oracle RAC Installation Errors</h2>
+<p>This section provides information on how to proceed if you encounter an error during installation of Oracle RAC.</p>
+<div class="sect2"><a id="sthref414" name="sthref414"></a>
+<h3 class="sect2"><span class="secnum">A.4.1</span> Verifying Requirements</h3>
+<p>Before you try any of the troubleshooting steps in this appendix, do the following:</p>
+<ul>
+<li>
+<p>Check <a href="chklist.htm#CHDDGACA">Chapter 1, "Preinstallation Checklist"</a> to make sure that your system meets the requirements and that you have completed all of the preinstallation tasks.</p>
+</li>
+<li>
+<p>Read the release notes for the product on your platform before installing it. The release notes are available on the Oracle Database installation media. You can find the latest version of the release notes on the Oracle Technology Network Web site:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://www.oracle.com/technology/documentation/index.html">http://www.oracle.com/technology/documentation/index.html</a>
+</pre></li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref415" name="sthref415"></a>
+<h3 class="sect2"><span class="secnum">A.4.2</span> Resolving Installation Errors</h3>
+<p>If you encounter an error during installation:</p>
+<ul>
+<li>
+<p>Do not exit Oracle Universal Installer.</p>
+</li>
+<li>
+<p>If you clicked <span class="bold">Next</span> after you entered incorrect information about one of the installation windows, then click <span class="bold">Back</span> to return to the window and correct the information.</p>
+</li>
+<li>
+<p>If you encounter an error while Oracle Universal Installer is copying or linking files, then see <a href="#BABFIHIH">"Reviewing the Log of an Installation Session"</a> for interactive installations or <a href="#BABEIJHF">"Silent or Noninteractive Installation Response File Error Handling"</a> for more information.</p>
+</li>
+<li>
+<p>If you encounter an error while a configuration assistant is running, then see the <a href="#BABCACHH">"Troubleshooting Configuration Assistant Errors"</a> section.</p>
+</li>
+<li>
+<p>If you cannot resolve the problem, then remove the failed installation by following the steps listed in <a href="#BABEFEBI">"Cleaning Up After a Failed Installation"</a>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABFIHIH" name="BABFIHIH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">A.4.3</span> Reviewing the Log of an Installation Session<a id="sthref416" name="sthref416"></a><a id="sthref417" name="sthref417"></a><a id="sthref418" name="sthref418"></a></h3>
+<p>During an installation, Oracle Universal Installer records all the actions that it performs in a log file. If you encounter problems during the installation, then review the log file for information about possible causes of the problem.</p>
+<p>By default, the log files are located in the following directory:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">SYSTEM_DRIVE</span>:\&gt; Program Files\Oracle\Inventory\logs
+</pre>
+<p>Log filenames from interactive installations take the form:<a id="sthref419" name="sthref419"></a></p>
+<pre xml:space="preserve" class="oac_no_warn">installActions<span class="italic">date_time</span>.log
+</pre>
+<p>For example, if an interactive installation occurred at 9:00:56 a.m. on October 14, 2009, then the log file would be named:</p>
+<pre xml:space="preserve" class="oac_no_warn">installActions2009-10-14_09-00-56AM.log
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Do not delete or manually alter the <code>Inventory</code> directory or its contents. Doing so can prevent Oracle Universal Installer from locating products that you install on your system.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#BABEIJHF">"Silent or Noninteractive Installation Response File Error Handling"</a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCACHH" name="BABCACHH"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.5</span> Troubleshooting Configuration Assistant Errors<a id="sthref420" name="sthref420"></a><a id="sthref421" name="sthref421"></a></h2>
+<p>To troubleshoot an installation error that occurs when a configuration assistant is running, do the following:</p>
+<ul>
+<li>
+<p>Review the installation log files listed in the section <a href="#BABFIHIH">"Reviewing the Log of an Installation Session"</a>.</p>
+</li>
+<li>
+<p>Review the specific configuration assistant log file located in the Oracle base directory, in the path <code>ORACLE_BASE\cfgtoollogs</code>. Try to fix the issue that caused the error.</p>
+</li>
+<li>
+<p>If you see the "Fatal Error. Reinstall" message, then look for the cause of the problem by reviewing the log files. Refer to the section <a href="#BABBFFBA">"Fatal Errors Reported by Configuration Assistants"</a> for further instructions.</p>
+</li>
+</ul>
+<div class="sect2"><a id="sthref422" name="sthref422"></a>
+<h3 class="sect2"><span class="secnum">A.5.1</span> Configuration Assistant Failures</h3>
+<p><a id="sthref423" name="sthref423"></a>If an Oracle configuration assistant is not able to complete its configuration tasks, then it reports a status of 'Failed'. Oracle configuration assistant failures are noted at the bottom of the installation screen. The configuration assistant interface displays additional information, if available.</p>
+<p>The configuration assistant execution status is stored in the following file:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\Program Files\Oracle\Inventory\logs\installActions<span class="italic">date</span>_<span class="italic">time</span>.log
+</pre>
+<p>More details on errors related to the configuration assistant can be found in the following directory:</p>
+<pre xml:space="preserve" class="oac_no_warn">ORACLE_BASE\cfgtoollogs
+</pre>
+<p>The <code>ORACLE_BASE</code> directory is the Oracle base for the Oracle RAC installation. Completion status codes are listed in the following table:</p>
+<div class="inftblinformal">
+<table class="Informal" title="Configuration Assistant Status Codes" summary="Table of configuration assistant status codes" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="41%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Status</th>
+<th align="left" valign="bottom" id="r1c2-t6">Result Code</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">Configuration assistant succeeded</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">0</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">Configuration assistant failed</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">1</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">Configuration assistant cancelled</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">-1</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="BABBFFBA" name="BABBFFBA"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">A.5.2</span> Fatal Errors Reported by Configuration Assistants</h3>
+<p>If you receive a fatal error while a configuration assistant is running, then you must complete the following tasks:</p>
+<ol>
+<li>
+<p>Remove the failed installation as described in the <a href="#BABEFEBI">"Cleaning Up After a Failed Installation"</a> section.</p>
+</li>
+<li>
+<p>Correct the cause of the fatal error.</p>
+</li>
+<li>
+<p>Reinstall the Oracle software.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABEIJHF" name="BABEIJHF"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.6</span> Silent or Noninteractive Installation Response File Error<a id="sthref424" name="sthref424"></a><a id="sthref425" name="sthref425"></a><a id="sthref426" name="sthref426"></a> Handling<a id="sthref427" name="sthref427"></a><a id="sthref428" name="sthref428"></a><a id="sthref429" name="sthref429"></a></h2>
+<p>To determine whether a silent or noninteractive installation succeeds or fails, check the <code>silentInstallActions</code><code><span class="codeinlineitalic">date_time</span></code><code>.log</code> file, located in <code><span class="codeinlineitalic">DRIVE_LETTER</span></code><code>:\Program Files\Oracle\Inventory\logs</code>.</p>
+<p>If necessary, see the previous section for information about determining the location of the <code>Inventory</code> directory.</p>
+<p>A silent or noninteractive installation fails if:</p>
+<ul>
+<li>
+<p>You do not specify a response file.</p>
+</li>
+<li>
+<p>You specify an incorrect or incomplete response file.</p>
+<p>For example, a common problem is that while all the product-specific data is filled out correctly, the staging area location may be incorrect. If this is the case, then check the <code>FROM_LOCATION</code> variable and make sure that it points to the <code>products.xml</code> file in the installation media. In the installation media, this <code>products.xml</code> is in <code>database\stage</code>.</p>
+</li>
+<li>
+<p>Oracle Universal Installer encounters an error, such as insufficient disk space.</p>
+</li>
+</ul>
+<p>Oracle Universal Installer or a configuration assistant validates the response file at runtime. If the validation fails, then the silent or noninteractive installation or configuration process ends. <a id="sthref430" name="sthref430"></a><a id="sthref431" name="sthref431"></a>Oracle Universal Installer treats values for parameters that are of the wrong context, format, or type as if no value was specified in the file.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#BABFIHIH">"Reviewing the Log of an Installation Session"</a> for information about interactive installation log files</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABEFEBI" name="BABEFEBI"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.7</span> Cleaning Up After a Failed Installation</h2>
+<p>If an installation fails, then you must remove the Oracle home directory and remove all files that Oracle Universal Installer (OUI) created during the attempted installation. Perform the following steps to cleanup the failed installation:</p>
+<ol>
+<li>
+<p>Follow the instructions in <a href="rem_orcl.htm#CIHBHIJH">Chapter 8, "Removing Oracle Real Application Clusters Software"</a> to run Oracle Universal Installer to deinstall Oracle RAC</p>
+</li>
+<li>
+<p>Manually remove the directory that was used as the Oracle home directory during the installation</p>
+</li>
+<li>
+<p>Remove the following Windows Registry keys created by OUI during the previous installation attempt:</p>
+<pre xml:space="preserve" class="oac_no_warn">HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Oracle11\Performance
+ \KEY_<span class="italic">ORACLE_HOME_NAME</span>
+</pre></li>
+</ol>
+<p>After you have completed these steps you can start the installation again.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="rem_orcl.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="scripts.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2007, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

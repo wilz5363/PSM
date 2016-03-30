@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE targetset SYSTEM "dcommon/dtds/targetdatabase.dtd" [
+<!ENTITY e12255 SYSTEM "em.112/e12255/target.db">
+<!ENTITY e10817 SYSTEM "install.112/e10817/target.db">
+<!ENTITY e10818 SYSTEM "install.112/e10818/target.db">
+<!ENTITY e10843 SYSTEM "install.112/e10843/target.db">
+<!ENTITY e10878 SYSTEM "install.112/e10878/target.db">
+<!ENTITY e13366 SYSTEM "install.112/e13366/target.db">
+<!ENTITY e10579 SYSTEM "owb.112/e10579/target.db">
+<!ENTITY e11015 SYSTEM "readmes.112/e11015/target.db">
+<!ENTITY e10585 SYSTEM "relnotes.112/e10585/target.db">
+<!ENTITY e10842 SYSTEM "relnotes.112/e10842/target.db">
+<!ENTITY e11944 SYSTEM "relnotes.112/e11944/target.db">
+<!ENTITY e10897 SYSTEM "server.112/e10897/target.db">
+<!ENTITY e10845 SYSTEM "win.112/e10845/target.db">
+<!ENTITY e12255 SYSTEM "em.112/e12255/target.db">
+<!ENTITY e10817 SYSTEM "install.112/e10817/target.db">
+<!ENTITY e10818 SYSTEM "install.112/e10818/target.db">
+<!ENTITY e10843 SYSTEM "install.112/e10843/target.db">
+<!ENTITY e10878 SYSTEM "install.112/e10878/target.db">
+<!ENTITY e13366 SYSTEM "install.112/e13366/target.db">
+<!ENTITY e10579 SYSTEM "owb.112/e10579/target.db">
+<!ENTITY e11015 SYSTEM "readmes.112/e11015/target.db">
+<!ENTITY e10585 SYSTEM "relnotes.112/e10585/target.db">
+<!ENTITY e10842 SYSTEM "relnotes.112/e10842/target.db">
+<!ENTITY e11944 SYSTEM "relnotes.112/e11944/target.db">
+<!ENTITY e10897 SYSTEM "server.112/e10897/target.db">
+<!ENTITY e10845 SYSTEM "win.112/e10845/target.db">
+]>
+<targetset>
+  <targetsetinfo>
+    Oracle® Database Documentation Media Library 11g Release 2 (11.2)
+  </targetsetinfo>
+  <sitemap>
+    <dir name=".">
+      <dir name="em.112">
+        <dir name="e12255">
+          <document targetdoc="OUICG" baseuri="toc.htm">&e12255;</document>
+          <document targetdoc="OUICG" baseuri="toc.htm">&e12255;</document>
+        </dir>
+      </dir>
+      <dir name="install.112">
+        <dir name="e10817">
+          <document targetdoc="CWWIN" baseuri="toc.htm">&e10817;</document>
+          <document targetdoc="CWWIN" baseuri="toc.htm">&e10817;</document>
+        </dir>
+        <dir name="e10818">
+          <document targetdoc="RIWIN" baseuri="toc.htm">&e10818;</document>
+          <document targetdoc="RIWIN" baseuri="toc.htm">&e10818;</document>
+        </dir>
+        <dir name="e10843">
+          <document targetdoc="NTDBI" baseuri="toc.htm">&e10843;</document>
+          <document targetdoc="NTDBI" baseuri="toc.htm">&e10843;</document>
+        </dir>
+        <dir name="e10878">
+          <document targetdoc="NXDQI" baseuri="toc.htm">&e10878;</document>
+          <document targetdoc="NXDQI" baseuri="toc.htm">&e10878;</document>
+        </dir>
+        <dir name="e13366">
+          <document targetdoc="HTMIG" baseuri="toc.htm">&e13366;</document>
+          <document targetdoc="HTMIG" baseuri="toc.htm">&e13366;</document>
+        </dir>
+      </dir>
+      <dir name="owb.112">
+        <dir name="e10579">
+          <document targetdoc="WBINS" baseuri="toc.htm">&e10579;</document>
+          <document targetdoc="WBINS" baseuri="toc.htm">&e10579;</document>
+        </dir>
+      </dir>
+      <dir name="readmes.112">
+        <dir name="e11015">
+          <document targetdoc="READM" baseuri="toc.htm">&e11015;</document>
+          <document targetdoc="READM" baseuri="toc.htm">&e11015;</document>
+        </dir>
+      </dir>
+      <dir name="relnotes.112">
+        <dir name="e10585">
+          <document targetdoc="WBREL" baseuri="toc.htm">&e10585;</document>
+          <document targetdoc="WBREL" baseuri="toc.htm">&e10585;</document>
+        </dir>
+        <dir name="e10842">
+          <document targetdoc="NTDBN" baseuri="toc.htm">&e10842;</document>
+          <document targetdoc="NTDBN" baseuri="toc.htm">&e10842;</document>
+        </dir>
+        <dir name="e11944">
+          <document targetdoc="HTMRN" baseuri="toc.htm">&e11944;</document>
+          <document targetdoc="HTMRN" baseuri="toc.htm">&e11944;</document>
+        </dir>
+      </dir>
+      <dir name="server.112">
+        <dir name="e10897">
+          <document targetdoc="ADMQS" baseuri="toc.htm">&e10897;</document>
+          <document targetdoc="ADMQS" baseuri="toc.htm">&e10897;</document>
+        </dir>
+      </dir>
+      <dir name="win.112">
+        <dir name="e10845">
+          <document targetdoc="NTQRF" baseuri="toc.htm">&e10845;</document>
+          <document targetdoc="NTQRF" baseuri="toc.htm">&e10845;</document>
+        </dir>
+      </dir>
+    </dir>
+  </sitemap>
+</targetset>

@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1.1 Build 026" />
+<meta name="Date" content="2010-03-23T20:31:35Z" />
+<meta name="doctitle" content="Oracle&reg; Database Installation Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10843-03" />
+<meta name="docid" content="NTDBI" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="reqs.htm" title="Previous" type="text/html" />
+<link rel="Next" href="install.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10843.pdf" title="PDF version" type="application/pdf" />
+<title>Oracle Grid Infrastructure</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Installation Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10843-03</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="reqs.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="install.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10843.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="CIHCBGCC" name="CIHCBGCC"></a>
+<h1 class="chapter"><span class="secnum">3</span> <a name="NTDBI999" id="NTDBI999"></a>Oracle Grid Infrastructure</h1>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Grid Infrastructure is only available on 64-bit Windows.</div>
+<p>The Oracle grid infrastructure for a standalone server is the Oracle software that provides system support for an Oracle database including volume management, file system, and automatic restart capabilities. If you plan to use Oracle Restart or Automatic Storage Management, you must install the grid infrastructure before installing your database. The grid infrastructure for a standalone server is the software that includes Oracle Restart and Automatic Storage Management, which provides the infrastructure for a standalone server in an enterprise grid architecture. Oracle combined the two infrastructure products into a single set of binaries that is installed as the grid infrastructure home. The grid infrastructure should be installed before installing Oracle Database 11<span class="italic">g</span> Release 2.</p>
+<p>Automatic Storage Management is a volume manager and a file system for Oracle database files that supports single-instance Oracle Database and Oracle Real Application Clusters (Oracle RAC) configurations. Automatic Storage Management also supports a general purpose file system for your application needs including Oracle Database binaries. Automatic Storage Management is Oracle's recommended storage management solution that provides an alternative to conventional volume managers, file systems, and raw devices.</p>
+<p>Oracle Restart<a id="sthref296" name="sthref296"></a><a id="sthref297" name="sthref297"></a><a id="sthref298" name="sthref298"></a> improves the availability of your Oracle database by providing the following:</p>
+<ul>
+<li>
+<p>When there is a hardware or a software failure, Oracle Restart automatically starts all Oracle components, including Oracle database instance, Oracle Net Listener, database services, and Automatic Storage Management.</p>
+</li>
+<li>
+<p>Oracle Restart starts components in the proper order when the database host is restarted.</p>
+</li>
+<li>
+<p>Oracle Restart runs periodic checks to monitor the health of Oracle components. If a check operation fails for a component, then the component is shut down and restarted.</p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>If you want to use Automatic Storage Management or Oracle Restart, then you must first install Oracle grid infrastructure for a standalone server and then install Oracle Database.</p>
+</li>
+<li>
+<p>Oracle Restart is used in single-instance (non-clustered) environments only.</p>
+</li>
+</ul>
+</div>
+<p>This chapter contains the following sections:</p>
+<ul>
+<li>
+<p><a href="#i1011299">Requirements for Oracle Grid Infrastructure Installation</a></p>
+</li>
+<li>
+<p><a href="#CHDCIJEG">Oracle ACFS and Oracle ADVM Support</a></p>
+</li>
+<li>
+<p><a href="#CFAGEIFE">Migrating Existing Automatic Storage Management Instances</a></p>
+</li>
+<li>
+<p><a href="#CHDBABHF">Automatic Storage Management Installation Considerations</a></p>
+</li>
+<li>
+<p><a href="#CHDGEAIF">Preparing Disks for an Automatic Storage Management Installation</a></p>
+</li>
+<li>
+<p><a href="#BABHEBIG">Installing and Configuring the Grid Infrastructure for a Standalone Server</a></p>
+</li>
+<li>
+<p><a href="#CHDHHDEH">Modifying Oracle Grid Infrastructure Binaries After Installation</a></p>
+</li>
+<li>
+<p><a href="#BABGFGCF">Manually Configuring Oracle Automatic Storage Management Disk Groups</a></p>
+</li>
+<li>
+<p><a href="#BABJDJCB">Testing the Oracle Automatic Storage Management Installation</a></p>
+</li>
+</ul>
+<a id="i1011299" name="i1011299"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.1</span> Requirements for Oracle Grid Infrastructure Installation<a id="sthref299" name="sthref299"></a><a id="sthref300" name="sthref300"></a><a id="sthref301" name="sthref301"></a><a id="sthref302" name="sthref302"></a><a id="sthref303" name="sthref303"></a><a id="sthref304" name="sthref304"></a></h2>
+<p>The system must meet the following requirements:</p>
+<ul>
+<li>
+<p><a href="#CHDCEBFD">Memory Requirements</a></p>
+</li>
+<li>
+<p><a href="#CHDIFGAD">Disk Space Requirements</a></p>
+</li>
+</ul>
+<a id="CHDCEBFD" name="CHDCEBFD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.1.1</span> Memory Requirements</h3>
+<p>Grid Infrastructure requires at least 1 GB of RAM for installation.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIFGAD" name="CHDIFGAD"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.1.2</span> Disk Space Requirements</h3>
+<p>The following are the disk space requirements for installing grid infrastructure:</p>
+<p>At least 2 GB of disk space</p>
+<p>The amount of disk space available in the <code>%TEMP%</code> directory is equivalent to the total amount of free disk space, minus what is required for the grid infrastructure to be installed.</p>
+<p><a id="sthref305" name="sthref305"></a><a id="sthref306" name="sthref306"></a><a id="sthref307" name="sthref307"></a>If there is less than 1 GB free disk space available in the <code>%TEMP%</code> directory, then complete of the following steps:</p>
+<ul>
+<li>
+<p>Delete unnecessary files from the %TEMP% directory to meet the disk space requirement.</p>
+</li>
+<li>
+<p>Set <code>TEMP</code> environment variable. Go to System Properties, then Environment Variables , "TEMP=C:\Temp\"</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCIJEG" name="CHDCIJEG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">3.2</span> <a id="sthref308" name="sthref308"></a><a id="sthref309" name="sthref309"></a><a id="sthref310" name="sthref310"></a><a id="sthref311" name="sthref311"></a><a id="sthref312" name="sthref312"></a><a id="sthref313" name="sthref313"></a><a id="sthref314" name="sthref314"></a><a id="sthref315" name="sthref315"></a><a id="sthref316" name="sthref316"></a>Oracle ACFS and Oracle ADVM Support</h2>
+<p>Oracle Automatic Storage Management Cluster File System (Oracle ACFS) extends Automatic Storage Management technology to support of all of your application data in both single host and cluster configurations. Oracle Automatic Storage Management Dynamic Volume Manager (Oracle ADVM) provides volume management services and a standard disk device driver interface to clients. Oracle Automatic Storage Management Cluster File System is layered on Automatic Storage Management through the Oracle Automatic Storage Management Dynamic Volume Manager interface.</p>
+<p>Oracle Automatic Storage Management Cluster File System and Oracle Automatic Storage Management Dynamic Volume Manager are supported only on Windows Server 2003 64-bit.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle recommends that Oracle data files are installed in Oracle ASM disk groups. Installing Oracle data files on an Oracle ACFS file system is not supported. Oracle ACFS can be used as an option only when Automatic Storage Management is configured.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a class="olink NTDBN" href="../../relnotes.112/e10842/toc.htm"><span class="italic">Oracle Database Release Notes for Microsoft Windows</span></a> for latest information about supported platforms and releases</p>
+</li>
+<li>
+<p><span class="italic"><a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG">Oracle Database Storage Administrator's Guide</a></span> for more information about Oracle Automatic Storage Management Cluster File System and Oracle Automatic Storage Management Dynamic Volume Manager</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="CFAGEIFE" name="CFAGEIFE"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.3</span> Migrating Existing Automatic Storage Management Instances</h2>
+<p>If you have an Automatic Storage Management installation from a previous release installed on your server, or in an existing Oracle grid infrastructure installation, you can use Oracle Automatic Storage Management Configuration Assistant to upgrade the existing Automatic Storage Management instance to 11<span class="italic">g</span> Release 2 (11.2), and subsequently configure disk groups, Automatic Storage Management volumes and Automatic Storage Management file systems.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You must first shut down all databases and applications using an existing Oracle Automatic Storage Management instance before upgrading it.</div>
+<p>During installation, if you chose to use Oracle Automatic Storage Management and Oracle Automatic Storage Management Configuration Assistant detects that there is an earlier Oracle Automatic Storage Management version installed in another Oracle Automatic Storage Management home, then after installing the Oracle Automatic Storage Management 11<span class="italic">g</span> Release 2 (11.2) binaries, you can start Oracle Automatic Storage Management Configuration Assistant to upgrade the existing Oracle Automatic Storage Management instance. You can then choose to configure an Automatic Storage Management File System deployment by using the Automatic Storage Management Configuration Assistant to create an Oracle Automatic Storage Management Dynamic Volume and an Oracle Automatic Storage Management Cluster File System (Oracle ACFS).</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDBABHF" name="CHDBABHF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">3.4</span> Automatic Storage Management Installation Considerations</h2>
+<p>In previous releases, Oracle Automatic Storage Management (Oracle ASM) was installed as part of the Oracle Database installation. With Oracle Database 11<span class="italic">g</span> Release 2 (11.2), Automatic Storage Management is part of an Oracle grid infrastructure installation, either for a cluster, or for a standalone server.</p>
+<p>If you want to upgrade an existing Automatic Storage Management installation, then you must upgrade Automatic Storage Management by running an Oracle grid infrastructure upgrade (upgrades of existing Automatic Storage Management installations). If you do not have Automatic Storage Management installed and you want to use Automatic Storage Management as your storage option, then you must complete an Oracle grid infrastructure installation before you start your Oracle Database installation.</p>
+<p>You must run Oracle Automatic Storage Management Configuration Assistant for installing and configuring Oracle ASM instances, disk groups, volumes, and Oracle Automatic Storage Management Cluster File System (Oracle ACFS). In addition, you can use the ASMCA command-line interface as a non-GUI utility.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Chapter 11, "Oracle ASM Configuration Assistant" in <a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG"><span class="italic">Oracle Database Storage Administrator's Guide</span></a> for information on Oracle ASMCA</div>
+<p><a id="sthref317" name="sthref317"></a>Apply the following guidelines when you install Oracle Automatic Storage Management:</p>
+<ul>
+<li>
+<p>You must complete the steps listed under the <a href="#CHDGEAIF">"Preparing Disks for an Automatic Storage Management Installation"</a> section to prepare a disk partition to use for the Oracle Automatic Storage Management disk groups.</p>
+</li>
+<li>
+<p>Ensure that at least one disk is configured appropriately in an Oracle ASM disk group before beginning the installation.</p>
+</li>
+<li>
+<p>When you install Oracle Automatic Storage Management, Oracle Automatic Storage Management Configuration Assistant creates a separate server parameter file (<a id="sthref318" name="sthref318"></a><a id="sthref319" name="sthref319"></a><a id="sthref320" name="sthref320"></a><code>SPFILE</code>) and <a id="sthref321" name="sthref321"></a><a id="sthref322" name="sthref322"></a>password file for the Oracle Automatic Storage Management instance. As soon as Oracle Automatic Storage Management is installed, <code>ASMSNMP</code> schema and user are created. See <span class="italic"><a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG">Oracle Database Storage Administrator's Guide</a></span> for more information.</p>
+</li>
+<li>
+<p>The Automatic Storage Management instance that manages the existing disk group runs in the grid infrastructure Oracle home directory.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGEAIF" name="CHDGEAIF"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.5</span> Preparing Disks for an Automatic Storage Management Installation</h2>
+<p>If you plan to use Automatic Storage Management to manage database files for your databases, then use the procedures in this section to prepare disk groups before you install an Automatic Storage Management instance.</p>
+<p>This section covers the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDJJAF">General Steps for Configuring Automatic Storage Management</a></p>
+</li>
+<li>
+<p><a href="#CHDGCEHG">Step 1: Identifying Storage Requirements for Automatic Storage Management</a></p>
+</li>
+<li>
+<p><a href="#CHDFDGHD">Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance</a></p>
+</li>
+<li>
+<p><a href="#CHDHFFGH">Step 4: Manually Configuring Disks for Automatic Storage Management</a></p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle does not recommend using identifiers for database object names that must be quoted. While these quoted identifiers may be valid as names in the <code>SQL CREATE</code> statement, such as <code>CREATE DISKGROUP</code> <code>"1data" ...</code>, the names may not be valid when using other tools that manage the database object.</div>
+<a id="CHDDJJAF" name="CHDDJJAF"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.5.1</span> General Steps for Configuring Automatic Storage Management</h3>
+<p><a id="ABC4666019" name="ABC4666019"></a><a id="ABC4666019SRI1" name="ABC4666019SRI1"></a><a id="ABC4666019SRI12" name="ABC4666019SRI12"></a>The following are the general steps to configure Automatic Storage Management:</p>
+<ol>
+<li>
+<p>Identify your site's storage requirements.</p>
+</li>
+<li>
+<p>If you are creating a new Automatic Storage Management disk group, create partitions for direct attached storage (DAS) or storage area network (SAN) disks.</p>
+</li>
+<li>
+<p>Use <code>asmtool</code> to stamp the disks before using them for Automatic Storage Management.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#CHDHFFGH">"Step 4: Manually Configuring Disks for Automatic Storage Management"</a> for more information about stamping the disks</div>
+</li>
+<li>
+<p>Configure the disks for use with Automatic Storage Management. You must provide the Automatic Storage Management disk configuration information during the grid infrastructure installation.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGCEHG" name="CHDGCEHG"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.5.2</span> Step 1: Identifying Storage Requirements for Automatic Storage Management</h3>
+<p><a id="sthref323" name="sthref323"></a><a id="sthref324" name="sthref324"></a>To identify the storage requirements for using Automatic Storage Management, you must determine how many devices and the amount of free disk space that you require. To complete this task, follow these steps:</p>
+<ol>
+<li>
+<p>Determine whether you want to use Automatic Storage Management for Oracle data files, recovery files, or both.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You do not have to use the same storage mechanism for Oracle Database files and recovery files. You can use a file system for one file type and Automatic Storage Management for the other.
+<p>If you choose to enable automated backups and you do not have a shared file system, then you must choose Automatic Storage Management for recovery file storage.</p>
+</div>
+<p>During the database installation, if you plan to enable automated backups, then you can choose Automatic Storage Management as the storage mechanism for recovery files by specifying an Automatic Storage Management disk group for the fast recovery area. Depending how you choose to create a database during the installation, you have the following options:</p>
+<ul>
+<li>
+<p>You can run Oracle Automatic Storage Management Configuration Assistant in interactive mode to create and configure the required disk groups.</p>
+<p>During the database installation, if you select an installation method that runs Database Configuration Assistant in interactive mode (Advanced Installation type), then you select the disk groups that you created using Oracle ASMCA.</p>
+<p>You have the option to use the disk groups you created using Oracle ASMCA both for database files and recovery files, or you can choose to use different disk groups for each file type. Ideally, you should create separate Automatic Storage Management disk groups for data files and for recovery files.</p>
+</li>
+<li>
+<p>If you run Oracle ASMCA in noninteractive mode, then you must use the same Automatic Storage Management disk group for data files and recovery files. During the database installation (Typical Installation type), you select the same disk group for both data files and recovery files.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>"Oracle ASM Configuration Assistant Command-Line Interface" section in <a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG"><span class="italic">Oracle Database Storage Administrator's Guide</span></a></p>
+</li>
+<li>
+<p><a href="postcfg.htm#BCGFCJJE">"Create a Fast Recovery Area Disk Group"</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Choose the Automatic Storage Management redundancy level for each <a id="sthref325" name="sthref325"></a><a id="sthref326" name="sthref326"></a>Automatic Storage Management disk <a id="sthref327" name="sthref327"></a><a id="sthref328" name="sthref328"></a><a id="sthref329" name="sthref329"></a>group you create.</p>
+<p><a id="sthref330" name="sthref330"></a><a id="sthref331" name="sthref331"></a><a id="sthref332" name="sthref332"></a>The <a id="sthref333" name="sthref333"></a><a id="sthref334" name="sthref334"></a>redundancy level that you choose for the Automatic Storage Management disk group determines how Automatic Storage Management mirrors files in the disk group and determines the number of disks and amount of disk space that you require. The redundancy levels are as follows:<a id="sthref335" name="sthref335"></a><a id="sthref336" name="sthref336"></a></p>
+<ul>
+<li>
+<p>External redundancy</p>
+<p>An external redundancy disk group requires a minimum of one disk device. The effective disk space in an external redundancy disk group is the sum of the disk space in all of its devices.</p>
+<p><a id="sthref337" name="sthref337"></a>Because Automatic Storage Management does not mirror data in an external redundancy disk group, Oracle recommends that you use only RAID or similar devices that provide their own data protection mechanisms as disk devices in this type of disk group.</p>
+</li>
+<li>
+<p>Normal redundancy</p>
+<p>To optimize performance and reliability in a normal redundancy disk group, Automatic Storage Management uses two-way mirroring for data files and three-way mirroring for control files, by default. In addition, you can choose the mirroring characteristics for individual files in a disk group. Alternatively, you can use two-way mirroring or no mirroring.</p>
+<p>A normal redundancy disk group requires a minimum of two failure groups (or two disk devices) if you are using two-way mirroring. The effective disk space in a normal redundancy disk group is <span class="italic">half</span> the sum of the disk space in all of its devices.</p>
+<p>For most installations, Oracle recommends that you use normal redundancy disk groups.</p>
+</li>
+<li>
+<p>High redundancy</p>
+<p>In a high redundancy disk group, Automatic Storage Management uses three-way mirroring to increase performance and provide the highest level of reliability. A high redundancy disk group requires a minimum of three disk devices (or three failure groups). The effective disk space in a high redundancy disk group is <span class="italic">one-third</span> the sum of the disk space in all of its devices.</p>
+<p>While high redundancy disk groups do provide a high level of data protection, you must consider the higher cost of additional storage devices before deciding to use this redundancy level.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Determine the total amount of disk space that you require for the data files and recovery files.<a id="sthref338" name="sthref338"></a><a id="sthref339" name="sthref339"></a><a id="sthref340" name="sthref340"></a></p>
+<p>Use the following table to determine the minimum number of disks and the minimum disk space requirements for the<a id="sthref341" name="sthref341"></a><a id="sthref342" name="sthref342"></a> installation:<a id="sthref343" name="sthref343"></a><a id="sthref344" name="sthref344"></a></p>
+<div class="inftblinformal">
+<table class="Informal" title="Disk Space Calculation Table" summary="This table provides information to help you determine the disk space requirements for ASM storage. Column 1 lists the redundancy level, column 2 lists the number of disks, column 3 lists the size of the datafiles, column four lists the size of the recovery files, and column 6 lists the combined total size for both the recovery and datafiles." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<col width="18%" />
+<col width="18%" />
+<col width="19%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t12">Redundancy Level</th>
+<th align="left" valign="bottom" id="r1c2-t12">Minimum Number of Disks</th>
+<th align="left" valign="bottom" id="r1c3-t12">Data Files</th>
+<th align="left" valign="bottom" id="r1c4-t12">Recovery Files</th>
+<th align="left" valign="bottom" id="r1c5-t12">Both File Types</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t12" headers="r1c1-t12">External</td>
+<td align="left" headers="r2c1-t12 r1c2-t12">1</td>
+<td align="left" headers="r2c1-t12 r1c3-t12">1.6 GB</td>
+<td align="left" headers="r2c1-t12 r1c4-t12">2.95 GB</td>
+<td align="left" headers="r2c1-t12 r1c5-t12">4.55 GB</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t12" headers="r1c1-t12">Normal</td>
+<td align="left" headers="r3c1-t12 r1c2-t12">2</td>
+<td align="left" headers="r3c1-t12 r1c3-t12">3.2 GB</td>
+<td align="left" headers="r3c1-t12 r1c4-t12">5.90 GB</td>
+<td align="left" headers="r3c1-t12 r1c5-t12">9.10 GB</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t12" headers="r1c1-t12">High</td>
+<td align="left" headers="r4c1-t12 r1c2-t12">3</td>
+<td align="left" headers="r4c1-t12 r1c3-t12">4.8 GB</td>
+<td align="left" headers="r4c1-t12 r1c4-t12">8.85 GB</td>
+<td align="left" headers="r4c1-t12 r1c5-t12">13.65 GB</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>If an Automatic Storage Management instance is already on the system, you can use an existing disk group to meet these storage requirements. If necessary, you can add disks to an existing disk group during the database installation.</p>
+</li>
+<li>
+<p>Optionally identify failure groups for the Automatic Storage Management disk group devices.<a id="sthref345" name="sthref345"></a><a id="sthref346" name="sthref346"></a><a id="sthref347" name="sthref347"></a></p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You must complete this step only if you intend to use an installation method that runs Oracle Automatic Storage Management Configuration Assistant in interactive mode, for example, if you intend to choose the Advanced database configuration option. Other installation types do not allow you to specify failure groups.</div>
+<p><a id="sthref348" name="sthref348"></a><a id="sthref349" name="sthref349"></a>If <a id="sthref350" name="sthref350"></a><a id="sthref351" name="sthref351"></a><a id="sthref352" name="sthref352"></a>you intend to use a normal or high redundancy disk group, you can further protect your database against hardware failure by associating a set of disk devices in a custom failure group. By default, each device comprises its own failure group. However, if two disk devices in a normal redundancy disk group are attached to the same SCSI controller, the disk group becomes unavailable if the controller fails. The controller in this example is a single point of failure.</p>
+<p>For instance, to avoid failures of this type, you could use two SCSI controllers, each with two disks, and define a failure group for the disks attached to each controller. This configuration would enable the disk group to tolerate the failure of one SCSI controller.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you define custom failure groups, you must specify a minimum of two failure groups for normal redundancy disk groups and three failure groups for high redundancy disk groups.</div>
+</li>
+<li>
+<p>If you are sure that a suitable disk group does not exist on the system, install or identify appropriate disk devices to add to a new disk group. Use the following guidelines when identifying appropriate disk devices:</p>
+<ul>
+<li>
+<p>All of the devices in an Automatic Storage Management disk group should be the same size and have the same performance characteristics.</p>
+</li>
+<li>
+<p>Do not specify multiple partitions on a single physical disk as a disk group device. Automatic Storage Management expects each disk group device to be on a separate physical disk.</p>
+</li>
+<li>
+<p>Although you can specify a logical volume as a device in an Automatic Storage Management disk group, Oracle does not recommend their use. Logical volume managers can hide the physical disk architecture, preventing Automatic Storage Management from optimizing I/O across the physical devices.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#CHDHFFGH">"Step 4: Manually Configuring Disks for Automatic Storage Management"</a> for information about completing this task</div>
+</li>
+</ol>
+<p>The following step describes how to identify existing disk groups and determine the free disk space that they contain.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFDGHD" name="CHDFDGHD"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.5.3</span> Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance</h3>
+<p><a id="sthref353" name="sthref353"></a><a id="sthref354" name="sthref354"></a><a id="sthref355" name="sthref355"></a>In order to <a id="sthref356" name="sthref356"></a><a id="sthref357" name="sthref357"></a><a id="sthref358" name="sthref358"></a><a id="sthref359" name="sthref359"></a>use a DAS or SAN disk in Automatic Storage Management, the disk must have a partition table. Oracle recommends creating exactly one partition for each disk containing the entire disk.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Y<a id="sthref360" name="sthref360"></a><a id="sthref361" name="sthref361"></a>ou can use any physical disk for Automatic Storage Management, if it is partitioned. However, you cannot use NAS or Microsoft dynamic disks.</div>
+<p>This section covers the following topics.</p>
+<ul>
+<li>
+<p><a href="#CHDHIHCH">Step 1: Enabling Disk Automounting</a></p>
+</li>
+<li>
+<p><a href="#CHDGDCEE">Step 2: Creating the Disk Partitions</a></p>
+</li>
+</ul>
+<a id="CHDHIHCH" name="CHDHIHCH"></a>
+<p class="subhead2">Step 1: Enabling Disk Automounting</p>
+<p>Before you can configure partitions or logical drives on Windows, you must enable disk automounting. Enable disk automounting when using:</p>
+<ul>
+<li>
+<p>Disk partitions on both single-instance and Oracle RAC installations</p>
+</li>
+<li>
+<p>Cluster file system for Oracle RAC</p>
+</li>
+<li>
+<p>Oracle Clusterware</p>
+</li>
+<li>
+<p>Raw partitions for a single-node database installation</p>
+</li>
+<li>
+<p>Primary or logical partitions for Automatic Storage Management</p>
+</li>
+</ul>
+<p>To enable automounting:</p>
+<ol>
+<li>
+<p>Enter the following commands at a command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; diskpart
+DISKPART&gt; automount enable
+DISKPART&gt; exit
+</pre></li>
+<li>
+<p>Restart your computer.</p>
+</li>
+</ol>
+<a id="CHDGDCEE" name="CHDGDCEE"></a>
+<p class="subhead2">Step 2: Creating the Disk Partitions</p>
+<p>To create disk partitions, use the disk administration tools provided by the operating system or third party vendors. The following administration tools are provided by the operating system:</p>
+<ul>
+<li>
+<p>The graphical user interface Disk Management snap-in to manage disks.</p>
+<p>To access this tool, type <code>diskmgmt.msc</code> at the command prompt. Alternatively, from the <span class="bold">Start</span> menu, select <span class="bold">Programs</span>, then <span class="bold">Administrative Tools</span>, then <span class="bold">Computer Management</span>. Then select the <span class="bold">Disk Management</span> node in the Storage tree.</p>
+<p>On Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2, create primary partitions and logical drives in extended partitions by selecting the <span class="bold">New Simple Volume</span> option. To create a raw device, assign a drive letter and remove the letter after the partition is created. For other Windows, you must not assign the drive letter. You must select <span class="bold">Do not format this partition</span> to specify raw partition. Do not use spanned volumes or striped volumes. These options convert the volume to a dynamic disk. Automatic Storage Management does not support dynamic disks.</p>
+<p>For other Windows, create primary partitions by selecting the <span class="bold">New Partition</span> option. Create the logical drives by selecting the <span class="bold">New Logical Drive</span> option.</p>
+</li>
+<li>
+<p>The command-line tool <code>diskpart.exe</code>, which lets you create primary partitions, extended partitions, and logical drives.</p>
+<p><a id="sthref362" name="sthref362"></a><a id="sthref363" name="sthref363"></a>To access this tool, enter <code>diskpart.exe</code> at the command prompt. The syntax for using <code>diskpart.exe</code> for the procedures in this section is as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; diskpart
+DISKPART&gt; select disk <span class="italic">diskn</span>
+DISKPART&gt; create partition primary | extended | logical size=<span class="italic">sizen</span>
+DISKPART&gt; 
+</pre>
+<p>where:</p>
+<ul>
+<li>
+<p><code>diskpart.exe</code> is the command-line tool for managing disks.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">diskn</span></code> is the disk number where the partitions are created.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">sizen</span></code> is the size of the partition, for example 500 represents 500 MB.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+The online help or documentation for the administration tool you are using</div>
+<p>You can enter the <code>diskpart.exe</code> commands directly at the command line; alternatively, you can enter the commands in a text file, and then run <code>diskpart /s</code> using this file as a script.</p>
+<p>You cannot create more than four primary disk partitions per disk. If you need more, you can get around this limitation by creating three primary partitions and then creating the fourth partition as an extended partition with as many logical partitions within as you need.</p>
+<p>For example, on Windows x86-based systems, to create the disk partitions on Disk 5 and assign them each a size:</p>
+<pre xml:space="preserve" class="oac_no_warn">DISKPART&gt; select disk 5
+DISKPART&gt; create partition primary size=500
+DISKPART&gt; ...
+DISKPART&gt; create partition extended
+DISKPART&gt; create partition logical size=800
+DISKPART&gt; ...
+DISKPART&gt; create partition logical size=500
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">DISKPART&gt; select disk 5
+DISKPART&gt; create partition primary size=500
+DISKPART&gt; ... 
+DISKPART&gt; create partition primary size=800
+</pre>
+<p>If you prefer to use logical drives, you can create an extended partition and then assign the logical drives within it. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">DISKPART&gt; create partition extended
+DISKPART&gt; create partition logical size=500
+DISKPART&gt; create partition logical size=700
+</pre></div>
+<!-- class="sect2" -->
+<a id="CHDHFFGH" name="CHDHFFGH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.5.4</span> Step 4: Manually Configuring Disks for Automatic Storage Management</h3>
+<p>To use Automatic Storage Management with direct attached storage (DAS) or storage area network (SAN), the disks must be stamped with a header. If you install Oracle grid infrastructure in interactive mode, Oracle Universal Installer configures the disks' headers during the installation process. However, if you plan to install Oracle grid infrastructure in response file mode, you must manually configure the disks before installation by using either <code>asmtoolg</code> (GUI version) or <code>asmtool</code> (command-line version). You can also use these tools to reconfigure the disks later on after installation. The <code>asmtoolg</code> and <code>asmtool</code> utilities only work on partitioned disks&#x2014;you cannot use Automatic Storage Management on unpartitioned disks.</p>
+<p>The <code>asmtoolg</code> and <code>asmtool</code> tools associate meaningful, persistent names with disks to facilitate using those disks with Automatic Storage Management. Automatic Storage Management uses disk strings to more easily operate on groups of disks at once, so the names that <code>asmtoolg</code> or <code>asmtool</code> creates make this easier than using Windows drive letters.</p>
+<p>All disk names created by <code>asmtoolg</code> or <code>asmtool</code> begin with the prefix <code>ORCLDISK</code> followed by a user-defined prefix (the default is <code>DATA</code>) and a disk number for identification purposes.</p>
+<a id="sthref364" name="sthref364"></a>
+<p class="subhead2">Using the asmtoolg Tool (Graphical User Interface)</p>
+<p>The <a id="sthref365" name="sthref365"></a><a id="sthref366" name="sthref366"></a><a id="sthref367" name="sthref367"></a><code>asmtoolg</code> tool is a graphical interface for creating device names. Use <code>asmtoolg</code> to add, change, delete, and examine the devices available for use in Automatic Storage Management.</p>
+<p>To add or change disk stamps:</p>
+<ol>
+<li>
+<p>In the installation media labeled Oracle Grid Infrastructure 11<span class="italic">g</span> Release 2 (11.2), from the media root, go to <code>asmtool</code> directory and double-click <code>asmtoolg.exe</code>.</p>
+<p>If Oracle Database is already installed, go to <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\</code><code>bin</code> and double-click <code>asmtoolg.exe</code>.</p>
+<p>On Windows Vista and Windows Server 2008, if User Account Control is enabled, create a shortcut for the command prompt window on your desktop. An icon for that shortcut appears on the desktop. Right click the icon for the newly created shortcut, and specify "Run as administrator." When the command window opens, go to <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\bin</code>, and then type <code>asmtoolg</code>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Add or change label</span> option, then click <span class="bold">Next</span>.</p>
+<p>The <code>asmtoolg</code> tool shows the devices available on the system. Unrecognized disks are labeled as "Candidate device", stamped Automatic Storage Management disks as "Stamped ASM disk", and unstamped Automatic Storage Management disks as "Unstamped ASM disks." The tool also shows disks that are recognized by Windows as a file system (such as NTFS). These are not available for use as disks and cannot be selected. In addition, Microsoft Dynamic disks are not available for use as Oracle Automatic Storage Management disks.</p>
+<p>If necessary, follow the steps under <a href="#CHDFDGHD">"Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance"</a> to create a disk partition for the Oracle Automatic Storage Management instance.</p>
+</li>
+<li>
+<p>In the Stamp Disks window, select the disks to stamp.</p>
+<p>Automatic Storage Management can generate unique stamps for all of the devices selected for a given prefix. The stamps are generated by concatenating a number with the prefix specified. For example, if the prefix is <code>DATA</code>, then the first Automatic Storage Management link name is <code>ORCLDISKDATA0</code>.</p>
+<p>You can also specify the stamps of individual devices.</p>
+</li>
+<li>
+<p>Optionally, select a disk to edit the individual stamp (Automatic Storage Management link name).</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+</ol>
+<p>To delete disk stamps:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Delete labels</span> option, then click <span class="bold">Next</span>.</p>
+<p>The delete option is only available if disks exist with stamps. The delete window shows all stamped Automatic Storage Management disks.</p>
+</li>
+<li>
+<p>In the Delete Stamps window, select the disks to unstamp.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+</ol>
+<a id="sthref368" name="sthref368"></a>
+<p class="subhead2">Using the asmtool Utility (Command Line)</p>
+<p>The <a id="sthref369" name="sthref369"></a><a id="sthref370" name="sthref370"></a><a id="sthref371" name="sthref371"></a><code>asmtool</code> utility is a command-line interface for stamping disks. On Windows Vista and Windows Server 2008, if User Account Control is enabled, then you can create a shortcut for the command prompt window on your desktop. An icon for that shortcut appears on the desktop. Right-click the icon for the newly created shortcut, and specify "Run as administrator." Then start <code>asmtool</code>.</p>
+<p>It has the following options:</p>
+<div class="inftblinformalwide">
+<table class="InformalWide" title="ASM command line options" summary="This table lists the asmtool command line options. column 1 lists the option, column 2 lists the description of the option, and column 3 gives an example." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="17%" />
+<col width="38%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t18">Option</th>
+<th align="left" valign="bottom" id="r1c2-t18">Description</th>
+<th align="left" valign="bottom" id="r1c3-t18">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t18" headers="r1c1-t18"><code>-add</code></td>
+<td align="left" headers="r2c1-t18 r1c2-t18">Adds or changes stamps. You must specify the hard disk, partition, and new stamp name. If the disk is a raw device or has an existing Automatic Storage Management stamp, then you must specify the <code>-force</code> option. Also sets Oracle Automatic Storage Management instances to rescan the available disks.
+<p>If you must partition a disk, then follow the procedures under <a href="#CHDFDGHD">"Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance"</a>.</p>
+</td>
+<td align="left" headers="r2c1-t18 r1c3-t18">
+<pre xml:space="preserve" class="oac_no_warn">asmtool -add [-force]
+\Device\Harddisk1\Partition1 ORCLDISKASM0
+\Device\Harddisk2\Partition1 ORCLDISKASM2...
+</pre></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t18" headers="r1c1-t18"><code>-addprefix</code></td>
+<td align="left" headers="r3c1-t18 r1c2-t18">Adds or changes stamps using a common prefix to generate stamps automatically. The stamps are generated by concatenating a number with the prefix specified. If the disk is a raw device or has an existing Automatic Storage Management stamp, then you must specify the <code>-force</code> option. Also sets Oracle Automatic Storage Management instances to rescan the available disks</td>
+<td align="left" headers="r3c1-t18 r1c3-t18">
+<pre xml:space="preserve" class="oac_no_warn">asmtool -addprefix ORCLDISKASM [-force]
+\Device\Harddisk1\Partition1
+\Device\Harddisk2\Partition1...
+</pre></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t18" headers="r1c1-t18"><code>-list</code></td>
+<td align="left" headers="r4c1-t18 r1c2-t18">List available disks. The stamp, windows device name, and disk size in megabytes are shown. Some disks may be file systems, and cannot be stamped. If the disk is a raw device or has an existing Oracle Automatic Storage Management stamp, then you must specify the <code>-force</code> option.</td>
+<td align="left" headers="r4c1-t18 r1c3-t18">
+<pre xml:space="preserve" class="oac_no_warn">asmtool -list [-force]
+</pre></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t18" headers="r1c1-t18"><code>-delete</code></td>
+<td align="left" headers="r5c1-t18 r1c2-t18">Removes existing stamps from disks. Also sets Oracle Automatic Storage Management instances to rescan the available disks</td>
+<td align="left" headers="r5c1-t18 r1c3-t18">
+<pre xml:space="preserve" class="oac_no_warn">asmtool -delete ORCLDISKASM0 ORCLDISKASM1...
+</pre></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwide" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHEBIG" name="BABHEBIG"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.6</span> Installing and Configuring the Grid Infrastructure for a Standalone Server</h2>
+<p>If you install Oracle Restart and then create your database, the database is automatically added to the Oracle Restart configuration, and is then automatically restarted when required. However, if you install Oracle Restart on a host computer on which a database already exists, you must manually add the database, the listener, the Automatic Storage Management (Oracle ASM) instance, and other components to the Oracle Restart configuration.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle Restart can accommodate multiple single-instance databases on a single host computer.</div>
+<p>This section covers the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABCHCBG">Installing Grid Infrastructure with a New Database Installation</a></p>
+</li>
+<li>
+<p><a href="#BABCIBEF">Installing Grid Infrastructure for an Existing Database</a></p>
+</li>
+</ul>
+<a id="BABCHCBG" name="BABCHCBG"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.6.1</span> Installing Grid Infrastructure with a New Database Installation<a id="sthref372" name="sthref372"></a><a id="sthref373" name="sthref373"></a></h3>
+<p>Perform the following steps to install the grid infrastructure for a standalone server and then create a database that is managed by Oracle Restart. First install grid infrastructure, which installs Oracle Restart and Oracle Automatic Storage Management, then configure Oracle Automatic Storage Management with at least one disk group, and then install Oracle database that stores database files in Oracle Automatic Storage Management disk groups. Click the help button on the Oracle Universal Installer page for page level assistance.</p>
+<p>To install grid infrastructure for a standalone server with a new database installation:</p>
+<ol>
+<li>
+<p>Double-click <code>setup.exe</code> to start Oracle Universal Installer.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+You must install grid infrastructure for a standalone server from the grid infrastructure media.</div>
+</li>
+<li><a id="CIHHIJIJ" name="CIHHIJIJ"></a>
+<p>The Select Installation Option screen appears. Select <span class="bold">Install and Configure Grid Infrastructure for a Standalone Server</span> option, to install and configure Oracle Restart and Oracle Automatic Storage Management for a single instance server. Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>On the Select Product Languages screen, select one or more languages. Move the languages from the Available Languages list to the Selected Languages list. Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Create ASM Disk Group screen lists all the disks matching the default pattern, <code>\\.\ORCLDISK</code>.</p>
+<p>Click <span class="bold">Change Disk Discovery Path</span> to select any devices for use by Automatic Storage Management but are not listed. In the Change Disk Discovery Path window, enter a string to use to search for devices that Oracle Automatic Storage Management uses, such as <code>\\.\ORCLDISK*</code>, and then click <span class="bold">OK</span>.</p>
+<p>The Disk Group Name default is <code>DATA</code>. You can enter a new name for the disk group, or use the default name.</p>
+<p>Check with your system administrator to determine if the disks used by Automatic Storage Management are mirrored at the storage level. If so, select External for the redundancy. If the disks are not mirrored at the storage level, then choose Normal for the redundancy.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+For normal redundancy, you require twice as much disk space to hold the same amount of data. For example, if your database is 100 GB, then you approximately require 200 GB of storage.</div>
+<p>After you have finished selecting the disks to be used by Oracle Automatic Storage Management, click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>On the Specify ASM password screen, enter <code>SYSASM</code> password required to connect to the Oracle Automatic Storage Management instance. The Oracle Automatic Storage Management instance is managed by a privileged role called <code>SYSASM</code>, which grants full access to Oracle Automatic Storage Management disk groups. Oracle recommends that you create a less privileged user, <code>ASMSNMP</code>, with SYSDBA privileges to monitor the Oracle Automatic Storage Management instance.</p>
+<p>Enter password for the <code>SYSASM</code> and <code>ASMSNMP</code> user accounts. The passwords should be at least eight characters in length and include at least one alphabetic and one numeric character.</p>
+</li>
+<li>
+<p>On the Specify Installation Location screen, enter the following details and click <span class="bold">Next</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Oracle base:</span> Enter the directory location for Oracle base. Do not include spaces in the path name.</p>
+</li>
+<li>
+<p><span class="bold">Software Location:</span> This field is populated by default in concurrence with Oracle base location.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Perform Prerequisite Checks screen, checks if the minimum system requirements are met to perform the database installation. If all the system requirements are met, then you are directed to the Summary screen. However, in a failed installation, you can review the error.</p>
+<p>To get a failed requirements list, click <span class="bold">Show Failed</span>. Click <span class="bold">Fix &amp; Check Again</span>, if you want the installer to fix the problem and check the system requirements once more. If you click <span class="bold">Check Again</span>, then you can run the prerequisite check again to see if the minimum requirements are met to carry on with the database installation.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>The Fix &amp; Check Again option generates a script that sets some system parameters to Oracle-recommended values. Oracle recommends that you do not modify the contents of this script.</p>
+</li>
+<li>
+<p>To ignore all the errors and proceed with the database installation, check <span class="bold">Ignore All</span> option.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Review contents of the Summary screen, click <span class="bold">Finish</span>.</p>
+<p>The setup screen displays the progress of a Oracle Restart installation.</p>
+</li>
+<li>
+<p>The Finish screen displays the installation status. Click <span class="bold">Close</span> to end the installation, then <span class="bold">Yes</span> to confirm you want to exit Oracle Universal Installer.</p>
+<p>If you encounter any problems, refer to the configuration log for information. The path to the configuration log is displayed on the Configuration Assistants window.</p>
+</li>
+<li>
+<p>If you want to create additional disk groups, then run Oracle Automatic Storage Management Configuration Assistant (ASMCA) utility. For example, you can create another disk group named <code>RECOVERY</code> to store the fast recovery area.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+To check if the Oracle High Availability Service is installed properly, run <code>crsctl check has</code> command from <code><span class="codeinlineitalic">Grid_home</span></code><code>\bin</code> directory. <code>has</code> is a service that is installed with Oracle Restart, which is responsible for starting software services like Automatic Storage Management.</div>
+</li>
+<li>
+<p>Install Oracle Database</p>
+<p>Because you have already installed Oracle Restart, Oracle Universal Installer automatically adds the database instance to the Oracle Restart configuration if you choose to create a database as part of the installation.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="install.htm#BABDJIFG">"Installing the Oracle Database Software"</a> for information about installing Oracle database</div>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>If a new database is installed after a grid infrastructure installation, then the listener runs from the grid infrastructure home. Because Oracle Automatic Storage Management is installed as part of the grid infrastructure, the default listener is created and runs from the grid infrastructure home. If you perform a database installation, then the database uses the same listener created during the grid infrastructure installation.</p>
+</li>
+<li>
+<p>If you are using Oracle Restart, then the default listener and any additional listeners must run from the grid infrastructure home.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABCIBEF" name="BABCIBEF"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">3.6.2</span> Installing Grid Infrastructure for an Existing Database</h3>
+<p>Follow the high-level instructions in this section to install Oracle grid infrastructure and configure it for an existing Oracle database. Oracle Restart can only manage existing 11.2 resources and hence you can install Oracle grid infrastructure only for an existing 11.2 database. However, Oracle database releases before 11.2 can coexist on the same server without being managed by Oracle Restart.</p>
+<p>To install Oracle Restart for an Existing database:</p>
+<ul>
+<li>
+<p>On the same host computer as the database, use Oracle Universal Installer to install the grid infrastructure, and select <span class="bold">Install and Configure Grid Infrastructure</span> <span class="bold">for a Standalone Server</span> as the installation option.</p>
+<p>The grid infrastructure components are installed in a separate Oracle home.</p>
+<p>Refer to <a href="#BABCHCBG">"Installing Grid Infrastructure with a New Database Installation"</a> section for detailed instructions.</p>
+</li>
+<li>
+<p>Use the <code>SRVCTL</code> utility to add the database, the listener, the Oracle Automatic Storage Management instance, all Oracle Automatic Storage Management disk groups, and any database services to the Oracle Restart configuration.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic"><a class="olink ADMIN12708" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN12708">Oracle Database Administrator's Guide</a></span> for more information about <code>SRVCTL</code> commands for Oracle Restart</div>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDHHDEH" name="CHDHHDEH"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.7</span> Modifying Oracle Grid Infrastructure Binaries After Installation</h2>
+<p>After installation, you must first stop the Oracle Restart stack to modify the software installed in your Grid home. For example, to apply a one-off patch or modify any of the DLLs used by Oracle Restart or Oracle ASM, you must follow these steps to stop and restart the Oracle Restart stack.</p>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+To put the changes you make to the Oracle grid infrastructure home into effect, you must shut down all executables that run in the Grid home directory and then restart them. In addition, shut down any applications that use Oracle shared libraries or DLL files in the Grid home.</div>
+<p>Prepare the Oracle grid infrastructure home for modification using the following procedure:</p>
+<ol>
+<li>
+<p>Log in using a member of the Administrators group and change directory to the path <code><span class="codeinlineitalic">Grid_home</span></code><code>\bin</code>, where <code><span class="codeinlineitalic">Grid_home</span></code> is the path to the Oracle grid infrastructure home.</p>
+</li>
+<li>
+<p>Shut down the Oracle Restart stack using the following command:</p>
+<pre xml:space="preserve" class="oac_no_warn">DRIVE_LETTER:\<span class="italic">Grid_home</span>\bin&gt; crsctl stop has -f
+</pre></li>
+<li>
+<p>After the Oracle Restart stack is completely shut down, perform the updates to the software installed in the Grid home.</p>
+</li>
+<li>
+<p>Use the following command to restart the Oracle Restart stack:</p>
+<pre xml:space="preserve" class="oac_no_warn">DRIVE_LETTER:\<span class="italic">Grid_home</span>\bin&gt; crsctl start has
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABGFGCF" name="BABGFGCF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">3.8</span> Manually Configuring Oracle Automatic Storage Management Disk Groups</h2>
+<p>The Oracle Automatic Storage Management Configuration Assistant utility creates a new Oracle Automatic Storage Management instance if there is no Oracle Automatic Storage Management instance currently configured on this computer. After installing the Grid Infrastructure for a standalone server, you can also use Oracle Automatic Storage Management Configuration Assistant to create and configure disk groups, Oracle Automatic Storage Management Dynamic Volume Manager and Oracle Automatic Storage Management Cluster File System. If you want to create additional disk groups or manually configure Oracle Automatic Storage Management disks, then you can run the Oracle Automatic Storage Management Configuration Assistant as follows:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt; cd <span class="italic">ORACLE_HOME</span>\bin
+<span class="italic">DRIVE_LETTER</span>:\&gt; asmca.bat
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<span class="italic">Oracle Database Storage Administrator's Guide</span> for further information about Oracle Automatic Storage Management Configuration Assistant</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABJDJCB" name="BABJDJCB"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">3.9</span> Testing the Oracle Automatic Storage Management Installation</h2>
+<p><a id="sthref374" name="sthref374"></a>To <a id="sthref375" name="sthref375"></a><a id="sthref376" name="sthref376"></a>test the Oracle Automatic Storage Management installation:</p>
+<ol>
+<li>
+<p>Use SQL*Plus to connect to the Oracle Automatic Storage Management instance as the <code>SYS</code> user with <code>SYSASM</code> privilege and start the instance if necessary:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">DRIVE_LETTER</span>:\&gt;sqlplus /nolog
+SQL&gt; CONNECT SYS as SYSASM
+Enter password: <span class="italic">SYS_password</span> 
+SQL&gt; STARTUP
+</pre></li>
+<li>
+<p>Enter the following command to view the existing disk groups, their redundancy level, and the amount of free disk space in each one:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SELECT NAME,TYPE,TOTAL_MB,FREE_MB FROM V$ASM_DISKGROUP;
+</pre></li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a class="olink SUTIL" href="http://www.oracle.com/pls/db112/lookup?id=SUTIL"><span class="italic">Oracle Database Utilities</span></a> for more information about <code>asmcmd</code></p>
+</li>
+<li>
+<p><a class="olink OSTMG" href="http://www.oracle.com/pls/db112/lookup?id=OSTMG"><span class="italic">Oracle Database Storage Administrator's Guide</span></a> for a more detailed description of Oracle Automatic Storage Management</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="reqs.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="install.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

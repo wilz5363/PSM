@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ed380a9-e8b4-4c03-9f60-7649deca1c91" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/footer.php" afterPath="$PROJECT_DIR$/inc/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/css/responsive-calendar.css" afterPath="$PROJECT_DIR$/libs/css/responsive-calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/js/responsive-calendar.js" afterPath="$PROJECT_DIR$/libs/js/responsive-calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/index.php" afterPath="$PROJECT_DIR$/log/index.php" />
-    </list>
+    <list default="true" id="3ed380a9-e8b4-4c03-9f60-7649deca1c91" name="Default" comment="" />
     <ignored path="psm.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />

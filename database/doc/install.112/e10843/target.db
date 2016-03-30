@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div element="book" href="toc.htm" number="" targetptr="NTDBI">
+  <ttl>Oracle&#x00AE; Database Installation Guide for Microsoft Windows</ttl>
+  <xreftext><cite>Oracle&#x00AE; Database Installation Guide for Microsoft Windows</cite></xreftext>
+  <div element="preface" href="preface.htm" number="" targetptr="">
+    <ttl>Preface</ttl>
+    <xreftext>&#x201C;Preface&#x201D;</xreftext>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="CIADDCEJ">
+      <ttl>Audience</ttl>
+      <xreftext>&#x201C;Audience&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="CHDDFEFG">
+      <ttl>Documentation Accessibility</ttl>
+      <xreftext>&#x201C;Documentation Accessibility&#x201D;</xreftext>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="">
+        <ttl>Accessibility of Code Examples in Documentation</ttl>
+        <xreftext>&#x201C;Accessibility of Code Examples in Documentation&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="">
+        <ttl>Accessibility of Links to External Web Sites in Documentation</ttl>
+        <xreftext>&#x201C;Accessibility of Links to External Web Sites in Documentation&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="">
+        <ttl>Access to Oracle Support</ttl>
+        <xreftext>&#x201C;Access to Oracle Support&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="CIAFJDBI">
+      <ttl>Related Documentation</ttl>
+      <xreftext>&#x201C;Related Documentation&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="i971172">
+      <ttl>Conventions</ttl>
+      <xreftext>&#x201C;Conventions&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="preface" href="whatsnew.htm" number="" targetptr="BGGJDGAA">
+    <ttl>What&#x0027;s New in Oracle Database 11g Release 2 (11.2)</ttl>
+    <xreftext>&#x201C;What&#x0027;s New in Oracle Database 11<span class="italic">g</span> Release 2 (11.2)&#x201D;</xreftext>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGDCCIG">
+      <ttl>New Grid Infrastructure Installation Option</ttl>
+      <xreftext>&#x201C;New Grid Infrastructure Installation Option&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGIBGAB">
+      <ttl>New Desktop and Server Class Options</ttl>
+      <xreftext>&#x201C;New Desktop and Server Class Options&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGJDJCH">
+      <ttl>Daylight Savings Time Upgrade of Timestamp with Timezone Data Type</ttl>
+      <xreftext>&#x201C;Daylight Savings Time Upgrade of Timestamp with Timezone Data Type&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGDFFHF">
+      <ttl>SYSASM Privilege</ttl>
+      <xreftext>&#x201C;SYSASM Privilege&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGBHDFG">
+      <ttl>New Tool to Configure Custom Installation Options</ttl>
+      <xreftext>&#x201C;New Tool to Configure Custom Installation Options&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGFBEEI">
+      <ttl>Deinstallation Tool</ttl>
+      <xreftext>&#x201C;Deinstallation Tool&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="CEGFCEJA">
+      <ttl>Intelligent Data Placement</ttl>
+      <xreftext>&#x201C;Intelligent Data Placement&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="CJAGDDAA">
+      <ttl>Oracle Automatic Storage Management Cluster File System (Oracle ACFS)</ttl>
+      <xreftext>&#x201C;Oracle Automatic Storage Management Cluster File System (Oracle ACFS)&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGBGJAA">
+      <ttl>Data Pump Export and Data Pump Import</ttl>
+      <xreftext>&#x201C;Data Pump Export and Data Pump Import&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="CJAFAFFD">
+      <ttl>Use Oracle Restart to Automatically Restart Your Database</ttl>
+      <xreftext>&#x201C;Use Oracle Restart to Automatically Restart Your Database&#x201D;</xreftext>
+      <div element="prefsect2" href="whatsnew.htm" number="" targetptr="">
+        <ttl>New Method of Installing Oracle Automatic Storage Management</ttl>
+        <xreftext>&#x201C;New Method of Installing Oracle Automatic Storage Management&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGHBEJG">
+      <ttl>SRVCTL Support for Single Instance Database in a Cluster</ttl>
+      <xreftext>&#x201C;SRVCTL Support for Single Instance Database in a Cluster&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="whatsnew.htm" number="" targetptr="BGGJCIEH">
+      <ttl>Deprecated in Oracle Database 11g Release 2 (11.2)</ttl>
+      <xreftext>&#x201C;Deprecated in Oracle Database 11<span class="italic">g</span> Release 2 (11.2)&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="intro.htm" number="1" targetptr="BABHDHHA">
+    <ttl>Overview of Oracle Database Installation</ttl>
+    <xreftext>&#x201C;Overview of Oracle Database Installation&#x201D;</xreftext>
+    <div element="sect1" href="intro.htm" number="1.1" targetptr="CHDDFIIB">
+      <ttl>New Oracle Products and Features Installed with This Release</ttl>
+      <xreftext>&#x201C;New Oracle Products and Features Installed with This Release&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.2" targetptr="BABIDCGG">
+      <ttl>Planning Your Installation</ttl>
+      <xreftext>&#x201C;Planning Your Installation&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.3" targetptr="i1005728">
+      <ttl>Installation Considerations</ttl>
+      <xreftext>&#x201C;Installation Considerations&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.3.1" targetptr="i1005689">
+        <ttl>Installation Differences Between Windows and UNIX Systems</ttl>
+        <xreftext>&#x201C;Installation Differences Between Windows and UNIX Systems&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.2" targetptr="BHCIIDDD">
+        <ttl>Recommended File System</ttl>
+        <xreftext>&#x201C;Recommended File System&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.3" targetptr="CHDBJCJA">
+        <ttl>Managing User Accounts with User Account Control</ttl>
+        <xreftext>&#x201C;Managing User Accounts with User Account Control&#x201D;</xreftext>
+        <obj element="bridgehead" href="intro.htm" number="" targetptr="">
+          <ttl>To start a command prompt window with Windows Administrator privileges:</ttl>
+          <xreftext>&#x201C;To start a command prompt window with Windows Administrator privileges:&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.4" targetptr="CHDCDIJI">
+        <ttl>Hardware and Software Certification</ttl>
+        <xreftext>&#x201C;Hardware and Software Certification&#x201D;</xreftext>
+        <div element="sect3" href="intro.htm" number="1.3.4.1" targetptr="">
+          <ttl>Third-Party Database Certification for SQL Developer</ttl>
+          <xreftext>&#x201C;Third-Party Database Certification for SQL Developer&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.5" targetptr="BABHHAJC">
+        <ttl>Multiple Oracle Homes Support</ttl>
+        <xreftext>&#x201C;Multiple Oracle Homes Support&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.6" targetptr="CHDBDGID">
+        <ttl>Grid Infrastructure for a Standalone Server</ttl>
+        <xreftext>&#x201C;Grid Infrastructure for a Standalone Server&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.7" targetptr="BABBIEGB">
+        <ttl>Oracle Cluster Synchronization Services</ttl>
+        <xreftext>&#x201C;Oracle Cluster Synchronization Services&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.8" targetptr="i1005848">
+        <ttl>Oracle Universal Installer Overview</ttl>
+        <xreftext>&#x201C;Oracle Universal Installer Overview&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.9" targetptr="CCHFHHFI">
+        <ttl>Oracle Base Directory</ttl>
+        <xreftext>&#x201C;Oracle Base Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.10" targetptr="BABFHEHD">
+        <ttl>Oracle Home Directory</ttl>
+        <xreftext>&#x201C;Oracle Home Directory&#x201D;</xreftext>
+        <div element="sect3" href="intro.htm" number="1.3.10.1" targetptr="CEGFIHHD">
+          <ttl>Contents of the Oracle Home Environment</ttl>
+          <xreftext>&#x201C;Contents of the Oracle Home Environment&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="intro.htm" number="1.3.10.2" targetptr="i1005660">
+          <ttl>Multiple Oracle Home Components</ttl>
+          <xreftext>&#x201C;Multiple Oracle Home Components&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.11" targetptr="CHDCHJDH">
+        <ttl>Installing Oracle Database Vault in an Oracle Data Guard Environment</ttl>
+        <xreftext>&#x201C;Installing Oracle Database Vault in an Oracle Data Guard Environment&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.3.12" targetptr="CEGDFJBF">
+        <ttl>Oracle Database Vault Default Audit Policy and Initialization Parameters</ttl>
+        <xreftext>&#x201C;Oracle Database Vault Default Audit Policy and Initialization Parameters&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.4" targetptr="BABEGIJD">
+      <ttl>Migration Considerations</ttl>
+      <xreftext>&#x201C;Migration Considerations&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.5" targetptr="CEGDACJD">
+      <ttl>Oracle Database Installation Methods</ttl>
+      <xreftext>&#x201C;Oracle Database Installation Methods&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.5.1" targetptr="CHDGDAFG">
+        <ttl>Interactive Installation Types</ttl>
+        <xreftext>&#x201C;Interactive Installation Types&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.5.2" targetptr="CHDECFBB">
+        <ttl>Automated Installation Methods Using Response Files</ttl>
+        <xreftext>&#x201C;Automated Installation Methods Using Response Files&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.6" targetptr="i1005984">
+      <ttl>Oracle Database Editions</ttl>
+      <xreftext>&#x201C;Oracle Database Editions&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.7" targetptr="BABGDEHD">
+      <ttl>Database Configuration Options</ttl>
+      <xreftext>&#x201C;Database Configuration Options&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.7.1" targetptr="CHDDEEFI">
+        <ttl>Preconfigured Database Types</ttl>
+        <xreftext>&#x201C;Preconfigured Database Types&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.7.2" targetptr="CHDJJGCJ">
+        <ttl>Installation Choices that Affect Database Creation</ttl>
+        <xreftext>&#x201C;Installation Choices that Affect Database Creation&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.7.3" targetptr="CHDFIFBD">
+        <ttl>Creating a Database After Installation</ttl>
+        <xreftext>&#x201C;Creating a Database After Installation&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.8" targetptr="CEGBGDFE">
+      <ttl>Database Storage Options</ttl>
+      <xreftext>&#x201C;Database Storage Options&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.8.1" targetptr="CEGFGHJF">
+        <ttl>File System</ttl>
+        <xreftext>&#x201C;File System&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.8.2" targetptr="CEGBDDFD">
+        <ttl>Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Automatic Storage Management&#x201D;</xreftext>
+        <div element="sect3" href="intro.htm" number="1.8.2.1" targetptr="">
+          <ttl>Automatic Storage Management Components</ttl>
+          <xreftext>&#x201C;Automatic Storage Management Components&#x201D;</xreftext>
+          <obj element="bridgehead" href="intro.htm" number="" targetptr="CEGIABDI">
+            <ttl>Automatic Storage Management Disk Groups</ttl>
+            <xreftext>&#x201C;Automatic Storage Management Disk Groups&#x201D;</xreftext>
+          </obj>
+          <obj element="bridgehead" href="intro.htm" number="" targetptr="CEGEFFFC">
+            <ttl>Automatic Storage Management Instance</ttl>
+            <xreftext>&#x201C;Automatic Storage Management Instance&#x201D;</xreftext>
+          </obj>
+        </div>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.9" targetptr="BGEDFBEA">
+      <ttl>Database Management Options</ttl>
+      <xreftext>&#x201C;Database Management Options&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.9.1" targetptr="CEGGIACC">
+        <ttl>Management Options for Preconfigured Databases</ttl>
+        <xreftext>&#x201C;Management Options for Preconfigured Databases&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.9.2" targetptr="CEGJFHBI">
+        <ttl>Management Options for Custom Databases</ttl>
+        <xreftext>&#x201C;Management Options for Custom Databases&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.9.3" targetptr="CHDHGEBI">
+        <ttl>Features Provided by Oracle Enterprise Manager Database Control</ttl>
+        <xreftext>&#x201C;Features Provided by Oracle Enterprise Manager Database Control&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.10" targetptr="BGEGHEIC">
+      <ttl>Database Backup and Recovery Options</ttl>
+      <xreftext>&#x201C;Database Backup and Recovery Options&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.10.1" targetptr="CEGGCIHC">
+        <ttl>Enabling Automated Backups</ttl>
+        <xreftext>&#x201C;Enabling Automated Backups&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.10.2" targetptr="CEGEDJDD">
+        <ttl>Backup Job Default Settings</ttl>
+        <xreftext>&#x201C;Backup Job Default Settings&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.11" targetptr="BGEGDGGE">
+      <ttl>E-mail Notification Options</ttl>
+      <xreftext>&#x201C;E-mail Notification Options&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="intro.htm" number="1.12" targetptr="CIHHGABI">
+      <ttl>Upgrade Considerations</ttl>
+      <xreftext>&#x201C;Upgrade Considerations&#x201D;</xreftext>
+      <div element="sect2" href="intro.htm" number="1.12.1" targetptr="CHDEGEGC">
+        <ttl>Automatic Storage Management Is Installed with Oracle Grid Infrastructure</ttl>
+        <xreftext>&#x201C;Automatic Storage Management Is Installed with Oracle Grid Infrastructure&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.12.2" targetptr="CHDBIEGE">
+        <ttl>Daylight Savings Time Upgrade</ttl>
+        <xreftext>&#x201C;Daylight Savings Time Upgrade&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.12.3" targetptr="i1007026">
+        <ttl>Policies for Client and Application Software Installations</ttl>
+        <xreftext>&#x201C;Policies for Client and Application Software Installations&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="intro.htm" number="1.12.4" targetptr="BABECEIJ">
+        <ttl>Downgrading a Database</ttl>
+        <xreftext>&#x201C;Downgrading a Database&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="reqs.htm" number="2" targetptr="NTDBI002">
+    <ttl>Oracle Database Preinstallation Requirements</ttl>
+    <xreftext>&#x201C;Oracle Database Preinstallation Requirements&#x201D;</xreftext>
+    <div element="sect1" href="reqs.htm" number="2.1" targetptr="CHDGJEJE">
+      <ttl>Oracle Database Hardware Requirements</ttl>
+      <xreftext>&#x201C;Oracle Database Hardware Requirements&#x201D;</xreftext>
+      <div element="sect2" href="reqs.htm" number="2.1.1" targetptr="BCFDACBF">
+        <ttl>Hardware Component Requirements for Windows 32-Bit</ttl>
+        <xreftext>&#x201C;Hardware Component Requirements for Windows 32-Bit&#x201D;</xreftext>
+        <obj element="table" href="reqs.htm" number="2-1" targetptr="">
+          <ttl>Windows 32-Bit Hardware Requirements</ttl>
+          <xreftext>&#x201C;Windows 32-Bit Hardware Requirements&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.1.2" targetptr="CHDBJADB">
+        <ttl>Hardware Component Requirements for Windows x64</ttl>
+        <xreftext>&#x201C;Hardware Component Requirements for Windows x64&#x201D;</xreftext>
+        <obj element="table" href="reqs.htm" number="2-2" targetptr="">
+          <ttl>Windows x64 Hardware Requirements</ttl>
+          <xreftext>&#x201C;Windows x64 Hardware Requirements&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.1.3" targetptr="CHDEAHDJ">
+        <ttl>Hard Disk Space Requirements</ttl>
+        <xreftext>&#x201C;Hard Disk Space Requirements&#x201D;</xreftext>
+        <obj element="table" href="reqs.htm" number="2-3" targetptr="">
+          <ttl>Windows 32-Bit Disk Space Requirements on NTFS</ttl>
+          <xreftext>&#x201C;Windows 32-Bit Disk Space Requirements on NTFS&#x201D;</xreftext>
+        </obj>
+        <obj element="table" href="reqs.htm" number="2-4" targetptr="">
+          <ttl>Windows x64 Disk Space Requirements on NTFS</ttl>
+          <xreftext>&#x201C;Windows x64 Disk Space Requirements on NTFS&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.1.4" targetptr="BCFDHDBF">
+        <ttl>Verifying Hardware Requirements</ttl>
+        <xreftext>&#x201C;Verifying Hardware Requirements&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="reqs.htm" number="2.2" targetptr="CHDHGGFE">
+      <ttl>Oracle Database Software Requirements</ttl>
+      <xreftext>&#x201C;Oracle Database Software Requirements&#x201D;</xreftext>
+      <obj element="table" href="reqs.htm" number="2-5" targetptr="">
+        <ttl>Windows 32-Bit Software Requirements</ttl>
+        <xreftext>&#x201C;Windows 32-Bit Software Requirements&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="reqs.htm" number="2-6" targetptr="">
+        <ttl>Windows x64 Software Requirements</ttl>
+        <xreftext>&#x201C;Windows x64 Software Requirements&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="reqs.htm" number="2.3" targetptr="BGBEEREE">
+      <ttl>Windows Certification and Web Browser Support</ttl>
+      <xreftext>&#x201C;Windows Certification and Web Browser Support&#x201D;</xreftext>
+      <div element="sect2" href="reqs.htm" number="2.3.1" targetptr="BABDEDJG">
+        <ttl>Windows Terminal Services and Remote Desktop Support</ttl>
+        <xreftext>&#x201C;Windows Terminal Services and Remote Desktop Support&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.3.2" targetptr="">
+        <ttl>Oracle Services for Microsoft Transaction Server</ttl>
+        <xreftext>&#x201C;Oracle Services for Microsoft Transaction Server&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.3.3" targetptr="CHDEGICJ">
+        <ttl>Unsupported Components on 32-Bit Windows Client Operating Systems</ttl>
+        <xreftext>&#x201C;Unsupported Components on 32-Bit Windows Client Operating Systems&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.3.4" targetptr="CHDCEFIJ">
+        <ttl>Unsupported Components on Windows x64</ttl>
+        <xreftext>&#x201C;Unsupported Components on Windows x64&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.3.5" targetptr="CFHEEEBJ">
+        <ttl>Web Browser Support</ttl>
+        <xreftext>&#x201C;Web Browser Support&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="reqs.htm" number="2.4" targetptr="NTDBI02600">
+      <ttl>Oracle Database Network Topics</ttl>
+      <xreftext>&#x201C;Oracle Database Network Topics&#x201D;</xreftext>
+      <div element="sect2" href="reqs.htm" number="2.4.1" targetptr="BABBDGBI">
+        <ttl>Installing Oracle Database on DHCP Computers</ttl>
+        <xreftext>&#x201C;Installing Oracle Database on DHCP Computers&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.4.2" targetptr="BABHFIBJ">
+        <ttl>Installing Oracle Database on Computers with Multiple IP Addresses</ttl>
+        <xreftext>&#x201C;Installing Oracle Database on Computers with Multiple IP Addresses&#x201D;</xreftext>
+        <obj element="bridgehead" href="reqs.htm" number="" targetptr="CHDFFGEB">
+          <ttl>Setting the ORACLE_HOSTNAME Environment Variable</ttl>
+          <xreftext>&#x201C;Setting the ORACLE_HOSTNAME Environment Variable&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.4.3" targetptr="BABHHBFF">
+        <ttl>Installing Oracle Database on Computers with Multiple Aliases</ttl>
+        <xreftext>&#x201C;Installing Oracle Database on Computers with Multiple Aliases&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.4.4" targetptr="BABFHCJG">
+        <ttl>Installing Oracle Database on Non-Networked Computers</ttl>
+        <xreftext>&#x201C;Installing Oracle Database on Non-Networked Computers&#x201D;</xreftext>
+        <obj element="bridgehead" href="reqs.htm" number="" targetptr="">
+          <ttl>Connecting the Computer to the Network after Installation</ttl>
+          <xreftext>&#x201C;Connecting the Computer to the Network after Installation&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.4.5" targetptr="BABGCEAI">
+        <ttl>Installing a Loopback Adapter</ttl>
+        <xreftext>&#x201C;Installing a Loopback Adapter&#x201D;</xreftext>
+        <div element="sect3" href="reqs.htm" number="2.4.5.1" targetptr="BABGHEFB">
+          <ttl>Checking if a Loopback Adapter Is Installed on Your Computer</ttl>
+          <xreftext>&#x201C;Checking if a Loopback Adapter Is Installed on Your Computer&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.4.5.2" targetptr="CHDGIFBC">
+          <ttl>Installing a Loopback Adapter on Windows Server 2003, Windows Server 2003 R2, or Windows XP</ttl>
+          <xreftext>&#x201C;Installing a Loopback Adapter on Windows Server 2003, Windows Server 2003 R2, or Windows XP&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.4.5.3" targetptr="BABBIBFB">
+          <ttl>Installing a Loopback Adapter on Windows Vista and Windows Server 2008</ttl>
+          <xreftext>&#x201C;Installing a Loopback Adapter on Windows Vista and Windows Server 2008&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.4.5.4" targetptr="BABEDFGI">
+          <ttl>Installing a Loopback Adapter on Windows 7</ttl>
+          <xreftext>&#x201C;Installing a Loopback Adapter on Windows 7&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.4.5.5" targetptr="BABECDGI">
+          <ttl>Removing a Loopback Adapter</ttl>
+          <xreftext>&#x201C;Removing a Loopback Adapter&#x201D;</xreftext>
+        </div>
+      </div>
+    </div>
+    <div element="sect1" href="reqs.htm" number="2.5" targetptr="BCFBIDDB">
+      <ttl>Individual Component Requirements</ttl>
+      <xreftext>&#x201C;Individual Component Requirements&#x201D;</xreftext>
+      <div element="sect2" href="reqs.htm" number="2.5.1" targetptr="i1015038">
+        <ttl>Configuring Disk Storage for Oracle Data Files and Recovery Files</ttl>
+        <xreftext>&#x201C;Configuring Disk Storage for Oracle Data Files and Recovery Files&#x201D;</xreftext>
+        <div element="sect3" href="reqs.htm" number="2.5.1.1" targetptr="CHDBFAGA">
+          <ttl>Choosing a Storage Option for Oracle Data Files</ttl>
+          <xreftext>&#x201C;Choosing a Storage Option for Oracle Data Files&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.5.1.2" targetptr="CHDJBFHF">
+          <ttl>Choosing a Storage Option for Oracle Database Recovery Files</ttl>
+          <xreftext>&#x201C;Choosing a Storage Option for Oracle Database Recovery Files&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.5.1.3" targetptr="CHDIBEGA">
+          <ttl>Configuring Disk Storage</ttl>
+          <xreftext>&#x201C;Configuring Disk Storage&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.2" targetptr="CHDHIBJF">
+        <ttl>Creating Directories for Oracle Data Files or Recovery Files</ttl>
+        <xreftext>&#x201C;Creating Directories for Oracle Data Files or Recovery Files&#x201D;</xreftext>
+        <div element="sect3" href="reqs.htm" number="2.5.2.1" targetptr="CHDBJCCG">
+          <ttl>Guidelines for Placing Oracle Data Files on a File System</ttl>
+          <xreftext>&#x201C;Guidelines for Placing Oracle Data Files on a File System&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.5.2.2" targetptr="CHDFHHDA">
+          <ttl>Guidelines for Placing Oracle Recovery Files on a File System</ttl>
+          <xreftext>&#x201C;Guidelines for Placing Oracle Recovery Files on a File System&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="reqs.htm" number="2.5.2.3" targetptr="CHDFGJIA">
+          <ttl>Creating Required Directories</ttl>
+          <xreftext>&#x201C;Creating Required Directories&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.3" targetptr="BCFCFECG">
+        <ttl>Stopping Existing Oracle Services</ttl>
+        <xreftext>&#x201C;Stopping Existing Oracle Services&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.4" targetptr="BCFFAFBB">
+        <ttl>Oracle Advanced Security Requirements</ttl>
+        <xreftext>&#x201C;Oracle Advanced Security Requirements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.5" targetptr="BCFDJJJG">
+        <ttl>Oracle Enterprise Manager Requirements</ttl>
+        <xreftext>&#x201C;Oracle Enterprise Manager Requirements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.6" targetptr="CHDDJIGG">
+        <ttl>Oracle-Managed Files Requirements</ttl>
+        <xreftext>&#x201C;Oracle-Managed Files Requirements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.7" targetptr="BCFJGIHE">
+        <ttl>Oracle Real Application Clusters (Oracle RAC)</ttl>
+        <xreftext>&#x201C;Oracle Real Application Clusters (Oracle RAC)&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.8" targetptr="BABEBECD">
+        <ttl>Oracle Volume Shadow Copy Service (VSS) Writer</ttl>
+        <xreftext>&#x201C;Oracle Volume Shadow Copy Service (VSS) Writer&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="reqs.htm" number="2.5.9" targetptr="BABIEGAJ">
+        <ttl>Preinstallation Requirement for Oracle Database Vault</ttl>
+        <xreftext>&#x201C;Preinstallation Requirement for Oracle Database Vault&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="oraclerestart.htm" number="3" targetptr="NTDBI999">
+    <ttl>Oracle Grid Infrastructure</ttl>
+    <xreftext>&#x201C;Oracle Grid Infrastructure&#x201D;</xreftext>
+    <div element="sect1" href="oraclerestart.htm" number="3.1" targetptr="i1011299">
+      <ttl>Requirements for Oracle Grid Infrastructure Installation</ttl>
+      <xreftext>&#x201C;Requirements for Oracle Grid Infrastructure Installation&#x201D;</xreftext>
+      <div element="sect2" href="oraclerestart.htm" number="3.1.1" targetptr="CHDCEBFD">
+        <ttl>Memory Requirements</ttl>
+        <xreftext>&#x201C;Memory Requirements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="oraclerestart.htm" number="3.1.2" targetptr="CHDIFGAD">
+        <ttl>Disk Space Requirements</ttl>
+        <xreftext>&#x201C;Disk Space Requirements&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.2" targetptr="CHDCIJEG">
+      <ttl>Oracle ACFS and Oracle ADVM Support</ttl>
+      <xreftext>&#x201C;Oracle ACFS and Oracle ADVM Support&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.3" targetptr="CFAGEIFE">
+      <ttl>Migrating Existing Automatic Storage Management Instances</ttl>
+      <xreftext>&#x201C;Migrating Existing Automatic Storage Management Instances&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.4" targetptr="CHDBABHF">
+      <ttl>Automatic Storage Management Installation Considerations</ttl>
+      <xreftext>&#x201C;Automatic Storage Management Installation Considerations&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.5" targetptr="CHDGEAIF">
+      <ttl>Preparing Disks for an Automatic Storage Management Installation</ttl>
+      <xreftext>&#x201C;Preparing Disks for an Automatic Storage Management Installation&#x201D;</xreftext>
+      <div element="sect2" href="oraclerestart.htm" number="3.5.1" targetptr="CHDDJJAF">
+        <ttl>General Steps for Configuring Automatic Storage Management</ttl>
+        <xreftext>&#x201C;General Steps for Configuring Automatic Storage Management&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="oraclerestart.htm" number="3.5.2" targetptr="CHDGCEHG">
+        <ttl>Step 1: Identifying Storage Requirements for Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Step 1: Identifying Storage Requirements for Automatic Storage Management&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="oraclerestart.htm" number="3.5.3" targetptr="CHDFDGHD">
+        <ttl>Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance</ttl>
+        <xreftext>&#x201C;Step 3: Creating DAS or SAN Disk Partitions for an Automatic Storage Management Instance&#x201D;</xreftext>
+        <obj element="bridgehead" href="oraclerestart.htm" number="" targetptr="CHDHIHCH">
+          <ttl>Step 1: Enabling Disk Automounting</ttl>
+          <xreftext>&#x201C;Step 1: Enabling Disk Automounting&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="oraclerestart.htm" number="" targetptr="CHDGDCEE">
+          <ttl>Step 2: Creating the Disk Partitions</ttl>
+          <xreftext>&#x201C;Step 2: Creating the Disk Partitions&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="oraclerestart.htm" number="3.5.4" targetptr="CHDHFFGH">
+        <ttl>Step 4: Manually Configuring Disks for Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Step 4: Manually Configuring Disks for Automatic Storage Management&#x201D;</xreftext>
+        <obj element="bridgehead" href="oraclerestart.htm" number="" targetptr="">
+          <ttl>Using the asmtoolg Tool (Graphical User Interface)</ttl>
+          <xreftext>&#x201C;Using the asmtoolg Tool (Graphical User Interface)&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="oraclerestart.htm" number="" targetptr="">
+          <ttl>Using the asmtool Utility (Command Line)</ttl>
+          <xreftext>&#x201C;Using the asmtool Utility (Command Line)&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.6" targetptr="BABHEBIG">
+      <ttl>Installing and Configuring the Grid Infrastructure for a Standalone Server</ttl>
+      <xreftext>&#x201C;Installing and Configuring the Grid Infrastructure for a Standalone Server&#x201D;</xreftext>
+      <div element="sect2" href="oraclerestart.htm" number="3.6.1" targetptr="BABCHCBG">
+        <ttl>Installing Grid Infrastructure with a New Database Installation</ttl>
+        <xreftext>&#x201C;Installing Grid Infrastructure with a New Database Installation&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="oraclerestart.htm" number="3.6.2" targetptr="BABCIBEF">
+        <ttl>Installing Grid Infrastructure for an Existing Database</ttl>
+        <xreftext>&#x201C;Installing Grid Infrastructure for an Existing Database&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.7" targetptr="CHDHHDEH">
+      <ttl>Modifying Oracle Grid Infrastructure Binaries After Installation</ttl>
+      <xreftext>&#x201C;Modifying Oracle Grid Infrastructure Binaries After Installation&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.8" targetptr="BABGFGCF">
+      <ttl>Manually Configuring Oracle Automatic Storage Management Disk Groups</ttl>
+      <xreftext>&#x201C;Manually Configuring Oracle Automatic Storage Management Disk Groups&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="oraclerestart.htm" number="3.9" targetptr="BABJDJCB">
+      <ttl>Testing the Oracle Automatic Storage Management Installation</ttl>
+      <xreftext>&#x201C;Testing the Oracle Automatic Storage Management Installation&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="install.htm" number="4" targetptr="NTDBI003">
+    <ttl>Installing Oracle Database</ttl>
+    <xreftext>&#x201C;Installing Oracle Database&#x201D;</xreftext>
+    <div element="sect1" href="install.htm" number="4.1" targetptr="i1013831">
+      <ttl>Preinstallation Considerations for Installing Oracle Database</ttl>
+      <xreftext>&#x201C;Preinstallation Considerations for Installing Oracle Database&#x201D;</xreftext>
+      <div element="sect2" href="install.htm" number="4.1.1" targetptr="CBHDECCE">
+        <ttl>Installation Consideration on Windows Vista and Later</ttl>
+        <xreftext>&#x201C;Installation Consideration on Windows Vista and Later&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="install.htm" number="4.1.2" targetptr="BABIAFDF">
+        <ttl>Performing Multiple Oracle Database Installations</ttl>
+        <xreftext>&#x201C;Performing Multiple Oracle Database Installations&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="install.htm" number="4.1.3" targetptr="BABBJJEE">
+        <ttl>Installing on Systems That Already Have Oracle Components</ttl>
+        <xreftext>&#x201C;Installing on Systems That Already Have Oracle Components&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="install.htm" number="4.1.4" targetptr="BABFAAHI">
+        <ttl>Installing with Minimum Memory Requirements</ttl>
+        <xreftext>&#x201C;Installing with Minimum Memory Requirements&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="install.htm" number="4.2" targetptr="BABFDDEA">
+      <ttl>Reviewing Component-Specific Installation Guidelines</ttl>
+      <xreftext>&#x201C;Reviewing Component-Specific Installation Guidelines&#x201D;</xreftext>
+      <div element="sect2" href="install.htm" number="4.2.1" targetptr="BJFIIDGI">
+        <ttl>Selecting the Database Character Set</ttl>
+        <xreftext>&#x201C;Selecting the Database Character Set&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="install.htm" number="4.2.2" targetptr="CHDFDEIC">
+        <ttl>Using an Automatic Storage Management Disk Group</ttl>
+        <xreftext>&#x201C;Using an Automatic Storage Management Disk Group&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="install.htm" number="4.3" targetptr="BABDAAEF">
+      <ttl>Accessing the Installation Software</ttl>
+      <xreftext>&#x201C;Accessing the Installation Software&#x201D;</xreftext>
+      <div element="sect2" href="install.htm" number="4.3.1" targetptr="BABJJEBD">
+        <ttl>Installing from a Remote DVD Drive</ttl>
+        <xreftext>&#x201C;Installing from a Remote DVD Drive&#x201D;</xreftext>
+        <div element="sect3" href="install.htm" number="4.3.1.1" targetptr="BABDJIGC">
+          <ttl>Step 1: On the Remote Computer, Share the DVD Drive</ttl>
+          <xreftext>&#x201C;Step 1: On the Remote Computer, Share the DVD Drive&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="install.htm" number="4.3.1.2" targetptr="BABICEHD">
+          <ttl>Step 2: On the Local Computer, Map the DVD Drive</ttl>
+          <xreftext>&#x201C;Step 2: On the Local Computer, Map the DVD Drive&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="install.htm" number="4.3.2" targetptr="BABEBGEJ">
+        <ttl>Installing on Remote Computers Through Remote Access Software</ttl>
+        <xreftext>&#x201C;Installing on Remote Computers Through Remote Access Software&#x201D;</xreftext>
+        <div element="sect3" href="install.htm" number="4.3.2.1" targetptr="">
+          <ttl>Installing on Remote Computers from a Hard Drive</ttl>
+          <xreftext>&#x201C;Installing on Remote Computers from a Hard Drive&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="install.htm" number="4.3.2.2" targetptr="">
+          <ttl>Installing on Remote Computers from a Remote DVD Drive</ttl>
+          <xreftext>&#x201C;Installing on Remote Computers from a Remote DVD Drive&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="install.htm" number="4.3.3" targetptr="BABBHJIG">
+        <ttl>Downloading Oracle Software</ttl>
+        <xreftext>&#x201C;Downloading Oracle Software&#x201D;</xreftext>
+        <div element="sect3" href="install.htm" number="4.3.3.1" targetptr="CBHJDHJA">
+          <ttl>Downloading the Installation Archive Files from OTN</ttl>
+          <xreftext>&#x201C;Downloading the Installation Archive Files from OTN&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="install.htm" number="4.3.3.2" targetptr="CBHIBCGG">
+          <ttl>Downloading the Software from Oracle E-Delivery</ttl>
+          <xreftext>&#x201C;Downloading the Software from Oracle E-Delivery&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="install.htm" number="4.3.3.3" targetptr="CBHHJHFH">
+          <ttl>Extracting the Installation Files</ttl>
+          <xreftext>&#x201C;Extracting the Installation Files&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="install.htm" number="4.3.4" targetptr="BABHAJFC">
+        <ttl>Copying the Oracle Database Software to a Hard Disk</ttl>
+        <xreftext>&#x201C;Copying the Oracle Database Software to a Hard Disk&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="install.htm" number="4.4" targetptr="BJFJJAIB">
+      <ttl>Database Security Options</ttl>
+      <xreftext>&#x201C;Database Security Options&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="install.htm" number="4.5" targetptr="BABDJIFG">
+      <ttl>Installing the Oracle Database Software</ttl>
+      <xreftext>&#x201C;Installing the Oracle Database Software&#x201D;</xreftext>
+      <obj element="table" href="install.htm" number="4-1" targetptr="">
+        <ttl>Oracle Universal Installer Windows</ttl>
+        <xreftext>&#x201C;Oracle Universal Installer Windows&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="install.htm" number="4.6" targetptr="BBAIFCGB">
+      <ttl>Cloning an Oracle Home</ttl>
+      <xreftext>&#x201C;Cloning an Oracle Home&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="postcfg.htm" number="5" targetptr="NTDBI004">
+    <ttl>Oracle Database Postinstallation Tasks</ttl>
+    <xreftext>&#x201C;Oracle Database Postinstallation Tasks&#x201D;</xreftext>
+    <div element="sect1" href="postcfg.htm" number="5.1" targetptr="i1009930">
+      <ttl>Installing the Latest Patch Set Release</ttl>
+      <xreftext>&#x201C;Installing the Latest Patch Set Release&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.2" targetptr="i1010414">
+      <ttl>Validating Invalid PL/SQL Modules</ttl>
+      <xreftext>&#x201C;Validating Invalid PL/SQL Modules&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.3" targetptr="BABIDHJB">
+      <ttl>Configuring Secure Sockets Layer</ttl>
+      <xreftext>&#x201C;Configuring Secure Sockets Layer&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.4" targetptr="BJFGIBJA">
+      <ttl>Postinstallation Tasks for SQL Developer</ttl>
+      <xreftext>&#x201C;Postinstallation Tasks for SQL Developer&#x201D;</xreftext>
+      <div element="sect2" href="postcfg.htm" number="5.4.1" targetptr="BJFGAACH">
+        <ttl>Migrating User Settings from Release 1.0</ttl>
+        <xreftext>&#x201C;Migrating User Settings from Release 1.0&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.4.2" targetptr="BJFIHBEF">
+        <ttl>Migrating Information from Previous Releases</ttl>
+        <xreftext>&#x201C;Migrating Information from Previous Releases&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.4.3" targetptr="BJFDCFDC">
+        <ttl>Location of User-Related Information</ttl>
+        <xreftext>&#x201C;Location of User-Related Information&#x201D;</xreftext>
+        <obj element="table" href="postcfg.htm" number="5-1" targetptr="">
+          <ttl>Default Locations for User-Related Information</ttl>
+          <xreftext>&#x201C;Default Locations for User-Related Information&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.5" targetptr="CEGCCBAC">
+      <ttl>Configuring Oracle Components</ttl>
+      <xreftext>&#x201C;Configuring Oracle Components&#x201D;</xreftext>
+      <div element="sect2" href="postcfg.htm" number="5.5.1" targetptr="NTDBI0451">
+        <ttl>Direct NFS Client</ttl>
+        <xreftext>&#x201C;Direct NFS Client&#x201D;</xreftext>
+        <div element="sect3" href="postcfg.htm" number="5.5.1.1" targetptr="CHDFGFDC">
+          <ttl>Enable Direct NFS Client</ttl>
+          <xreftext>&#x201C;Enable Direct NFS Client&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="postcfg.htm" number="5.5.1.2" targetptr="BCGJGIBA">
+          <ttl>Disable Direct NFS Client</ttl>
+          <xreftext>&#x201C;Disable Direct NFS Client&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="postcfg.htm" number="5.5.1.3" targetptr="">
+          <ttl>ORADNFS</ttl>
+          <xreftext>&#x201C;ORADNFS&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.2" targetptr="CEGHHCJC">
+        <ttl>Configuring Oracle Messaging Gateway</ttl>
+        <xreftext>&#x201C;Configuring Oracle Messaging Gateway&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.3" targetptr="BABJIGEC">
+        <ttl>Configuring Oracle Administration Assistant for Windows</ttl>
+        <xreftext>&#x201C;Configuring Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.4" targetptr="CEGHBCCD">
+        <ttl>Configuring Oracle Counters for Windows Performance Monitor</ttl>
+        <xreftext>&#x201C;Configuring Oracle Counters for Windows Performance Monitor&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.5" targetptr="CEGGGFHF">
+        <ttl>Configuring Oracle Label Security</ttl>
+        <xreftext>&#x201C;Configuring Oracle Label Security&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.6" targetptr="BABDJCGH">
+        <ttl>Configuring Oracle Database Vault</ttl>
+        <xreftext>&#x201C;Configuring Oracle Database Vault&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.7" targetptr="BABDJIAG">
+        <ttl>Configuring Oracle Net Services</ttl>
+        <xreftext>&#x201C;Configuring Oracle Net Services&#x201D;</xreftext>
+        <obj element="bridgehead" href="postcfg.htm" number="" targetptr="">
+          <ttl>Modifying the listener.ora File</ttl>
+          <xreftext>&#x201C;Modifying the listener.ora File&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="postcfg.htm" number="" targetptr="">
+          <ttl>Modifying the tnsnames.ora File</ttl>
+          <xreftext>&#x201C;Modifying the tnsnames.ora File&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.8" targetptr="BABEFGIC">
+        <ttl>Installing Oracle Text Supplied Knowledge Bases</ttl>
+        <xreftext>&#x201C;Installing Oracle Text Supplied Knowledge Bases&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.9" targetptr="BCGBAAAI">
+        <ttl>Installing Oracle Text Filtering Component</ttl>
+        <xreftext>&#x201C;Installing Oracle Text Filtering Component&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.10" targetptr="CEGBJIHD">
+        <ttl>Configuring or Reinstalling Oracle XML DB</ttl>
+        <xreftext>&#x201C;Configuring or Reinstalling Oracle XML DB&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.11" targetptr="CEGGIACF">
+        <ttl>Configuring PL/SQL External Procedures</ttl>
+        <xreftext>&#x201C;Configuring PL/SQL External Procedures&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.12" targetptr="CEGGAJHA">
+        <ttl>Configuring Shared Server Support</ttl>
+        <xreftext>&#x201C;Configuring Shared Server Support&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.13" targetptr="BABFAEIG">
+        <ttl>Setting Credentials for the Job System to Work with Enterprise Manager</ttl>
+        <xreftext>&#x201C;Setting Credentials for the Job System to Work with Enterprise Manager&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.14" targetptr="BABGIHAF">
+        <ttl>Configuring Oracle Database to Communicate with Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Configuring Oracle Database to Communicate with Automatic Storage Management&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.15" targetptr="BABJDDBD">
+        <ttl>Configuring Databases to Use Oracle Enterprise Manager Database Control</ttl>
+        <xreftext>&#x201C;Configuring Databases to Use Oracle Enterprise Manager Database Control&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.5.16" targetptr="BABIFCEC">
+        <ttl>Installing Oracle Database Examples</ttl>
+        <xreftext>&#x201C;Installing Oracle Database Examples&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.6" targetptr="BCGFCJJE">
+      <ttl>Create a Fast Recovery Area Disk Group</ttl>
+      <xreftext>&#x201C;Create a Fast Recovery Area Disk Group&#x201D;</xreftext>
+      <div element="sect2" href="postcfg.htm" number="5.6.1" targetptr="">
+        <ttl>About the Fast Recovery Area and the Fast Recovery Area Disk Group</ttl>
+        <xreftext>&#x201C;About the Fast Recovery Area and the Fast Recovery Area Disk Group&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="postcfg.htm" number="5.6.2" targetptr="">
+        <ttl>Creating the Fast Recovery Area Disk Group</ttl>
+        <xreftext>&#x201C;Creating the Fast Recovery Area Disk Group&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="postcfg.htm" number="5.7" targetptr="BCGEHAJD">
+      <ttl>Enabling and Disabling Database Options</ttl>
+      <xreftext>&#x201C;Enabling and Disabling Database Options&#x201D;</xreftext>
+      <obj element="example" href="postcfg.htm" number="5-1" targetptr="BCGJAGHG">
+        <ttl>Complete Example of Running the Chopt Tool</ttl>
+        <xreftext>&#x201C;Complete Example of Running the Chopt Tool&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="startrdb.htm" number="6" targetptr="NTDBI005">
+    <ttl>Getting Started with Oracle Database</ttl>
+    <xreftext>&#x201C;Getting Started with Oracle Database&#x201D;</xreftext>
+    <div element="sect1" href="startrdb.htm" number="6.1" targetptr="CHDCADBD">
+      <ttl>Checking the Installed Oracle Database Contents and Directory Location</ttl>
+      <xreftext>&#x201C;Checking the Installed Oracle Database Contents and Directory Location&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.2" targetptr="NTDBI0052">
+      <ttl>Logging in to Enterprise Manager Database Control</ttl>
+      <xreftext>&#x201C;Logging in to Enterprise Manager Database Control&#x201D;</xreftext>
+      <div element="sect2" href="startrdb.htm" number="6.2.1" targetptr="">
+        <ttl>Understanding Database Control Login Privileges</ttl>
+        <xreftext>&#x201C;Understanding Database Control Login Privileges&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.3" targetptr="CHDFJABD">
+      <ttl>Managing Automatic Storage Management</ttl>
+      <xreftext>&#x201C;Managing Automatic Storage Management&#x201D;</xreftext>
+      <div element="sect2" href="startrdb.htm" number="6.3.1" targetptr="BABFGCII">
+        <ttl>Starting and Stopping Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Starting and Stopping Automatic Storage Management&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="startrdb.htm" number="6.3.2" targetptr="BABFBIGB">
+        <ttl>Automatic Storage Management Utilities</ttl>
+        <xreftext>&#x201C;Automatic Storage Management Utilities&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.4" targetptr="CHDDEEAF">
+      <ttl>Starting and Stopping an Oracle Database</ttl>
+      <xreftext>&#x201C;Starting and Stopping an Oracle Database&#x201D;</xreftext>
+      <div element="sect2" href="startrdb.htm" number="6.4.1" targetptr="CHDFCFAI">
+        <ttl>Starting and Stopping the Database with Oracle Enterprise Manager Database Control</ttl>
+        <xreftext>&#x201C;Starting and Stopping the Database with Oracle Enterprise Manager Database Control&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="startrdb.htm" number="6.4.2" targetptr="CHDGGDAB">
+        <ttl>Starting and Stopping the Database with Oracle Administration Assistant for Windows</ttl>
+        <xreftext>&#x201C;Starting and Stopping the Database with Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="startrdb.htm" number="6.4.3" targetptr="CHDFDIHI">
+        <ttl>Starting and Stopping the Database from the Microsoft Windows Services Utility</ttl>
+        <xreftext>&#x201C;Starting and Stopping the Database from the Microsoft Windows Services Utility&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.5" targetptr="CHDIIIDB">
+      <ttl>Accessing Oracle Database with SQL*Plus</ttl>
+      <xreftext>&#x201C;Accessing Oracle Database with SQL*Plus&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.6" targetptr="">
+      <ttl>Accessing Oracle Database with SQL Developer</ttl>
+      <xreftext>&#x201C;Accessing Oracle Database with SQL Developer&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.7" targetptr="BDCCADCJ">
+      <ttl>Reviewing User Accounts and Passwords</ttl>
+      <xreftext>&#x201C;Reviewing User Accounts and Passwords&#x201D;</xreftext>
+      <div element="sect2" href="startrdb.htm" number="6.7.1" targetptr="CHDHEBIB">
+        <ttl>Reviewing Administrative Accounts</ttl>
+        <xreftext>&#x201C;Reviewing Administrative Accounts&#x201D;</xreftext>
+        <obj element="table" href="startrdb.htm" number="6-1" targetptr="">
+          <ttl>Administrative Accounts</ttl>
+          <xreftext>&#x201C;Administrative Accounts&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="startrdb.htm" number="6.7.2" targetptr="BDCDIEBD">
+        <ttl>Minimum Requirements for Passwords</ttl>
+        <xreftext>&#x201C;Minimum Requirements for Passwords&#x201D;</xreftext>
+        <div element="sect3" href="startrdb.htm" number="6.7.2.1" targetptr="CHDCBCHD">
+          <ttl>Using Enterprise Manager Database Control to Unlock and Change Passwords</ttl>
+          <xreftext>&#x201C;Using Enterprise Manager Database Control to Unlock and Change Passwords&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="startrdb.htm" number="6.7.2.2" targetptr="CHDJDDEA">
+          <ttl>Using SQL*Plus to Unlock and Change Passwords</ttl>
+          <xreftext>&#x201C;Using SQL*Plus to Unlock and Change Passwords&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="startrdb.htm" number="6.7.3" targetptr="BABCJHBG">
+        <ttl>Recommendations for Passwords</ttl>
+        <xreftext>&#x201C;Recommendations for Passwords&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.8" targetptr="i1006051">
+      <ttl>Identifying Databases</ttl>
+      <xreftext>&#x201C;Identifying Databases&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.9" targetptr="BDCFBGCH">
+      <ttl>Locating the Server Parameter File</ttl>
+      <xreftext>&#x201C;Locating the Server Parameter File&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.10" targetptr="BDCFHCCJ">
+      <ttl>Identifying Tablespaces and Data Files</ttl>
+      <xreftext>&#x201C;Identifying Tablespaces and Data Files&#x201D;</xreftext>
+      <obj element="table" href="startrdb.htm" number="6-2" targetptr="">
+        <ttl>Tablespaces and Data Files</ttl>
+        <xreftext>&#x201C;Tablespaces and Data Files&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.11" targetptr="BDCDEIDJ">
+      <ttl>Locating Redo Log Files</ttl>
+      <xreftext>&#x201C;Locating Redo Log Files&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.12" targetptr="BDCBJEEG">
+      <ttl>Locating Control Files</ttl>
+      <xreftext>&#x201C;Locating Control Files&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="startrdb.htm" number="6.13" targetptr="i1006089">
+      <ttl>Understanding Oracle Database Services on Windows</ttl>
+      <xreftext>&#x201C;Understanding Oracle Database Services on Windows&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="deinstall.htm" number="7" targetptr="NTDBI006">
+    <ttl>Removing Oracle Database Software</ttl>
+    <xreftext>&#x201C;Removing Oracle Database Software&#x201D;</xreftext>
+    <div element="sect1" href="deinstall.htm" number="7.1" targetptr="BABDHEAE">
+      <ttl>About the Deinstallation Tool</ttl>
+      <xreftext>&#x201C;About the Deinstallation Tool&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="deinstall.htm" number="7.2" targetptr="BABGBEEA">
+      <ttl>Downloading the Deinstallation Tool</ttl>
+      <xreftext>&#x201C;Downloading the Deinstallation Tool&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="deinstall.htm" number="7.3" targetptr="BABCAFAJ">
+      <ttl>Example of Running the Deinstall Command for an Oracle Database</ttl>
+      <xreftext>&#x201C;Example of Running the Deinstall Command for an Oracle Database&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="deinstall.htm" number="7.4" targetptr="BABHIEJI">
+      <ttl>Example of a Deinstallation Parameter File for an Oracle Database</ttl>
+      <xreftext>&#x201C;Example of a Deinstallation Parameter File for an Oracle Database&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="deinstall.htm" number="7.5" targetptr="BABCHCJH">
+      <ttl>Example of a Deinstallation Parameter File for Oracle Grid Infrastructure</ttl>
+      <xreftext>&#x201C;Example of a Deinstallation Parameter File for Oracle Grid Infrastructure&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="deinstall.htm" number="7.6" targetptr="BABFGJIE">
+      <ttl>Removing Oracle Software</ttl>
+      <xreftext>&#x201C;Removing Oracle Software&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="jbridge.htm" number="A" targetptr="NTDBI007">
+    <ttl>Installing Java Access Bridge</ttl>
+    <xreftext>&#x201C;Installing Java Access Bridge&#x201D;</xreftext>
+    <div element="sect1" href="jbridge.htm" number="A.1" targetptr="i697702">
+      <ttl>Overview of Java Access Bridge</ttl>
+      <xreftext>&#x201C;Overview of Java Access Bridge&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="jbridge.htm" number="A.2" targetptr="i697547">
+      <ttl>Setup for JRE 1.5</ttl>
+      <xreftext>&#x201C;Setup for JRE 1.5&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="jbridge.htm" number="A.3" targetptr="i696276">
+      <ttl>Setup for Oracle Installed Components</ttl>
+      <xreftext>&#x201C;Setup for Oracle Installed Components&#x201D;</xreftext>
+      <div element="sect2" href="jbridge.htm" number="A.3.1" targetptr="BABDIIJC">
+        <ttl>Installing Java Access Bridge</ttl>
+        <xreftext>&#x201C;Installing Java Access Bridge&#x201D;</xreftext>
+        <obj element="table" href="jbridge.htm" number="A-1" targetptr="">
+          <ttl>Copy Files to JRE Directory on Windows 32-Bit</ttl>
+          <xreftext>&#x201C;Copy Files to JRE Directory on Windows 32-Bit&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="jbridge.htm" number="A.3.2" targetptr="BABGADED">
+        <ttl>Configuring Oracle Components to Use Java Access Bridge</ttl>
+        <xreftext>&#x201C;Configuring Oracle Components to Use Java Access Bridge&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="appendix" href="ofa.htm" number="B" targetptr="CBBEDHEB">
+    <ttl>Optimal Flexible Architecture</ttl>
+    <xreftext>&#x201C;Optimal Flexible Architecture&#x201D;</xreftext>
+    <div element="sect1" href="ofa.htm" number="B.1" targetptr="CBBGIAHE">
+      <ttl>Overview of the Optimal Flexible Architecture Standard</ttl>
+      <xreftext>&#x201C;Overview of the Optimal Flexible Architecture Standard&#x201D;</xreftext>
+      <div element="sect2" href="ofa.htm" number="B.1.1" targetptr="">
+        <ttl>Advantages of Multiple Oracle Homes and OFA</ttl>
+        <xreftext>&#x201C;Advantages of Multiple Oracle Homes and OFA&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ofa.htm" number="B.2" targetptr="CBBGJJAG">
+      <ttl>Changes to the Optimal Flexible Architecture for Oracle Database 11g</ttl>
+      <xreftext>&#x201C;Changes to the Optimal Flexible Architecture for Oracle Database 11<span class="italic">g</span>&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ofa.htm" number="B.3" targetptr="i1006203">
+      <ttl>Directory Tree Differences by Release</ttl>
+      <xreftext>&#x201C;Directory Tree Differences by Release&#x201D;</xreftext>
+      <div element="sect2" href="ofa.htm" number="B.3.1" targetptr="BABHJGIA">
+        <ttl>Top-Level Oracle Directory</ttl>
+        <xreftext>&#x201C;Top-Level Oracle Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.3.2" targetptr="BABEICFC">
+        <ttl>Database File Names</ttl>
+        <xreftext>&#x201C;Database File Names&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.3.3" targetptr="BABDFICF">
+        <ttl>Database File Name Extensions</ttl>
+        <xreftext>&#x201C;Database File Name Extensions&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ofa.htm" number="B.4" targetptr="i1006238">
+      <ttl>Optimal Flexible Architecture Directory Naming Conventions</ttl>
+      <xreftext>&#x201C;Optimal Flexible Architecture Directory Naming Conventions&#x201D;</xreftext>
+      <div element="sect2" href="ofa.htm" number="B.4.1" targetptr="i1010000">
+        <ttl>ORACLE_BASE Directory</ttl>
+        <xreftext>&#x201C;ORACLE_BASE Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.4.2" targetptr="i1010016">
+        <ttl>ORACLE_HOME Directory</ttl>
+        <xreftext>&#x201C;ORACLE_HOME Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.4.3" targetptr="i1006296">
+        <ttl>ADMIN Directory</ttl>
+        <xreftext>&#x201C;ADMIN Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.4.4" targetptr="i1006306">
+        <ttl>ORADATA Directory</ttl>
+        <xreftext>&#x201C;ORADATA Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.4.5" targetptr="BABIFGAD">
+        <ttl>RECOVERY_AREA Directory</ttl>
+        <xreftext>&#x201C;RECOVERY_AREA Directory&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ofa.htm" number="B.5" targetptr="i1006345">
+      <ttl>Optimal Flexible Architecture and Multiple Oracle Home Configurations</ttl>
+      <xreftext>&#x201C;Optimal Flexible Architecture and Multiple Oracle Home Configurations&#x201D;</xreftext>
+      <div element="sect2" href="ofa.htm" number="B.5.1" targetptr="">
+        <ttl>Specifying an ORACLE_HOME Directory</ttl>
+        <xreftext>&#x201C;Specifying an ORACLE_HOME Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.5.2" targetptr="i1006361">
+        <ttl>Installing a Default Optimal Flexible Architecture Database: Example</ttl>
+        <xreftext>&#x201C;Installing a Default Optimal Flexible Architecture Database: Example&#x201D;</xreftext>
+        <obj element="table" href="ofa.htm" number="B-1" targetptr="">
+          <ttl>Default Optimal Flexible Architecture Database Settings</ttl>
+          <xreftext>&#x201C;Default Optimal Flexible Architecture Database Settings&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.5.3" targetptr="i1006492">
+        <ttl>Installing a Nondefault Optimal Flexible Architecture Database: Example 2</ttl>
+        <xreftext>&#x201C;Installing a Nondefault Optimal Flexible Architecture Database: Example 2&#x201D;</xreftext>
+        <obj element="table" href="ofa.htm" number="B-2" targetptr="">
+          <ttl>Nondefault Optimal Flexible Architecture Database Settings: Example 2</ttl>
+          <xreftext>&#x201C;Nondefault Optimal Flexible Architecture Database Settings: Example 2&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="ofa.htm" number="B.6" targetptr="i1006606">
+      <ttl>Comparison Between Optimal Flexible Architecture on Windows and UNIX</ttl>
+      <xreftext>&#x201C;Comparison Between Optimal Flexible Architecture on Windows and UNIX&#x201D;</xreftext>
+      <div element="sect2" href="ofa.htm" number="B.6.1" targetptr="i1006627">
+        <ttl>Directory Naming</ttl>
+        <xreftext>&#x201C;Directory Naming&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.6.2" targetptr="i1009754">
+        <ttl>ORACLE_BASE Directory</ttl>
+        <xreftext>&#x201C;ORACLE_BASE Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ofa.htm" number="B.6.3" targetptr="i1006634">
+        <ttl>Support for Symbolic Links on Windows</ttl>
+        <xreftext>&#x201C;Support for Symbolic Links on Windows&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="appendix" href="advance.htm" number="C" targetptr="CHDICDJA">
+    <ttl>Installing and Configuring Oracle Database Using Response Files</ttl>
+    <xreftext>&#x201C;Installing and Configuring Oracle Database Using Response Files&#x201D;</xreftext>
+    <div element="sect1" href="advance.htm" number="C.1" targetptr="BBAHEGFF">
+      <ttl>How Response Files Work</ttl>
+      <xreftext>&#x201C;How Response Files Work&#x201D;</xreftext>
+      <div element="sect2" href="advance.htm" number="C.1.1" targetptr="CIAICGDI">
+        <ttl>Reasons for Using Silent Mode or Response File Mode</ttl>
+        <xreftext>&#x201C;Reasons for Using Silent Mode or Response File Mode&#x201D;</xreftext>
+        <obj element="table" href="advance.htm" number="C-1" targetptr="">
+          <ttl>Reasons for Using Silent Mode or Response File Mode</ttl>
+          <xreftext>&#x201C;Reasons for Using Silent Mode or Response File Mode&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="advance.htm" number="C.1.2" targetptr="CIAGAFBD">
+        <ttl>General Procedure for Using Response Files</ttl>
+        <xreftext>&#x201C;General Procedure for Using Response Files&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="advance.htm" number="C.2" targetptr="BBAEDBJG">
+      <ttl>Preparing a Response File</ttl>
+      <xreftext>&#x201C;Preparing a Response File&#x201D;</xreftext>
+      <div element="sect2" href="advance.htm" number="C.2.1" targetptr="BBAICFGJ">
+        <ttl>Editing a Response File Template</ttl>
+        <xreftext>&#x201C;Editing a Response File Template&#x201D;</xreftext>
+        <obj element="table" href="advance.htm" number="C-2" targetptr="">
+          <ttl>Response Files</ttl>
+          <xreftext>&#x201C;Response Files&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="advance.htm" number="C.2.2" targetptr="BBADBFFI">
+        <ttl>Recording a Response File</ttl>
+        <xreftext>&#x201C;Recording a Response File&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="advance.htm" number="C.3" targetptr="BBAIEBDG">
+      <ttl>Running Oracle Universal Installer Using the Response File</ttl>
+      <xreftext>&#x201C;Running Oracle Universal Installer Using the Response File&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="advance.htm" number="C.4" targetptr="BBACCDJF">
+      <ttl>Running Net Configuration Assistant Using a Response File</ttl>
+      <xreftext>&#x201C;Running Net Configuration Assistant Using a Response File&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="advance.htm" number="C.5" targetptr="BBAFCFDH">
+      <ttl>Running Oracle Database Configuration Assistant Using a Response File</ttl>
+      <xreftext>&#x201C;Running Oracle Database Configuration Assistant Using a Response File&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="advance.htm" number="C.6" targetptr="CIAEBGCI">
+      <ttl>Postinstallation Configuration Using a Response File</ttl>
+      <xreftext>&#x201C;Postinstallation Configuration Using a Response File&#x201D;</xreftext>
+      <div element="sect2" href="advance.htm" number="C.6.1" targetptr="">
+        <ttl>About the Postinstallation Configuration File</ttl>
+        <xreftext>&#x201C;About the Postinstallation Configuration File&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="advance.htm" number="C.6.2" targetptr="">
+        <ttl>Running Postinstallation Configuration Using a Response File</ttl>
+        <xreftext>&#x201C;Running Postinstallation Configuration Using a Response File&#x201D;</xreftext>
+        <obj element="example" href="advance.htm" number="C-1" targetptr="">
+          <ttl>Password response file for Oracle grid infrastructure for a standalone server</ttl>
+          <xreftext>&#x201C;Password response file for Oracle grid infrastructure for a standalone server&#x201D;</xreftext>
+        </obj>
+        <obj element="example" href="advance.htm" number="C-2" targetptr="">
+          <ttl>Password response file for Oracle Database</ttl>
+          <xreftext>&#x201C;Password response file for Oracle Database&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+  </div>
+  <div element="appendix" href="gblsupp.htm" number="D" targetptr="CEGEAADF">
+    <ttl>Configuring Oracle Database Globalization Support</ttl>
+    <xreftext>&#x201C;Configuring Oracle Database Globalization Support&#x201D;</xreftext>
+    <div element="sect1" href="gblsupp.htm" number="D.1" targetptr="i637001">
+      <ttl>Installing and Using Oracle Components in Different Languages</ttl>
+      <xreftext>&#x201C;Installing and Using Oracle Components in Different Languages&#x201D;</xreftext>
+      <div element="sect2" href="gblsupp.htm" number="D.1.1" targetptr="BCEDHBFC">
+        <ttl>Configuring Oracle Components to Run in Different Languages</ttl>
+        <xreftext>&#x201C;Configuring Oracle Components to Run in Different Languages&#x201D;</xreftext>
+        <div element="sect3" href="gblsupp.htm" number="D.1.1.1" targetptr="BABDHCGD">
+          <ttl>Determining the Operating System Locale</ttl>
+          <xreftext>&#x201C;Determining the Operating System Locale&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="gblsupp.htm" number="D.1.1.2" targetptr="BCEDGIJC">
+          <ttl>Configuring Locale and Character Sets Using the NLS_LANG Environment Variable</ttl>
+          <xreftext>&#x201C;Configuring Locale and Character Sets Using the NLS_LANG Environment Variable&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="gblsupp.htm" number="D.1.1.3" targetptr="CHDGAEBH">
+          <ttl>NLS_LANG Settings in Console Mode and Batch Mode</ttl>
+          <xreftext>&#x201C;NLS_LANG Settings in Console Mode and Batch Mode&#x201D;</xreftext>
+          <obj element="table" href="gblsupp.htm" number="D-1" targetptr="">
+            <ttl>Oracle Character Sets for Console Mode (OEM) Code Pages</ttl>
+            <xreftext>&#x201C;Oracle Character Sets for Console Mode (OEM) Code Pages&#x201D;</xreftext>
+          </obj>
+        </div>
+      </div>
+      <div element="sect2" href="gblsupp.htm" number="D.1.2" targetptr="BCEJBHGI">
+        <ttl>Installing Translation Resources</ttl>
+        <xreftext>&#x201C;Installing Translation Resources&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="gblsupp.htm" number="D.2" targetptr="BCEHHJCI">
+      <ttl>Running Oracle Universal Installer in Different Languages</ttl>
+      <xreftext>&#x201C;Running Oracle Universal Installer in Different Languages&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="ports.htm" number="E" targetptr="NTDBI011">
+    <ttl>Managing Oracle Database Port Numbers</ttl>
+    <xreftext>&#x201C;Managing Oracle Database Port Numbers&#x201D;</xreftext>
+    <div element="sect1" href="ports.htm" number="E.1" targetptr="CIHHFDFH">
+      <ttl>About Managing Ports</ttl>
+      <xreftext>&#x201C;About Managing Ports&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.2" targetptr="CIHECDEE">
+      <ttl>Viewing Port Numbers and Access URLS</ttl>
+      <xreftext>&#x201C;Viewing Port Numbers and Access URLS&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.3" targetptr="BEHFDBEE">
+      <ttl>Port Numbers and Protocols of Oracle Components</ttl>
+      <xreftext>&#x201C;Port Numbers and Protocols of Oracle Components&#x201D;</xreftext>
+      <obj element="table" href="ports.htm" number="E-1" targetptr="">
+        <ttl>Ports Used in Oracle Components</ttl>
+        <xreftext>&#x201C;Ports Used in Oracle Components&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.4" targetptr="BEHIGAHJ">
+      <ttl>Changing the Oracle Enterprise Management Agent Port</ttl>
+      <xreftext>&#x201C;Changing the Oracle Enterprise Management Agent Port&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.5" targetptr="BEHEFACG">
+      <ttl>Changing the Oracle Enterprise Manager Database Control Ports</ttl>
+      <xreftext>&#x201C;Changing the Oracle Enterprise Manager Database Control Ports&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.6" targetptr="CIHCJJIG">
+      <ttl>Changing the Oracle XML DB Ports</ttl>
+      <xreftext>&#x201C;Changing the Oracle XML DB Ports&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ports.htm" number="E.7" targetptr="CHDHDHFE">
+      <ttl>Changing the Oracle Services for Microsoft Transaction Server Port</ttl>
+      <xreftext>&#x201C;Changing the Oracle Services for Microsoft Transaction Server Port&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="ts.htm" number="F" targetptr="BABFDJDB">
+    <ttl>Troubleshooting the Oracle&#x00A0;Database&#x00A0;Installation</ttl>
+    <xreftext>&#x201C;Troubleshooting the Oracle&#x00A0;Database&#x00A0;Installation&#x201D;</xreftext>
+    <div element="sect1" href="ts.htm" number="F.1" targetptr="CIHFJIFF">
+      <ttl>Verifying Requirements</ttl>
+      <xreftext>&#x201C;Verifying Requirements&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.2" targetptr="i638074">
+      <ttl>Encountering Installation Errors</ttl>
+      <xreftext>&#x201C;Encountering Installation Errors&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.3" targetptr="i1090466">
+      <ttl>Reviewing the Log of an Installation Session</ttl>
+      <xreftext>&#x201C;Reviewing the Log of an Installation Session&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.4" targetptr="i1090449">
+      <ttl>Silent Mode Response File Error Handling</ttl>
+      <xreftext>&#x201C;Silent Mode Response File Error Handling&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.5" targetptr="CIHIAJED">
+      <ttl>Troubleshooting Host Name Changes and CSS</ttl>
+      <xreftext>&#x201C;Troubleshooting Host Name Changes and CSS&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.6" targetptr="i637944">
+      <ttl>Troubleshooting Configuration Assistants</ttl>
+      <xreftext>&#x201C;Troubleshooting Configuration Assistants&#x201D;</xreftext>
+      <div element="sect2" href="ts.htm" number="F.6.1" targetptr="">
+        <ttl>Configuration Assistant Failures</ttl>
+        <xreftext>&#x201C;Configuration Assistant Failures&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ts.htm" number="F.6.2" targetptr="i639047">
+        <ttl>Irrecoverable Errors</ttl>
+        <xreftext>&#x201C;Irrecoverable Errors&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.7" targetptr="CIHHCCHJ">
+      <ttl>Troubleshooting Inventory Issues</ttl>
+      <xreftext>&#x201C;Troubleshooting Inventory Issues&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.8" targetptr="CIHIEGJJ">
+      <ttl>Troubleshooting Screen Display Issues</ttl>
+      <xreftext>&#x201C;Troubleshooting Screen Display Issues&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ts.htm" number="F.9" targetptr="BABDJIFE">
+      <ttl>Cleaning Up After a Failed Installation</ttl>
+      <xreftext>&#x201C;Cleaning Up After a Failed Installation&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="faq.htm" number="G" targetptr="NTDBI013">
+    <ttl>Frequently Asked Questions About Installation</ttl>
+    <xreftext>&#x201C;Frequently Asked Questions About Installation&#x201D;</xreftext>
+    <div element="sect1" href="faq.htm" number="G.1" targetptr="BEHHJBEE">
+      <ttl>Installing Oracle Database or Oracle Database Client</ttl>
+      <xreftext>&#x201C;Installing Oracle Database or Oracle Database Client&#x201D;</xreftext>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAGECHE">
+        <ttl>I only need one instance of Oracle Database or I just want to install a test database to get familiar with the product. How do I install Oracle Database for these situations?</ttl>
+        <xreftext>&#x201C;I only need one instance of Oracle Database or I just want to install a test database to get familiar with the product. How do I install Oracle Database for these situations?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBACIDJC">
+        <ttl>How can I create an Oracle database that can handle transaction-heavy or data warehousing applications?</ttl>
+        <xreftext>&#x201C;How can I create an Oracle database that can handle transaction-heavy or data warehousing applications?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAGEGEB">
+        <ttl>What&#x0027;s the best way to install multiple Oracle databases?</ttl>
+        <xreftext>&#x201C;What&#x0027;s the best way to install multiple Oracle databases?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAHFCBB">
+        <ttl>How do I configure client connections to an Oracle database?</ttl>
+        <xreftext>&#x201C;How do I configure client connections to an Oracle database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAGJHAJ">
+        <ttl>What is the best way to install Oracle Database Client if my client nodes have limited disk space?</ttl>
+        <xreftext>&#x201C;What is the best way to install Oracle Database Client if my client nodes have limited disk space?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAGCEDA">
+        <ttl>How do I upgrade Oracle Database?</ttl>
+        <xreftext>&#x201C;How do I upgrade Oracle Database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAHGEFE">
+        <ttl>The computers at my site have been configured to run as a cluster. How should I install Oracle Database?</ttl>
+        <xreftext>&#x201C;The computers at my site have been configured to run as a cluster. How should I install Oracle Database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAICICG">
+        <ttl>How do I migrate my non-Oracle databases to Oracle Database?</ttl>
+        <xreftext>&#x201C;How do I migrate my non-Oracle databases to Oracle Database?&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="faq.htm" number="G.2" targetptr="BEHGABCI">
+      <ttl>Installing Oracle Database Tools</ttl>
+      <xreftext>&#x201C;Installing Oracle Database Tools&#x201D;</xreftext>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBACJDCE">
+        <ttl>How do I install Oracle Application Server?</ttl>
+        <xreftext>&#x201C;How do I install Oracle Application Server?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAHJCAE">
+        <ttl>How can I administer and monitor my Oracle Database products?</ttl>
+        <xreftext>&#x201C;How can I administer and monitor my Oracle Database products?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAJADIE">
+        <ttl>How do I manage security for my Oracle Database products?</ttl>
+        <xreftext>&#x201C;How do I manage security for my Oracle Database products?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBACAJHI">
+        <ttl>How do I use Oracle Database to manage my XML data?</ttl>
+        <xreftext>&#x201C;How do I use Oracle Database to manage my XML data?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAJEAGA">
+        <ttl>Does Oracle Database provide OLAP tools so that I can analyze data such as trends and time series in my database?</ttl>
+        <xreftext>&#x201C;Does Oracle Database provide OLAP tools so that I can analyze data such as trends and time series in my database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBADEGAB">
+        <ttl>Does Oracle Database provide data mining tools that I can use to discover hidden meaning in my data and predict likely outcomes based on my data?</ttl>
+        <xreftext>&#x201C;Does Oracle Database provide data mining tools that I can use to discover hidden meaning in my data and predict likely outcomes based on my data?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBADEDAG">
+        <ttl>How do I perform backup and recovery operations for Oracle Database?</ttl>
+        <xreftext>&#x201C;How do I perform backup and recovery operations for Oracle Database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CHDJABEG">
+        <ttl>Is Oracle Workflow included with Oracle Database 11g?</ttl>
+        <xreftext>&#x201C;Is Oracle Workflow included with Oracle Database 11<span class="italic">g</span>?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CHDJHHJB">
+        <ttl>Is there a migration plan for customers that have built solutions using Oracle Workflow?</ttl>
+        <xreftext>&#x201C;Is there a migration plan for customers that have built solutions using Oracle Workflow?&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="faq.htm" number="G.3" targetptr="BEHIGEIH">
+      <ttl>Installing Oracle Database with Oracle Applications</ttl>
+      <xreftext>&#x201C;Installing Oracle Database with Oracle Applications&#x201D;</xreftext>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAJAAEG">
+        <ttl>How do I install my Oracle applications with Oracle Database?</ttl>
+        <xreftext>&#x201C;How do I install my Oracle applications with Oracle Database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBABGGEE">
+        <ttl>How can I create Web applications that communicate with Oracle Database?</ttl>
+        <xreftext>&#x201C;How can I create Web applications that communicate with Oracle Database?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CHDHEGHB">
+        <ttl>Which Web server can my Oracle applications use?</ttl>
+        <xreftext>&#x201C;Which Web server can my Oracle applications use?&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAEABEA">
+        <ttl>How can I migrate my non-Oracle applications to Oracle?</ttl>
+        <xreftext>&#x201C;How can I migrate my non-Oracle applications to Oracle?&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="faq.htm" number="G.4" targetptr="BEHGBDFI">
+      <ttl>Installing Oracle Database Heterogeneous Connectivity Tools (Gateways)</ttl>
+      <xreftext>&#x201C;Installing Oracle Database Heterogeneous Connectivity Tools (Gateways)&#x201D;</xreftext>
+      <obj element="bridgehead" href="faq.htm" number="" targetptr="CBAHEIEH">
+        <ttl>How can my Oracle applications access data in a non-Oracle database system?</ttl>
+        <xreftext>&#x201C;How can my Oracle applications access data in a non-Oracle database system?&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="faq.htm" number="G-1" targetptr="">
+        <ttl>Oracle Gateway Products</ttl>
+        <xreftext>&#x201C;Oracle Gateway Products&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="glossary" href="glossary.htm" number="" targetptr="CBAJADDD">
+    <ttl>Glossary</ttl>
+    <xreftext>&#x201C;Glossary&#x201D;</xreftext>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="CHDBFBJA">
+      <ttl>Automatic Storage Management disk group</ttl>
+      <xreftext>&#x201C;Automatic Storage Management disk group&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="CHDGABDG">
+      <ttl>Automatic Storage Management instance</ttl>
+      <xreftext>&#x201C;Automatic Storage Management instance&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="CHDDCAGE">
+      <ttl>Automatic Storage Management</ttl>
+      <xreftext>&#x201C;Automatic Storage Management&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>automatic undo management mode</ttl>
+      <xreftext>&#x201C;automatic undo management mode&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432199">
+      <ttl>connect descriptor</ttl>
+      <xreftext>&#x201C;connect descriptor&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>connect identifier</ttl>
+      <xreftext>&#x201C;connect identifier&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432217">
+      <ttl>control files</ttl>
+      <xreftext>&#x201C;control files&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432215">
+      <ttl>default domain</ttl>
+      <xreftext>&#x201C;default domain&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="BGBBEIBA">
+      <ttl>directory naming</ttl>
+      <xreftext>&#x201C;directory naming&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>directory server</ttl>
+      <xreftext>&#x201C;directory server&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>external procedures</ttl>
+      <xreftext>&#x201C;external procedures&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432239">
+      <ttl>global database name</ttl>
+      <xreftext>&#x201C;global database name&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432288">
+      <ttl>initialization parameter file</ttl>
+      <xreftext>&#x201C;initialization parameter file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432294">
+      <ttl>instance</ttl>
+      <xreftext>&#x201C;instance&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTDBI013">
+      <ttl>installation type</ttl>
+      <xreftext>&#x201C;installation type&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Interprocess Communication (IPC)</ttl>
+      <xreftext>&#x201C;Interprocess Communication (IPC)&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432263">
+      <ttl>listener</ttl>
+      <xreftext>&#x201C;listener&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432267">
+      <ttl>listener.ora file</ttl>
+      <xreftext>&#x201C;listener.ora file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432281">
+      <ttl>local naming</ttl>
+      <xreftext>&#x201C;local naming&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432290">
+      <ttl>manual undo management mode</ttl>
+      <xreftext>&#x201C;manual undo management mode&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432299">
+      <ttl>naming method</ttl>
+      <xreftext>&#x201C;naming method&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432307">
+      <ttl>net service name</ttl>
+      <xreftext>&#x201C;net service name&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432332">
+      <ttl>OPS$</ttl>
+      <xreftext>&#x201C;OPS$&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432427">
+      <ttl>ORACLE_BASE</ttl>
+      <xreftext>&#x201C;<code><span class="codeinlineboldital">ORACLE_BASE</span></code>&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i433461">
+      <ttl>ORACLE_HOME</ttl>
+      <xreftext>&#x201C;<code><span class="codeinlineboldital">ORACLE_HOME</span></code>&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Oracle home</ttl>
+      <xreftext>&#x201C;Oracle home&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Oracle home name</ttl>
+      <xreftext>&#x201C;Oracle home name&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Oracle schema</ttl>
+      <xreftext>&#x201C;Oracle schema&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Oracle Documentation Library</ttl>
+      <xreftext>&#x201C;Oracle Documentation Library&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432837">
+      <ttl>Oracle Net foundation layer</ttl>
+      <xreftext>&#x201C;Oracle Net foundation layer&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>protocol address</ttl>
+      <xreftext>&#x201C;protocol address&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432460">
+      <ttl>raw partitions</ttl>
+      <xreftext>&#x201C;raw partitions&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="CHDJAFAB">
+      <ttl>redo log files</ttl>
+      <xreftext>&#x201C;redo log files&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432474">
+      <ttl>registry</ttl>
+      <xreftext>&#x201C;registry&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432403">
+      <ttl>repository</ttl>
+      <xreftext>&#x201C;repository&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>service registration</ttl>
+      <xreftext>&#x201C;service registration&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432435">
+      <ttl>SID</ttl>
+      <xreftext>&#x201C;SID&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>sqlnet.ora file</ttl>
+      <xreftext>&#x201C;sqlnet.ora file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>Secure Sockets Layer (SSL)</ttl>
+      <xreftext>&#x201C;Secure Sockets Layer (SSL)&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>SSL</ttl>
+      <xreftext>&#x201C;SSL&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432537">
+      <ttl>System Global Area</ttl>
+      <xreftext>&#x201C;System Global Area&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>system identifier</ttl>
+      <xreftext>&#x201C;system identifier&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432555">
+      <ttl>tablespace</ttl>
+      <xreftext>&#x201C;tablespace&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432454">
+      <ttl>tnsnames.ora file</ttl>
+      <xreftext>&#x201C;tnsnames.ora file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="i432471">
+      <ttl>undo tablespace</ttl>
+      <xreftext>&#x201C;undo tablespace&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="">
+      <ttl>unqualified name</ttl>
+      <xreftext>&#x201C;unqualified name&#x201D;</xreftext>
+    </obj>
+  </div>
+</div>
