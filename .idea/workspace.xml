@@ -1,7 +1,471 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ed380a9-e8b4-4c03-9f60-7649deca1c91" name="Default" comment="" />
+    <list default="true" id="3ed380a9-e8b4-4c03-9f60-7649deca1c91" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/css/blafdoc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/css/bp_layout.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/css/darbbook.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/css/doccd.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/dtds/targetdatabase.dtd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/bookbig.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/bookicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/booklist.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/contbig.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/conticon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/doclib.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/feedback.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/feedbck2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/help.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/index.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/indxicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/larrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/leftnav.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/masterix.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/mix.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/oracle.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/prodbig.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/prodicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/rarrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/rightnav.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/toc.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/topnav.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/gifs/uarrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/html/cpyr.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/html/feedback.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/html/noexist.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/js/bp_layout.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/dcommon/js/doccd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/a_oui_appendix.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/b_oui_appendix.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/c_oui_appendix.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/d_oui_appendix.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/e_oui_appendix.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/img/exceed_screen.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/img/rac_allnode.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/img/rac_mindowntime.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/img/rac_rolling.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/img/rac_troubleshooting.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/loe.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/lof.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/lot.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui1_introduction.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui2_manage_oracle_homes.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui3_response_files.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui4_product_install.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui5_cluster_environment.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui6_cloning.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui7_opatch.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui8_internationalization.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/oui_preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/em.112/e12255/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/index.pdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/index/index.idx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/index/index1.idx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/app_nonint.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/concepts.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/crswin.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/lot.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/postinst.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/prewin.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/rem_orcl.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/storage.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/trouble.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/typinstl.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/upgrade.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10817/whatsnew.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/apa.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/chklist.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/cvrt2rac.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/dbcacrea.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/emca_ref.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/lot.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/params.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/ports.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/postinst.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/procstop.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/racinstl.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/rem_orcl.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/scripts.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/srvpool.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/trouble.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/undrstnd.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10818/whatsnew.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/advance.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/deinstall.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/faq.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/gblsupp.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/glossary.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/install.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/intro.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/jbridge.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/ofa.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/oraclerestart.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/ports.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/postcfg.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/reqs.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/startrdb.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/ts.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10843/whatsnew.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10878.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10878/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10878/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e10878/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/accessibility.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/db_install.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/http_9_0_3.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img/arch.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img/arch_epg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img/htmig001.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img_text/arch.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img_text/arch_epg.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/img_text/htmig001.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/license.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/otn_install.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/overview.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/pre_require.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/install.112/e13366/trouble.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/blue_med_dark_down.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/blue_med_dark_side.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/collapse_hlight_butt.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/expand_hlight_button.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/hide_nav.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/images/show_nav.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/lookup.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/nav/portal_booklist.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/olinkdb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/appendix_troubleshooting.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/change_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/components.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/content_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/contents.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/control_ctr_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/admin_bean_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/admin_bean_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_conn_pool_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_conn_pool_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_conn_pool_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_conn_pool_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_conn_pool_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_table_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_table_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_table_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/audit_table_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_17.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_18.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_19.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_20.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_21.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_22.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_23.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_24.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_25.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_26.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_27.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_28.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_29.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_30.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_31.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/change_mgr_32.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/configuration_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/configuration_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/configuration_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/del_wksp_users_15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/deploy_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/download_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/download_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/download_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_config_temp_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_config_temp_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_config_temp_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_config_temp_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_role_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_role_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_role_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/edit_role_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/export_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/export_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/exporting_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/exporting_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/exporting_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/exporting_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/exporting_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/globals_navigator.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/import_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/import_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/importing_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/importing_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/importing_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/importing_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/install_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jms_queues_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jms_queues_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jms_queues_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_path_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_path_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_security_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_web_services_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_web_services_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/jrt_web_services_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/locations_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/locations_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/locations_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/locations_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/locations_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_config_temp_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_config_temp_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_config_temp_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_role_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_role_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/new_user_13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/object_priv_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/object_priv_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/object_priv_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/security_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/security_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/security_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/set_config_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/snapshot_14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/system_priv_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/topology_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/topology_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/topology_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/topology_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/topology_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/uninstall_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_00.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/upgrade_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_02.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_03.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_04.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_05.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_06.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_07.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_08.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_10.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_11.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_12.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_13.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_14.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_15.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img/workspace_16.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/admin_bean_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/admin_bean_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_conn_pool_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_conn_pool_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_conn_pool_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_conn_pool_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_conn_pool_05.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_table_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_table_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_table_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/audit_table_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_05.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_06.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_07.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_08.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_09.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_10.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_11.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_12.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_13.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_14.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_15.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_16.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_17.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_18.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_19.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_20.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_21.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_22.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_23.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_24.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_25.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_26.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_27.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_28.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_29.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_30.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_31.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/change_mgr_32.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/configuration_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/configuration_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_05.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_06.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_07.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_08.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_09.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_10.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_11.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_12.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_14.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/del_wksp_users_15.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_05.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/deploy_06.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/download_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/download_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/download_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_config_temp_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_config_temp_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_config_temp_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_config_temp_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_role_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_role_02.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_role_03.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/edit_role_04.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/img_text/exporting_01.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/install.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/loe.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/lof.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/lot.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/migrate.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/multi_design_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/overview.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/part_1.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/part_2.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/preface.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/runtime_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/security_mgmt.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/setup_linux.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/setup_windows.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/target.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/title.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/toc.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doc/owb.112/e10579/uninstall.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/setup.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/welcome.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/connectDB.php" afterPath="$PROJECT_DIR$/inc/connectDB.php" />
+    </list>
     <ignored path="psm.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -29,12 +493,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2637931">
+            <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectDB.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inc/connectDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55689657">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding>
+                <marker date="1459325103328" expanded="true" signature="374:392" placeholder="select 1 fro... dual" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,6 +557,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -88,7 +567,6 @@
         <option value="$PROJECT_DIR$/log/index.php" />
         <option value="$PROJECT_DIR$/libs/js/responsive-calendar.js" />
         <option value="$PROJECT_DIR$/inc/check.php" />
-        <option value="$PROJECT_DIR$/inc/connectDB.php" />
         <option value="$PROJECT_DIR$/log/daily.php" />
         <option value="$PROJECT_DIR$/inc/constants.php" />
         <option value="$PROJECT_DIR$/logout.php" />
@@ -105,6 +583,7 @@
         <option value="$PROJECT_DIR$/student/mainPage.php" />
         <option value="$PROJECT_DIR$/login/index.php" />
         <option value="$PROJECT_DIR$/inc/navigation.php" />
+        <option value="$PROJECT_DIR$/inc/connectDB.php" />
       </list>
     </option>
   </component>
@@ -120,7 +599,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -165,7 +644,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,6 +706,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,10 +765,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17872968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -324,13 +803,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/log/daily.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -574,13 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/connectDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2637931">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/constants.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
@@ -692,9 +1157,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2637931">
+        <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/connectDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55689657">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <marker date="1459325103328" expanded="true" signature="374:392" placeholder="select 1 fro... dual" />
+          </folding>
         </state>
       </provider>
     </entry>

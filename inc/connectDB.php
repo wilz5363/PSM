@@ -7,14 +7,17 @@
  */
 ini_set('display_errors', 'On');
 
-$dsn = 'mysql:host=localhost;dbname=utem_intern';
+$dsn = 'mysql:host=localhost;port=3307;dbname=utem_intern';
 $username = 'root';
-$password = '';
+$password = 'password';
 
 try {
 
     $dbh = new PDO($dsn, $username, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $res = $dbh->query('select 1 from dual')->fetchAll();
+    print_r($res);
 
 } catch (Exception $exp) {
     echo 'Connection to database is not successful.' . $exp->getMessage();
