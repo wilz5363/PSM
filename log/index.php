@@ -9,15 +9,11 @@
 $title = 'Daily Log';
 $section = 'log';
 include '../inc/head.php';
-
-
-
-
-
-
-
-
-
+try {
+    $logs = $dbh->query("select dailylog_date, dailylog_status from dailylog where student_id = 'B031310166'")->fetchAll(PDO::FETCH_ASSOC);
+}catch(PDOException $e){
+    echo $e->getMessage();
+}
 ?>
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <!-- Responsive calendar - START -->
