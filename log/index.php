@@ -5,12 +5,19 @@
  * Date: 2/13/2016
  * Time: 9:50 AM
  */
-require_once '../inc/constants.php';
+
 $title = 'Daily Log';
 $section = 'log';
-include ROOT_PATH . 'inc/header.php';
-echo '<link rel="stylesheet" href="../libs/css/responsive-calendar.css">';
-include ROOT_PATH . 'inc/navigation.php';
+include '../inc/head.php';
+
+
+
+
+
+
+
+
+
 ?>
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <!-- Responsive calendar - START -->
