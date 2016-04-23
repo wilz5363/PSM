@@ -15,10 +15,6 @@ try {
 
     $dbh = new PDO($dsn, $username, $password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $res = $dbh->query('select 1 from dual')->fetchAll();
-    print_r($res);
-
 } catch (Exception $exp) {
     echo 'Connection to database is not successful.' . $exp->getMessage();
     die();

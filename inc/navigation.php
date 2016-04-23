@@ -21,17 +21,21 @@
                 </button>
             <?php } else { ?>
                 <ul class="nav navbar-nav">
-                    <li class="<?php if ($section == 'index') echo "active"; ?>">
+                    <li class="<?php if ($section == 'index') echo "active  "; ?>">
                         <a href="<?php echo BASE_URL ?>">Main <span class="sr-only">(current)</span></a>
                     </li>
                     <?php
-                        if($_SESSION['userType']=='STUDENT'){
-                     ?>
-                            <li class="<?php if ($section == 'log') echo "active"; ?>">
-                                <a href="<?php echo BASE_URL . 'log' ?>">Log <span class="sr-only">(current)</span></a>
-                            </li>
-                    <?php
-                        }
+                    if ($_SESSION['userType'] == 'STUDENT') {
+                        ?>
+                        <li class="<?php if ($section == 'log') echo "active"; ?>">
+                            <a href="<?php echo BASE_URL . 'log' ?>">Log <span class="sr-only">(current)</span></a>
+                        </li>
+                        <?php
+                    } else if ($_SESSION['userType'] == 'LECTURER') { ?>
+                        <li class="<?php if ($section == 'lec_list_student') echo "active"; ?>">
+                            <a href="<?php echo BASE_URL . 'log' ?>">Student List <span class="sr-only">(current)</span></a>
+                        </li>
+                    <?php }
                     ?>
 
                 </ul>
@@ -40,9 +44,11 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo BASE_URL.'profile';?>">Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="<?php echo BASE_URL.'logout'?>">Log Out</a></li>
+                            <?php if ($_SESSION['userType'] === 'STUDENT' OR $_SESSION['userType'] === 'COMPANY') { ?>
+                                <li><a href="<?php echo BASE_URL . 'profile'; ?>">Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                            <?php } ?>
+                            <li><a href="<?php echo BASE_URL . 'logout' ?>">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>

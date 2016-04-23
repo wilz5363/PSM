@@ -1,49 +1,47 @@
 <?php
-require_once '../inc/constants.php';
+$err_msg;
+$title = 'Log In';
+$section = 'login';
+include '../inc/head.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require_once ROOT_PATH . 'inc/connectDB.php';
     include ROOT_PATH . 'inc/validateInput.php';
 
     $userId = validate($_POST['inputMatricNo']);
     $password = validate($_POST['inputPassword']);
     try {
-        $stmt = $dbh->prepare("call utem_intern.userLogin(?,?, @nric, @userName, @userType, @userSession);");
+        $stmt = $dbh->prepare("call utem_intern.user_login(?, ?, @usertype, @session_time);");
         $stmt->bindValue(1, $userId);
         $stmt->bindValue(2, $password);
         $stmt->execute();
         $stmt->closeCursor();
 
-        $result = $dbh->query("select @nric, @userName, @userType, @userSession")
-            ->fetch(PDO::FETCH_ASSOC);
-        $data = [];
-//        echo $result['@nric'];
-        if($result){
+        $result = $dbh->query("select @usertype, @session_time")->fetch(PDO::FETCH_ASSOC);
+        if ($result) {
             $_SESSION['user'] = $userId;
-            $_SESSION['userType'] = $result['@userType'];
+            $_SESSION['userType'] = $result['@usertype'];
         }
-
-
         header("location:" . BASE_URL);
-
-    } catch (Exception $e) {
-        echo 'Query error.' . $e->getMessage();
+    } catch (PDOException $e) {
+        if ($e->errorInfo[0] = '45000') {
+            $err_msg = 'Username or Password is incorrect.';
+        }
     }
 }
 
-if (isset($_GET['status']) && $_GET['status'] === 'fail') { ?>
+?>
+
+
+<?php
+if (isset($err_msg)) {
+    ?>
     <div class="alert alert-danger alert-dismissible" role="alert"
          style="margin-top: 0;margin-bottom: 0; padding-bottom: 0 ">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <strong>Warning!</strong> Wrong Matric No or Password. If this continues, please contact webmaster.
+        <strong>Warning! </strong> <?php echo $err_msg; ?>.
     </div>
-    <?php
-}
-$title = 'Log In';
-$section = 'login';
-include ROOT_PATH . 'inc/header.php';
-include ROOT_PATH . 'inc/navigation.php';
-?>
+<?php } ?>
 
 <div class="container">
     <div class="text-center">

@@ -1,22 +1,19 @@
 <?php
-require_once 'inc/constants.php';
 $title = 'Main';
 $section = 'index';
-include './inc/header.php';
-include './inc/navigation.php';
+include 'inc/head.php';
 ?>
 
 <div class="text-center">
     <?php
 
     if($_SESSION['userType'] == 'FAC_ADV'){
-        include "fac_adv/mainPage.php";
+        include "fac_adv/index.php";
     }else if($_SESSION['userType'] == 'STUDENT'){
-        include "student/mainPage.php";
+        include "student/index.php";
+    }else if ($_SESSION['userType'] == 'LECTURER'){
+        include "lecturer/index.php";
     }
-
-
-
     ?>
 </div>
 
