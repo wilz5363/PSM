@@ -27,7 +27,7 @@
                     <?php
                     if ($_SESSION['userType'] == 'STUDENT') {
                         ?>
-                        <li class="<?php if ($section == 'log') echo "active"; ?>">
+                        <li class="<?php if ($section == 'log' or $section == 'dailylog') echo "active"; ?>">
                             <a href="<?php echo BASE_URL . 'log' ?>">Log <span class="sr-only">(current)</span></a>
                         </li>
                         <?php

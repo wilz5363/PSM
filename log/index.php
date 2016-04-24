@@ -8,10 +8,20 @@
 
 $title = 'Daily Log';
 $section = 'log';
+$subsection = 'dailog';
 include '../inc/head.php';
 try {
     $logs = $dbh->query("select dailylog_date, dailylog_status from dailylog where student_id = 'B031310166'")->fetchAll(PDO::FETCH_ASSOC);
 }catch(PDOException $e){
+    echo $e->getMessage();
+}
+$weekend;
+try {
+    $stmt = $dbh->query('select w.weekend_day from weekends w, company c, company_weekend cw where c.company_id = "RC01" and c.company_id = cw.company_id and w.weekend_id = cw.weekend_id')->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($stmt as $s) {
+        $weekend[] = $s['weekend_day'];
+    }
+} catch (PDOException $e) {
     echo $e->getMessage();
 }
 ?>

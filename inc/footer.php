@@ -4,21 +4,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<?php if ($section === 'log') {
-
-
-    $weekend;
-    try {
-        $stmt = $dbh->query('select w.weekend_day from weekends w, company c, company_weekend cw where c.company_id = "RC01" and c.company_id = cw.company_id and w.weekend_id = cw.weekend_id')->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($stmt as $s) {
-            $weekend[] = $s['weekend_day'];
-        }
-
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
-    ?>
-    <script></script>
+<?php if ($section === 'log') { ?>
     <script src="../libs/js/responsive-calendar.js"></script>
     <script type="text/javascript">
         var weekend = <?= json_encode($weekend);?>;
@@ -31,7 +17,6 @@
                 }
             }
 
-
             $('.responsive-calendar').responsiveCalendar({
                 onDayClick: function (events) {
                     var thisDay = $(this).data('year') + '-' +
@@ -39,11 +24,9 @@
                         addLeadingZero($(this).data('day'));
                     window.location.href = "daily.php?date=" + thisDay;
                 }, events: {
-                    "2016-03-28": {"class": "logged"},
-                    "2016-03-27": {"class": "sick_leave"},
                     <?php
-                    foreach($logs as $log){
-                    echo '"'.$log['dailylog_date'].'":{"class": "'.strtolower($log['dailylog_status']).'"},';
+                    foreach ($logs as $log) {
+                        echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
                     }
                     ?>
 
