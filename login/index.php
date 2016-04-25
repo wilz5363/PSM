@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result) {
             $_SESSION['user'] = $userId;
             $_SESSION['userType'] = $result['@usertype'];
+//            $_SESSION['userType'] = 'LECTURER';
         }
         header("location:" . BASE_URL);
     } catch (PDOException $e) {

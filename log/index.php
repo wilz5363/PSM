@@ -10,11 +10,7 @@ $title = 'Daily Log';
 $section = 'log';
 $subsection = 'dailog';
 include '../inc/head.php';
-try {
-    $logs = $dbh->query("select dailylog_date, dailylog_status from dailylog where student_id = 'B031310166'")->fetchAll(PDO::FETCH_ASSOC);
-}catch(PDOException $e){
-    echo $e->getMessage();
-}
+
 $weekend;
 try {
     $stmt = $dbh->query('select w.weekend_day from weekends w, company c, company_weekend cw where c.company_id = "RC01" and c.company_id = cw.company_id and w.weekend_id = cw.weekend_id')->fetchAll(PDO::FETCH_ASSOC);
@@ -23,6 +19,21 @@ try {
     }
 } catch (PDOException $e) {
     echo $e->getMessage();
+}
+
+if($_SESSION['userType'] == 'STUDENT'){
+    try {
+        $logs = $dbh->query("select dailylog_date, dailylog_status from dailylog where student_id = '".$_SESSION['user']."'")->fetchAll(PDO::FETCH_ASSOC);
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
+}
+else if($_SESSION['userType'] == 'LECTURER' and isset($_GET['stud_id'])){
+    try{
+        $lec_stmt = $dbh->query("select dailylog_date, dailylog_lecturer_comment from dailylog where student_id ='".$_GET['stud_id']."'");
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
 }
 ?>
 <div class="container" xmlns="http://www.w3.org/1999/html">
@@ -55,9 +66,6 @@ try {
 </div>
 
 <p><div class="logged_badge"></div> Logged </p>
-
-
-
 <?php
 include ROOT_PATH . 'inc/footer.php';
 ?>

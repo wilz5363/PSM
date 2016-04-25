@@ -25,8 +25,14 @@
                     window.location.href = "daily.php?date=" + thisDay;
                 }, events: {
                     <?php
-                    foreach ($logs as $log) {
-                        echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
+                    if ($_SESSION['userType'] == 'STUDENT') {
+                        foreach ($logs as $log) {
+                            echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
+                        }
+                    } else if ($_SESSION['userType'] == 'LECTURER') {
+                        foreach ($lec_stmt as $log) {
+                            echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_lecturer_comment']) === 'not_commented' ? 'not_commented' : 'logged') . '"},';
+                        }
                     }
                     ?>
 

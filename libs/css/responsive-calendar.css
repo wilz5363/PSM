@@ -124,3 +124,7 @@
   color: #ffffff;
 }
 
+.responsive-calendar .day.not_commented a {
+  background-color: #ff0;
+  color: #ffffff;
+}
