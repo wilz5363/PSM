@@ -1,3 +1,3 @@
 <div class="page-header">
-    <h1>Industry Adviser Index Page</h1>
+    <h1>Industry Adviser</h1>
 </div>
