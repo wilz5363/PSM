@@ -53,7 +53,7 @@ if (isset($err_msg)) {
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -61,12 +61,12 @@ if (isset($err_msg)) {
                 <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" action="" method="post">
+                <form class="form-horizontal" action="" method="post" autocomplete="off">
                     <div class="form-group">
-                        <label for="inputMatricNo" class="col-sm-2 control-label">Matric No.</label>
+                        <label for="inputMatricNo" class="col-sm-2 control-label">Matric No. / Company ID</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputMatricNo" name="inputMatricNo"
-                                   placeholder="Matric No.">
+                                   placeholder="Matric No./ Company Username">
                         </div>
                     </div>
                     <div class="form-group">
