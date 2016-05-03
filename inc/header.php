@@ -1,12 +1,12 @@
 <?php
 
-if(!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user'])) {
     if ($section !== 'login') {
         header("Location:" . BASE_URL . "login");
     }
-}else{
-    if($section === 'login'){
-        header("Location:".BASE_URL);
+} else {
+    if ($section === 'login') {
+        header("Location:" . BASE_URL);
     }
 }
 ?>
@@ -20,7 +20,10 @@ if(!isset($_SESSION['user'])) {
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <?php if($section === 'log')?>
-        <link rel="stylesheet" href="../libs/css/responsive-calendar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <?php if ($section === 'log') ?>
+    <link rel="stylesheet" href="../libs/css/responsive-calendar.css">
 
 </head>

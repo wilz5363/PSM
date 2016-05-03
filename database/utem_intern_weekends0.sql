@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `utem_intern` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `utem_intern`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: utem_intern
@@ -18,30 +16,28 @@ USE `utem_intern`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `company_location`
+-- Table structure for table `weekends`
 --
 
-DROP TABLE IF EXISTS `company_location`;
+DROP TABLE IF EXISTS `weekends`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `company_location` (
-  `location_id` varchar(10) NOT NULL,
-  `location_address` varchar(45) NOT NULL,
-  `poscode` varchar(5) NOT NULL,
-  PRIMARY KEY (`location_id`),
-  UNIQUE KEY `location_address_UNIQUE` (`location_address`),
-  KEY `location_poscode_fk_idx` (`poscode`),
-  CONSTRAINT `location_poscode_fk` FOREIGN KEY (`poscode`) REFERENCES `malaysia_poscode` (`poscode_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `weekends` (
+  `weekend_id` varchar(3) NOT NULL,
+  `weekend_day` varchar(45) NOT NULL,
+  PRIMARY KEY (`weekend_id`),
+  UNIQUE KEY `weekend_day_UNIQUE` (`weekend_day`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `company_location`
+-- Dumping data for table `weekends`
 --
 
-LOCK TABLES `company_location` WRITE;
-/*!40000 ALTER TABLE `company_location` DISABLE KEYS */;
-/*!40000 ALTER TABLE `company_location` ENABLE KEYS */;
+LOCK TABLES `weekends` WRITE;
+/*!40000 ALTER TABLE `weekends` DISABLE KEYS */;
+INSERT INTO `weekends` VALUES ('WK5','FRIDAY'),('WK1','MONDAY'),('WK6','SATURDAY'),('WK7','SUNDAY'),('WK4','THURSDAY'),('WK2','TUESDAY'),('WK3','WEDNESDAY');
+/*!40000 ALTER TABLE `weekends` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 19:06:40
+-- Dump completed on 2016-05-04  0:51:30

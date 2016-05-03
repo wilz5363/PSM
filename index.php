@@ -4,7 +4,7 @@ $section = 'index';
 include 'inc/head.php';
 ?>
 
-<div class="text-center">
+<div class="container">
     <?php
 
     if($_SESSION['userType'] == 'LECTURER'){

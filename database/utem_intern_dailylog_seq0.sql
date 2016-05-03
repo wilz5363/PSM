@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `utem_intern` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `utem_intern`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: utem_intern
@@ -18,30 +16,25 @@ USE `utem_intern`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `company_weekend`
+-- Table structure for table `dailylog_seq`
 --
 
-DROP TABLE IF EXISTS `company_weekend`;
+DROP TABLE IF EXISTS `dailylog_seq`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `company_weekend` (
-  `company_id` varchar(30) NOT NULL,
-  `weekend_id` varchar(3) NOT NULL,
-  PRIMARY KEY (`company_id`,`weekend_id`),
-  KEY `weekend_id_fk_idx` (`weekend_id`),
-  CONSTRAINT `company_id_fk` FOREIGN KEY (`company_id`) REFERENCES `company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `weekend_id_fk` FOREIGN KEY (`weekend_id`) REFERENCES `weekends` (`weekend_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `dailylog_seq` (
+  `int` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`int`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `company_weekend`
+-- Dumping data for table `dailylog_seq`
 --
 
-LOCK TABLES `company_weekend` WRITE;
-/*!40000 ALTER TABLE `company_weekend` DISABLE KEYS */;
-INSERT INTO `company_weekend` VALUES ('testing','WK1'),('testing with app','WK1'),('testing with app2','WK1'),('testing','WK2'),('testing with app','WK2'),('testing with app2','WK2'),('testing with app3','WK2'),('testing with app3','WK3');
-/*!40000 ALTER TABLE `company_weekend` ENABLE KEYS */;
+LOCK TABLES `dailylog_seq` WRITE;
+/*!40000 ALTER TABLE `dailylog_seq` DISABLE KEYS */;
+/*!40000 ALTER TABLE `dailylog_seq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +46,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 19:06:40
+-- Dump completed on 2016-05-04  0:51:30

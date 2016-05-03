@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `utem_intern` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `utem_intern`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: utem_intern
@@ -18,31 +16,28 @@ USE `utem_intern`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `internship`
+-- Table structure for table `malaysia_state`
 --
 
-DROP TABLE IF EXISTS `internship`;
+DROP TABLE IF EXISTS `malaysia_state`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `internship` (
-  `internship_id` varchar(15) NOT NULL DEFAULT '0',
-  `internship_title` varchar(45) NOT NULL,
-  `internship_desc` varchar(45) NOT NULL,
-  `internship_salary` varchar(45) NOT NULL,
-  `internship_location` varchar(10) NOT NULL,
-  PRIMARY KEY (`internship_id`),
-  KEY `intern_location_fk_idx` (`internship_location`),
-  CONSTRAINT `intern_location_fk` FOREIGN KEY (`internship_location`) REFERENCES `company_location` (`location_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `malaysia_state` (
+  `state_id` varchar(5) NOT NULL DEFAULT '0',
+  `state_name` varchar(50) NOT NULL,
+  PRIMARY KEY (`state_id`),
+  UNIQUE KEY `state_name_UNIQUE` (`state_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `internship`
+-- Dumping data for table `malaysia_state`
 --
 
-LOCK TABLES `internship` WRITE;
-/*!40000 ALTER TABLE `internship` DISABLE KEYS */;
-/*!40000 ALTER TABLE `internship` ENABLE KEYS */;
+LOCK TABLES `malaysia_state` WRITE;
+/*!40000 ALTER TABLE `malaysia_state` DISABLE KEYS */;
+INSERT INTO `malaysia_state` VALUES ('MS1','WILAYAH PERSEKUTUAN');
+/*!40000 ALTER TABLE `malaysia_state` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 19:06:40
+-- Dump completed on 2016-05-04  0:51:31

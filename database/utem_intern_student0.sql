@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `utem_intern` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `utem_intern`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: utem_intern
@@ -18,35 +16,36 @@ USE `utem_intern`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `dailylog`
+-- Table structure for table `student`
 --
 
-DROP TABLE IF EXISTS `dailylog`;
+DROP TABLE IF EXISTS `student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dailylog` (
-  `dailylog_id` varchar(100) NOT NULL DEFAULT '0',
+CREATE TABLE `student` (
   `student_id` varchar(10) NOT NULL,
-  `dailylog_date` date NOT NULL,
-  `dailylog_log_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `dailylog_status` varchar(45) NOT NULL DEFAULT 'LOGGED',
-  `dailylog_title` varchar(45) NOT NULL,
-  `dailylog_content` longtext NOT NULL,
-  `dailylog_lecturer_comment` longtext,
-  `dailylog_industry_comment` longtext,
-  PRIMARY KEY (`dailylog_id`),
-  KEY `dailyLog_student_fk_idx` (`student_id`),
-  CONSTRAINT `dailylog_student_fk` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  `student_name` varchar(100) NOT NULL,
+  `student_nric` varchar(12) NOT NULL,
+  `student_password` longtext NOT NULL,
+  `user_type` varchar(5) NOT NULL DEFAULT 'UT002',
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lecturer_in_charge` varchar(15) NOT NULL,
+  PRIMARY KEY (`student_id`),
+  UNIQUE KEY `student_nric_UNIQUE` (`student_nric`),
+  KEY `user_type_fk_idx` (`user_type`),
+  KEY `student_lectuer_fk_idx` (`lecturer_in_charge`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `dailylog`
+-- Dumping data for table `student`
 --
 
-LOCK TABLES `dailylog` WRITE;
-/*!40000 ALTER TABLE `dailylog` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dailylog` ENABLE KEYS */;
+LOCK TABLES `student` WRITE;
+/*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('B031310166','CHAN WILSON','930612075363','123456','UT002','2016-04-23 16:35:56','2016-04-23 16:35:56','');
+/*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
@@ -57,14 +56,13 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `utem_intern`.`dailylog_BEFORE_INSERT` BEFORE INSERT ON `dailylog` FOR EACH ROW
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `utem_intern`.`student_BEFORE_UPDATE` BEFORE UPDATE ON `student` FOR EACH ROW
 BEGIN
-	insert into dailylog_seq values (NULL);
-    set new.dailylog_id = concat('LOG', LPAD(LAST_INSERT_ID(),3,'0'));
-	if(new.dailylog_lecturer_comment is null)then
-		set new.dailylog_lecturer_comment = 'NOT_COMMENTED';
-		set new.dailylog_industry_comment = 'NOT_COMMENTED';
-	end if;
+	if(new.student_id != old.student_id) then
+		signal sqlstate '45000' set message_text = 'Student ID is not allowed to be updated. Please contact sysadmin.';
+	elseif (new.user_type != old.user_type) then
+		signal sqlstate '45000' set message_text = 'Student account type cant be updated. Please contact sysadmin.';
+    end if;
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -81,4 +79,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-03 19:06:40
+-- Dump completed on 2016-05-04  0:51:30
