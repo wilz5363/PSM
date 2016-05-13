@@ -110,23 +110,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <?php
                     if (isset($logRecord['dailylog_lecturer_comment'])) {
-                        ?>
-                        <div class="form-group">
-                            <label for="lec_comment" class="col-sm-2 control-label">Lecturer Comment</label>
-                            <div class="col-sm-10">
+                    ?>
+                    <div class="form-group">
+                        <label for="lec_comment" class="col-sm-2 control-label">Lecturer Comment</label>
+                        <div class="col-sm-10">
                        <textarea class="form-control" rows="5" name="lec_comment_input"
                                  id="lec_comment"<?php if ($_SESSION['userType'] == 'STUDENT' || $logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
                            echo 'readonly';
-                       } ?>><?php if ($logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED'){echo htmlspecialchars($logRecord['dailylog_lecturer_comment']);} ?>
+                       } ?>><?php if ($logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
+                               echo htmlspecialchars($logRecord['dailylog_lecturer_comment']);
+                           } ?>
                        </textarea>
-                            </div>
                         </div>
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <?php
-                            }
-                            ?>
-
-                            <div class="form-group">
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <?php
+                        }
+                        ?>
+                        <div class="form-group">
                             <button type="submit" class="btn btn-default"
                                     name="submit"
                                 <?php if ($_SESSION['userType'] == 'STUDENT' AND isset($logRecord['dailylog_status'])) {

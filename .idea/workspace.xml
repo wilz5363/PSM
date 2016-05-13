@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ed380a9-e8b4-4c03-9f60-7649deca1c91" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/css/dropzone.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/js/dropzone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fac_adv/index.php" afterPath="$PROJECT_DIR$/fac_adv/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/footer.php" afterPath="$PROJECT_DIR$/inc/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/header.php" afterPath="$PROJECT_DIR$/inc/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/navigation.php" afterPath="$PROJECT_DIR$/inc/navigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/css/responsive-calendar.css" afterPath="$PROJECT_DIR$/libs/css/responsive-calendar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/daily.php" afterPath="$PROJECT_DIR$/log/daily.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/index.php" afterPath="$PROJECT_DIR$/log/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/index.php" afterPath="$PROJECT_DIR$/login/index.php" />
     </list>
     <ignored path="psm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,19 +52,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="daily.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/daily.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6775862">
-              <caret line="121" column="34" selection-start-line="121" selection-start-column="34" selection-end-line="121" selection-end-column="34" />
+            <state vertical-scroll-proportion="-8.576923">
+              <caret line="114" column="73" selection-start-line="114" selection-start-column="73" selection-end-line="114" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1463099112324" expanded="true" signature="1113:1212" placeholder="INSERT INTO dailylog... " />
-                <marker date="1463099112324" expanded="true" signature="1822:1869" placeholder="update daily... " />
-                <marker date="1463099112324" expanded="true" signature="1822:1870" placeholder="update daily... " />
-                <marker date="1463099112324" expanded="true" signature="1822:1877" placeholder="update daily... " />
-                <marker date="1463099112324" expanded="true" signature="1822:1913" placeholder="update daily... " />
+                <marker date="1463099253793" expanded="true" signature="1113:1212" placeholder="INSERT INTO dailylog... " />
+                <marker date="1463099253793" expanded="true" signature="1822:1869" placeholder="update daily... " />
+                <marker date="1463099253793" expanded="true" signature="1822:1870" placeholder="update daily... " />
+                <marker date="1463099253793" expanded="true" signature="1822:1877" placeholder="update daily... " />
+                <marker date="1463099253793" expanded="true" signature="1822:1913" placeholder="update daily... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fac_adv/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2637931">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,10 +121,10 @@
         <option value="$PROJECT_DIR$/libs/css/dropzone.css" />
         <option value="$PROJECT_DIR$/inc/navigation.php" />
         <option value="$PROJECT_DIR$/inc/header.php" />
-        <option value="$PROJECT_DIR$/fac_adv/index.php" />
         <option value="$PROJECT_DIR$/log/index.php" />
         <option value="$PROJECT_DIR$/inc/footer.php" />
         <option value="$PROJECT_DIR$/log/daily.php" />
+        <option value="$PROJECT_DIR$/fac_adv/index.php" />
       </list>
     </option>
   </component>
@@ -310,7 +311,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22474378" sideWeight="0.4873817" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -700,14 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fac_adv/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41034484">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.384615">
@@ -726,16 +719,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/log/daily.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6775862">
-          <caret line="121" column="34" selection-start-line="121" selection-start-column="34" selection-end-line="121" selection-end-column="34" />
+        <state vertical-scroll-proportion="-8.576923">
+          <caret line="114" column="73" selection-start-line="114" selection-start-column="73" selection-end-line="114" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1463099112324" expanded="true" signature="1113:1212" placeholder="INSERT INTO dailylog... " />
-            <marker date="1463099112324" expanded="true" signature="1822:1869" placeholder="update daily... " />
-            <marker date="1463099112324" expanded="true" signature="1822:1870" placeholder="update daily... " />
-            <marker date="1463099112324" expanded="true" signature="1822:1877" placeholder="update daily... " />
-            <marker date="1463099112324" expanded="true" signature="1822:1913" placeholder="update daily... " />
+            <marker date="1463099253793" expanded="true" signature="1113:1212" placeholder="INSERT INTO dailylog... " />
+            <marker date="1463099253793" expanded="true" signature="1822:1869" placeholder="update daily... " />
+            <marker date="1463099253793" expanded="true" signature="1822:1870" placeholder="update daily... " />
+            <marker date="1463099253793" expanded="true" signature="1822:1877" placeholder="update daily... " />
+            <marker date="1463099253793" expanded="true" signature="1822:1913" placeholder="update daily... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fac_adv/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2637931">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

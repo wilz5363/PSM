@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <div class="page-header">
     <h1>Faculty Adviser</h1>
 </div>
