@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo BASE_URL ?>">Brand</a>
+            <a class="navbar-brand" href="<?php echo BASE_URL ?>">FTMK Intern Log Book</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,7 +44,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Settings <span class="caret"></span></a>
+                           aria-expanded="false">Settings</a>
                         <ul class="dropdown-menu">
                             <?php if ($_SESSION['userType'] === 'STUDENT' OR $_SESSION['userType'] === 'COMPANY') { ?>
                                 <li><a href="<?php echo BASE_URL . 'profile'; ?>">Profile</a></li>

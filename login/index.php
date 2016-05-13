@@ -88,7 +88,3 @@ if (isset($err_msg)) {
 </div>
 <?php
 include ROOT_PATH . 'inc/footer.php'; ?>
-
-
-
-

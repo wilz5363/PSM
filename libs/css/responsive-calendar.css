@@ -128,3 +128,7 @@
   background-color: #ff0;
   color: #ffffff;
 }
+
+.responsive-calendar .day.future{
+  pointer-events: none;
+}

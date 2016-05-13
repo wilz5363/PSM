@@ -12,28 +12,45 @@ $subsection = 'dailog';
 include '../inc/head.php';
 
 $weekend;
+$stud_id;
+
 try {
-    $stmt = $dbh->query('select w.weekend_day from weekends w, company c, company_weekend cw where c.company_id = "RC01" and c.company_id = cw.company_id and w.weekend_id = cw.weekend_id')->fetchAll(PDO::FETCH_ASSOC);
+    $comp_id = 'testing with app2';
+    $stmt = $dbh->prepare("call get_weekends(:company_id)");
+    $stmt->bindParam(':company_id',$comp_id);
+    $stmt->execute();
+
     foreach ($stmt as $s) {
         $weekend[] = $s['weekend_day'];
     }
+    $stmt->closeCursor();
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
 
 if($_SESSION['userType'] == 'STUDENT'){
     try {
-        $logs = $dbh->query("select dailylog_date, dailylog_status from dailylog where student_id = '".$_SESSION['user']."'")->fetchAll(PDO::FETCH_ASSOC);
+        $logs = $dbh->prepare("call get_log_student(:stud_id)");
+        $logs->bindParam(':stud_id', $_SESSION['user']);
+        $logs->execute();
     }catch(PDOException $e){
         echo $e->getMessage();
     }
 }
-else if($_SESSION['userType'] == 'LECTURER' and isset($_GET['stud_id'])){
+else if($_SESSION['userType'] == 'LECTURER' and isset($_GET['id'])){
+
+    $stud_id = $_GET['id'];
+
     try{
-        $lec_stmt = $dbh->query("select dailylog_date, dailylog_lecturer_comment from dailylog where student_id ='".$_GET['stud_id']."'");
+        $lec_stmt = $dbh->prepare("call get_log_lecturer(:stud_id)");
+        $lec_stmt->bindParam(':stud_id',$_GET['id']);
+        $lec_stmt->execute();
     }catch(PDOException $e){
         echo $e->getMessage();
     }
+}else{
+    echo 'smth wrong';
+    exit();
 }
 ?>
 <div class="container" xmlns="http://www.w3.org/1999/html">
