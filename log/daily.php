@@ -2,6 +2,7 @@
 $title = 'Daily Log';
 $section = 'dailylog';
 include '../inc/head.php';
+$imgMsg;
 $selectedDate;
 if (!isset($_GET['date']) || trim($_GET['date'] === '')) {
     header("Location:" . ROOT_PATH . "log/");
@@ -26,22 +27,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['submit'])) {
         if ($_SESSION['userType'] == 'STUDENT') {
-            $title = $_POST['titleInput'];
-            $desc = $_POST['descInput'];
 
-            try {
-                $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content) VALUES (?,?,?,?)');
-                $stmt->bindParam(1, $_SESSION['user']);
-                $stmt->bindParam(2, $selectedDate);
-                $stmt->bindParam(3, $title);
-                $stmt->bindParam(4, $desc);
-                $stmt->execute();
+            if ($_FILES['fileToUpload']['tmp_name']) {
+                $file = fopen($_FILES['fileToUpload']['tmp_name'], 'rb');
+                $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
+                if ($_FILES['fileToUpload']['size'] > 500000) {
+                    $imgMsg = "Image size must be less than 500MB";
+                } elseif ($file_type == 'jpg' || $file_type == 'jpeg') {
+                    $title = $_POST['titleInput'];
+                    $desc = $_POST['descInput'];
 
-                header('location:daily.php?date=' . $selectedDate);
+                    try {
+                        $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
+                        $stmt->bindParam(1, $_SESSION['user']);
+                        $stmt->bindParam(2, $selectedDate);
+                        $stmt->bindParam(3, $title);
+                        $stmt->bindParam(4, $desc);
+                        $stmt->bindParam(5, $file);
+                        $stmt->execute();
 
-            } catch (PDOException $e) {
-                echo $e->getMessage();
+                        header('location:daily.php?date=' . $selectedDate);
+
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                        exit();
+                    }
+                } else {
+                    $imgMsg = "Image type must be in JPG/JPEG format only";
+                }
+
+            } else {
+                $title = $_POST['titleInput'];
+                $desc = $_POST['descInput'];
+
+                try {
+                    $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
+                    $stmt->bindParam(1, $_SESSION['user']);
+                    $stmt->bindParam(2, $selectedDate);
+                    $stmt->bindParam(3, $title);
+                    $stmt->bindParam(4, $desc);
+                    $stmt->bindValue(5, "NO_IMAGE");
+                    $stmt->execute();
+                    header('location:daily.php?date=' . $selectedDate);
+
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                    exit();
+                }
             }
+
+
         } elseif ($_SESSION['userType'] == 'LECTURER') {
             $stud_id = $_GET['id'];
             $lecturer_comment = $_POST['lec_comment_input'];
@@ -76,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a class="btn btn-danger" href="index.php?id=<?php echo $_GET['id']; ?>">Back</a>
                 <?php
             } else { ?>
-                <form class="form-horizontal dropzone" method="post" action="">
+                <form enctype="multipart/form-data" class="form-horizontal dropzone" method="post" action="">
                     <div class="form-group">
                         <label for="title" class="col-sm-2 control-label">Title</label>
                         <div class="col-sm-10">
@@ -108,6 +143,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="fileToUpload" class="col-sm-2 control-label">Images</label>
+                        <div class="col-sm-10">
+                            <?php if (isset($logRecord['dailylog_img'])) {
+                                if ($logRecord['dailylog_img'] == 'NO_IMAGE') {
+                                    echo 'NO IMAGE SUBBMITTED';
+                                } else {
+                                    echo '<img src="displayImg.php?d=' . $selectedDate . '&m=x' . $_SESSION['user'] . '" class="img-responsive" alt="Image">';
+                                }
+                            } else {
+                                echo '<input type="file" name="fileToUpload" id="fileToUpload" class="form-control">';
+                                if(isset($imgMsg)) {
+                                    echo "<span>" . $imgMsg . "</span>";
+                                }
+                            } ?>
+                        </div>
+                    </div>
                     <?php
                     if (isset($logRecord['dailylog_lecturer_comment'])) {
                     ?>
