@@ -1,26 +1,46 @@
 <?php
-try{
-    $locations = $dbh->prepare("call utem_intern.show_all_location('" . $_SESSION['user'] . "');");
-    $locations->setFetchMode(PDO::FETCH_ASSOC);
-    $locations->execute();
-    $location_count = $locations->rowCount();
-}catch(PDOException $e){
+$locations;
+try {
+    $getLocations = $dbh->prepare("call utem_intern.show_all_location('" . $_SESSION['user'] . "')");
+    $getLocations->execute();
+    $result = $getLocations->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($result as $location) {
+        $locations[] = $location;
+    }
+
+    $location_count = $getLocations->rowCount();
+    $getLocations->closeCursor();
+} catch (PDOException $e) {
     echo $e->getMessage();
 }
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $location_id = validate($_POST['locationIdInput']);
-    $location_address= validate($_POST['locationAddressInput']);
-    $location_postcode = validate($_POST['locationPostcodeInput']);
+    $location_address = validate($_POST['locationAddressInput']);
+    $location_city = $_POST['citySelectionInput'];
 
-    try{
-        $stmt = $dbh->query("insert into company_location VALUES ('testing2', 'testing1', 'MP1', 'RC002')");
-    }catch(PDOException $e){
-        if($e->getCode() == '23000'){
+    try {
+        $stmt = $dbh->prepare("call utem_intern.insert_location_proc(?, ?, ?, ?)");
+        $stmt->bindParam(1, $location_id);
+        $stmt->bindParam(2, $location_address);
+        $stmt->bindParam(3, $_SESSION['user']);
+        $stmt->bindParam(4, $location_city);
+        $stmt->execute();
+
+        header('location:index.php');
+
+    } catch (PDOException $e) {
+        if ($e->getCode() == '23000') {
             echo '<div class="alert">
             	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             	<strong>Warning! </strong> Branch ID/ address has been used before.
             </div>';
+        } else {
+            echo '<div class="alert">
+            	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            	<strong>Warning! </strong>' . $e->getMessage()
+                . '</div>';
         }
     }
 
@@ -28,18 +48,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 
-
-
-
-
-
-
-
-
 ?>
 
 <div class="page-header text-center">
-    <h1>Industry Adviser</h1>
+    <h1>Welcome</h1>
 </div>
 
 <div class="row">
@@ -54,8 +66,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <p class="card-text">Address: <?php echo $location['location_address']; ?></p>
                     <p class="card-text">Postcode: <?php echo $location['poscode_number']; ?></p>
                     <p class="card-text">City: <?php echo $location['city_name']; ?></p>
-                    <a href="<?php echo BASE_URL . 'viewinterns.php?location=' . $location['location_id']; ?>"
-                       class="btn btn-primary">View Interns</a>
+                    <p class="card-text">No. of Offer: <?php echo $location['intern_no']; ?></p>
+                    <a href="<?php echo BASE_URL . 'ind_adv/viewOffers.php?location=' . $location['location_id']; ?>"
+                       class="btn btn-primary">View Offers</a>
                     <a href="#" class="btn btn-success">Edit Address</a>
                 </div>
             </div>
@@ -72,29 +85,34 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="" method="post"  role="form">
+                <form action="" method="post" role="form" autocomplete="off">
                     <legend>Insert New Location</legend>
                     <div class="form-group">
                         <label for="locationId">Branch ID: </label>
-                        <input type="text" class="form-control" name="locationIdInput" id="locationId" autofocus required>
+                        <input type="text" class="form-control" name="locationIdInput" id="locationId" autofocus
+                               required>
                     </div>
                     <div class="form-group">
                         <label for="locationAddress">Address: </label>
-                        <input type="text" class="form-control" name="locationAddressInput" id="locationAddress" required>
+                        <input type="text" class="form-control" name="locationAddressInput" id="locationAddress"
+                               required>
                     </div>
                     <div class="form-group">
                         <label for="locationPostcode">Postcode: </label><span id="location_error"></span>
-                        <input type="number" class="form-control" name="locationPostcodeInput" id="locationPostcode" onblur="searchPostcode()" required>
+                        <input type="number" class="form-control" name="locationPostcodeInput" id="locationPostcode"
+                               onblur="searchPostcode()" required>
                     </div>
                     <div class="form-group">
                         <label for="locationCity">City: </label>
-                        <input type="text" class="form-control" name="locationCityInput" id="locationCity" required readonly>
+                        <select name="citySelectionInput" id="citySelection" class="form-control" readonly disabled>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="locationState">State: </label>
-                        <input type="text" class="form-control" name="locationStateInput" id="locationState" readonly required>
+                        <input type="text" class="form-control" name="locationStateInput" id="locationState" readonly
+                               required>
                     </div>
-                	<button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
             </div>
         </div><!-- /.modal-content -->

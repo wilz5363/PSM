@@ -9,13 +9,30 @@ function searchPostcode(){
             if(xmlhttp.readyState == 4 && xmlhttp.status==200){
                 if(xmlhttp.responseText == "false"){
                     document.getElementById("location_error").innerHTML = "No such POSTCODE exist.";
-                    document.getElementById("locationCity").value = "";
+                    var select = document.getElementById("citySelection");
+                    if(select.length >0){
+                        for (var i=0; i<select.length;i++){
+                            select.remove(select.options[i]);
+                        }
+                    }
                     document.getElementById("locationState").value = "";
                 }else{
                     var result = JSON.parse(xmlhttp.responseText);
                     document.getElementById("location_error").innerHTML = "";
-                    document.getElementById("locationCity").value = result.city_name;
-                    document.getElementById("locationState").value = result.state_name;
+                    var select = document.getElementById("citySelection");
+                    select.removeAttribute("readonly");
+                    select.removeAttribute("disabled");
+                    for(var i =0; i<result.length; i++){
+                        var option = document.createElement('option');
+                        option.value = result[i].city_id;
+                        option.innerHTML = result[i].city_name;
+
+                        select.appendChild(option);
+                    }
+
+
+
+                    document.getElementById("locationState").value = result[0].state_name;
                 }
             }
         };

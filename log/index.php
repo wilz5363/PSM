@@ -24,6 +24,9 @@ try {
         $weekend[] = $s['weekend_day'];
     }
     $stmt->closeCursor();
+
+
+
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

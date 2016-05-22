@@ -14,6 +14,7 @@
     <script src="../libs/js/responsive-calendar.js"></script>
     <script type="text/javascript">
         var weekend = <?= json_encode($weekend);?>;
+
         <?php
         if($_SESSION['userType'] != 'STUDENT'){?>
         var stud_id = "<?php echo $_GET['id'];?>";

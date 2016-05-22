@@ -1,138 +1,169 @@
 .responsive-calendar .controls {
-  text-align: center;
+    text-align: center;
 }
+
 .responsive-calendar .controls a {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .responsive-calendar .controls h4 {
-  display: inline;
+    display: inline;
 }
+
 .responsive-calendar .day-headers,
 .responsive-calendar .days {
-  font-size: 0;
+    font-size: 0;
 }
+
 .responsive-calendar .day {
-  display: inline-block;
-  position: relative;
-  font-size: 14px;
-  width: 14.285714285714286%;
-  text-align: center;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    width: 14.285714285714286%;
+    text-align: center;
 }
+
 .responsive-calendar .day.today a {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4
 }
 
 .responsive-calendar .day.today a:hover {
-  color: #fff;
-  background-color: #4f93ce;
-  border-color: #2e6da4
+    color: #fff;
+    background-color: #4f93ce;
+    border-color: #2e6da4
 }
 
 .responsive-calendar .day a {
-  color: #000000;
-  display: block;
-  cursor: pointer;
-  padding: 20% 0 20% 0;
+    color: #000000;
+    display: block;
+    cursor: pointer;
+    padding: 20% 0 20% 0;
 }
+
 .responsive-calendar .day a:hover {
-  background-color: #eee;
-  text-decoration: none;
+    background-color: #eee;
+    text-decoration: none;
 }
+
 .responsive-calendar .day.header {
-  border-bottom: 1px gray solid;
+    border-bottom: 1px gray solid;
 }
+
 .responsive-calendar .day.header .unavailable {
-  border-bottom: 1px red solid;
+    border-bottom: 1px red solid;
 
 }
 
 .responsive-calendar .day.active a {
-  background-color: #1d86c8;
-  color: #ffffff;
+    background-color: #1d86c8;
+    color: #ffffff;
 }
+
 .responsive-calendar .day.active a:hover {
-  background-color: #36a0e2;
+    background-color: #36a0e2;
+    color: #ffffff;
 }
+
 .responsive-calendar .day.active .not-current {
-  background-color: #8fcaef;
-  color: #ffffff;
+    background-color: #8fcaef;
+    color: #ffffff;
 }
+
 .responsive-calendar .day.active .not-current:hover {
-  background-color: #bcdff5;
+    background-color: #bcdff5;
 }
+
 .responsive-calendar .day.not-current a {
-  color: #ddd;
+    color: #ddd;
 }
+
 .responsive-calendar .day .badge {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  z-index: 1;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
 }
 
-.disabled{
-  pointer-events: none;
-  background-color: #EBEBE4;
+.disabled {
+    pointer-events: none;
+    background-color: #EBEBE4;
 }
 
-.responsive-calendar .day.logged a {
-  background-color: #0f0;
-  color: #ffffff;
+/*.responsive-calendar .day.logged a {*/
+/*background-color: #0f0;*/
+/*color: #ffffff;*/
+/*}*/
+
+.responsive-calendar .day.logged a{
+    background-color: #27ae60;
+    color: #ffffff;
 }
 
-.logged_badge{
-  background-color: #0f0;
-  display: inline-block;
-  min-width: 50px;
-  padding: 3px 7px;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 10px;
+.responsive-calendar .day.logged a:hover{
+    background-color: #2ecc71;
+    color: #000;
 }
 
-.off_badge{
-  background-color: #f00;
-  display: inline-block;
-  min-width: 50px;
-  padding: 3px 7px;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 10px;
+/*.logged_badge{*/
+/*background-color: #0f0;*/
+/*display: inline-block;*/
+/*min-width: 50px;*/
+/*padding: 3px 7px;*/
+/*line-height: 1;*/
+/*white-space: nowrap;*/
+/*vertical-align: middle;*/
+/*border-radius: 10px;*/
+/*}*/
+
+/*.off_badge {*/
+    /*background-color: #f00;*/
+    /*display: inline-block;*/
+    /*min-width: 50px;*/
+    /*padding: 3px 7px;*/
+    /*line-height: 1;*/
+    /*white-space: nowrap;*/
+    /*vertical-align: middle;*/
+    /*border-radius: 10px;*/
+/*}*/
+
+.weekend_badge {
+    background-color: #f00;
+    display: inline-block;
+    min-width: 50px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
 }
 
-.weekend_badge{
-  background-color: #f00;
-  display: inline-block;
-  min-width: 50px;
-  padding: 3px 7px;
-  line-height: 1;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 10px;
+.indicator p {
+    display: inline-block;
 }
 
-.indicator p{
-  display: inline-block;
-}
-
-.responsive-calendar .day.sick_leave a {
-  background-color: #f00;
-  color: #ffffff;
+.sick_leave a {
+    background-color: #f00;
+    color: #ffffff;
 }
 
 .responsive-calendar .day.not_commented a {
-  background-color: #ff0;
-  color: #ffffff;
+    background-color: #f1c40f;
+    color: #ffffff;
 }
 
-.responsive-calendar .day.future{
-  pointer-events: none;
+.responsive-calendar .day.not_commented a {
+    background-color: #f39c12;
+    color: #ffffff;
 }
-.responsive-calendar .day.invalid{
-  pointer-events: none;
-  background-color: #269abc;
+
+.future {
+    pointer-events: none;
+}
+
+.responsive-calendar .day.invalid a {
+    pointer-events: none;
+    background-color: #269abc;
+    color: #ecf0f1;
 }
