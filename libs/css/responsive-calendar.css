@@ -132,3 +132,7 @@
 .responsive-calendar .day.future{
   pointer-events: none;
 }
+.responsive-calendar .day.invalid{
+  pointer-events: none;
+  background-color: #269abc;
+}

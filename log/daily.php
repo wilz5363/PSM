@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 }
                             } else {
                                 echo '<input type="file" name="fileToUpload" id="fileToUpload" class="form-control">';
-                                if(isset($imgMsg)) {
+                                if (isset($imgMsg)) {
                                     echo "<span>" . $imgMsg . "</span>";
                                 }
                             } ?>

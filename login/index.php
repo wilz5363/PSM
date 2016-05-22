@@ -5,22 +5,20 @@ $section = 'login';
 include '../inc/head.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include ROOT_PATH . 'inc/validateInput.php';
 
     $userId = validate($_POST['inputMatricNo']);
     $password = validate($_POST['inputPassword']);
     try {
-        $stmt = $dbh->prepare("call utem_intern.user_login(?, ?, @usertype, @session_time);");
+        $stmt = $dbh->prepare("call utem_intern.user_login(?, ?, @usertype);");
         $stmt->bindValue(1, $userId);
         $stmt->bindValue(2, $password);
         $stmt->execute();
         $stmt->closeCursor();
 
-        $result = $dbh->query("select @usertype, @session_time")->fetch(PDO::FETCH_ASSOC);
+        $result = $dbh->query("select @usertype")->fetch(PDO::FETCH_ASSOC);
         if ($result) {
             $_SESSION['user'] = $userId;
             $_SESSION['userType'] = $result['@usertype'];
-//            $_SESSION['userType'] = 'LECTURER';
         }
         header("location:" . BASE_URL);
     } catch (PDOException $e) {

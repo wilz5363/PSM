@@ -15,7 +15,7 @@ $weekend;
 $stud_id;
 
 try {
-    $comp_id = 'testing with app2';
+    $comp_id = 'RC001';
     $stmt = $dbh->prepare("call get_weekends(:company_id)");
     $stmt->bindParam(':company_id',$comp_id);
     $stmt->execute();

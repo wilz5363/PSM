@@ -8,7 +8,7 @@
 
 <script src="<?php echo BASE_URL . 'libs/js/jquery.js' ?>"></script>
 <script src="<?php echo BASE_URL . 'libs/js/bootstrap.js' ?>"></script>
-
+<script src="<?php echo BASE_URL.'libs/js/script.js' ?>"></script>
 <!--<script src="../libs/js/dropzone.js"></script>-->
 <?php if ($section === 'log') { ?>
     <script src="../libs/js/responsive-calendar.js"></script>
