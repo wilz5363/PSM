@@ -49,7 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 ?>
-
+<ol class="breadcrumb">
+	<li class="active">
+		Branches
+	</li>
+</ol>
 <div class="page-header text-center">
     <h1>Welcome</h1>
 </div>
@@ -60,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<h3 class="text-center">No location added in profile</h3>';
     } else {
         foreach ($locations as $location) { ?>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-5 col-xs-12 col-sm-offset-1 col-sm-offset-2 col">
                 <div class="card card-block">
                     <h3 class="card-title"><?php echo $location['state_name']; ?> <span class="small"><?php echo strtoupper($location['location_id']); ?></span></h3>
                     <p class="card-text">Address: <?php echo $location['location_address']; ?></p>

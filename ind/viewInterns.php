@@ -11,10 +11,8 @@ $section = 'index';
 include '../inc/head.php';
 $row;
 try {
-    $stmt = $dbh->prepare("select student.* from student , student_internship where "
-        . "student_internship.student_id = student.student_id and "
-        . "student_internship.internship_id ='$internId'");
-    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    $stmt = $dbh->prepare("call show_all_intern(?)");
+    $stmt->bindParam(1, $internId);
     $stmt->execute();
     $results = $stmt->fetchAll();
     $row = $stmt->rowCount();
@@ -24,7 +22,15 @@ try {
 
 ?>
     <div class="container">
-
+        <ol class="breadcrumb">
+            <li>
+                <a href="<?php echo BASE_URL.'index.php';?>">Branches</a>
+            </li>
+            <li>
+                <a href="javascript:window.history.back();">Location</a>
+            </li>
+            <li class="active">List Of Students</li>
+        </ol>
         <h1 class="page-header text-center">List of Students in <?php echo $internId; ?></h1>
         <?php if ($row == 0) { ?>
             <h1 class="text-center">No Students in this Offer</h1>

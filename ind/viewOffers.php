@@ -16,8 +16,13 @@ $viewOffersStmt->execute();
 $offerResult = $viewOffersStmt->fetchAll(PDO::FETCH_ASSOC);
 $offerResultCount = $viewOffersStmt->rowCount();
 ?>
-
 <div class="container">
+    <ol class="breadcrumb">
+        <li>
+            <a href="<?php echo BASE_URL.'index.php';?>">Branches</a>
+        </li>
+        <li class="active"><?php echo strtoupper($location_id);?></li>
+    </ol>
     <h1 class="page-header text-center">Offers</h1>
     <div class="row">
         <?php
