@@ -12,7 +12,7 @@ include 'inc/head.php';
     }else if($_SESSION['userType'] == 'STUDENT'){
         include "student/index.php";
     }else if ($_SESSION['userType'] == 'COMPANY'){
-        include "ind_adv/index.php";
+        include "ind/index.php";
     }
     ?>
 </div>
