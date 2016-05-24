@@ -40,6 +40,7 @@
     display: block;
     cursor: pointer;
     padding: 20% 0 20% 0;
+
 }
 
 .responsive-calendar .day a:hover {
@@ -106,32 +107,54 @@
     color: #000;
 }
 
-/*.logged_badge{*/
-/*background-color: #0f0;*/
-/*display: inline-block;*/
-/*min-width: 50px;*/
-/*padding: 3px 7px;*/
-/*line-height: 1;*/
-/*white-space: nowrap;*/
-/*vertical-align: middle;*/
-/*border-radius: 10px;*/
-/*}*/
+.logged_badge{
+background-color: #27ae60;
+display: inline-block;
+min-width: 30px;
+padding: 3px 7px;
+line-height: 1;
+white-space: nowrap;
+vertical-align: middle;
+border-radius: 10px;
+}
 
-/*.off_badge {*/
-    /*background-color: #f00;*/
-    /*display: inline-block;*/
-    /*min-width: 50px;*/
-    /*padding: 3px 7px;*/
-    /*line-height: 1;*/
-    /*white-space: nowrap;*/
-    /*vertical-align: middle;*/
-    /*border-radius: 10px;*/
-/*}*/
-
-.weekend_badge {
+.sick_leave_badge {
     background-color: #f00;
     display: inline-block;
-    min-width: 50px;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.today_badge {
+    background-color: #337ab7;
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.session_range_badge {
+    background-color: #2C3E50;
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.weekend_badge {
+    background-color: #EBEBE4;
+    display: inline-block;
+    min-width: 30px;
     padding: 3px 7px;
     line-height: 1;
     white-space: nowrap;
@@ -164,6 +187,6 @@
 
 .responsive-calendar .day.invalid a {
     pointer-events: none;
-    background-color: #269abc;
+    background-color: #2C3E50;
     color: #ecf0f1;
 }

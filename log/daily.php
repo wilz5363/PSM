@@ -93,8 +93,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo $e->getMessage();
             }
         }
-    } else if (isset($_POST['cancel'])) {
-        header('Location:' . BASE_URL . 'log');
+    } elseif (isset($_POST['onLeaveBtn'])) {
+        if ($_FILES['fileToUpload']['tmp_name']) {
+            $file = fopen($_FILES['fileToUpload']['tmp_name'], 'rb');
+            $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
+            if ($_FILES['fileToUpload']['size'] > 500000) {
+                $imgMsg = "Image size must be less than 500MB";
+            } else if ($file_type == 'jpg' || $file_type == 'jpeg') {
+                $title = "On Medical Leave";
+                $desc = "On Medical Leave";
+
+
+
+                $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
+                $stmt->bindParam(1, $_SESSION['user']);
+                $stmt->bindParam(2, $selectedDate);
+                $stmt->bindParam(3, $title);
+                $stmt->bindParam(4, $desc);
+                $stmt->bindValue(5, "NO_IMAGE");
+                $stmt->execute();
+            } else {
+                $imgMsg = "Image type must be in JPG/JPEG format only";
+            }
+        }else{
+            $imgMsg = 'Picture of Medical Check / Leave must be submitted as prove of leave.';
+        }
     }
 }
 ?>
@@ -111,7 +134,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a class="btn btn-danger" href="index.php?id=<?php echo $_GET['id']; ?>">Back</a>
                 <?php
             } else { ?>
-                <form enctype="multipart/form-data" class="form-horizontal dropzone" method="post" action="">
+                <form enctype="multipart/form-data" class="form-horizontal dropzone" id="dailyForm" method="post"
+                      action="">
                     <div class="form-group">
                         <label for="title" class="col-sm-2 control-label">Title</label>
                         <div class="col-sm-10">
@@ -152,9 +176,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 } else {
                                     echo '<img src="displayImg.php?d=' . $selectedDate . '&m=x' . $_SESSION['user'] . '" class="img-responsive" alt="Image">';
                                 }
-                            } else {
-                                echo '<input type="file" name="fileToUpload" id="fileToUpload" class="form-control">';
-                                if (isset($imgMsg)) {
+                            } else { ?>
+                                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
+                                <?php if (isset($imgMsg)) {
                                     echo "<span>" . $imgMsg . "</span>";
                                 }
                             } ?>
@@ -180,8 +204,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         }
                         ?>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-default"
-                                    name="submit"
+                            <input type="submit" class="btn btn-default"
+                                   name="submit" value="Submit"
                                 <?php if ($_SESSION['userType'] == 'STUDENT' AND isset($logRecord['dailylog_status'])) {
                                     echo 'disabled';
                                 } elseif
@@ -189,15 +213,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 ) {
                                     echo 'disabled';
                                 }
-                                ?>>Submit
-                            </button>
-                            <a class="btn btn-danger" name="cancel"
+                                ?>>
+                            <a class="btn btn-primary" name="cancel"
                                 <?php if ($_SESSION['userType'] == 'STUDENT')
                                     echo ' href="index.php"';
                                 elseif ($_SESSION['userType'] == 'LECTURER') {
                                     echo 'href="index.php?id=' . $_GET['id'] . '"';
                                 }
                                 ?>>Cancel</a>
+                            <?php if ($_SESSION['userType'] == 'STUDENT' && !isset($logRecord['dailylog_title'])) { ?>
+                                <input type="submit" class="btn btn-danger" name="onLeaveBtn" formnovalidate
+                                       value="On Leave">
+                                <?php
+                            } ?>
                         </div>
                     </div>
                 </form>

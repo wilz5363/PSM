@@ -14,6 +14,7 @@
     <script src="../libs/js/responsive-calendar.js"></script>
     <script type="text/javascript">
         var weekend = <?= json_encode($weekend);?>;
+        var sessionDates = <?=json_encode($dates);?>;
 
         <?php
         if($_SESSION['userType'] != 'STUDENT'){?>
@@ -46,7 +47,7 @@
                 }, events: {
                     <?php
                     if ($_SESSION['userType'] == 'STUDENT') {
-                        foreach ($logs as $log) {
+                        foreach ($datas as $log) {
                             echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
                         }
                         $logs->closeCursor();

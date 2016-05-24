@@ -40,3 +40,25 @@ function searchPostcode(){
         xmlhttp.send();
     }
 }
+
+function isImage(filename) {
+    var ext = getExtension(filename);
+    switch (ext.toLowerCase()) {
+        case 'jpg':
+        case 'gif':
+        case 'bmp':
+        case 'png':
+            //etc
+            return true;
+    }
+    return false;
+}
+
+
+function checkImageAttached(){
+    var file = document.getElementById("fileToUpload");
+    if(!isImage(file.value)){
+        alert("Please choose image to upload");
+    }
+
+}

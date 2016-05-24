@@ -196,10 +196,10 @@
                     pastFutureClass = "future";
                 }
 
-                if(dayDate.getTime() < Date.parse("2016-05-01")){
+                if(dayDate.getTime() <   Date.parse(sessionDates[0])){
                     liRangeClass = "invalid";
                 }
-                if(dayDate.getTime() > Date.parse("2016-05-30")){
+                if(dayDate.getTime() > Date.parse(sessionDates[1])){
                     liRangeClass = "invalid";
                 }
 
