@@ -107,19 +107,64 @@
     color: #000;
 }
 
+.responsive-calendar .day.sick_leave a {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+.responsive-calendar .day.sick_leave a:hover{
+    background-color: #ea6153;
+    color: #000;
+}
+
+.responsive-calendar .day.not_commented a {
+    background-color:  #f39c12;
+    color: #ffffff;
+}
+
+.responsive-calendar .day.not_commented a:hover {
+    background-color: #f1c40f;
+    color: #000;
+}
+
+.future {
+    pointer-events: none;
+}
+
+.responsive-calendar .day.invalid a {
+    pointer-events: none;
+    background-color: #2C3E50;
+    color: #ecf0f1;
+}
+
+@media print {
+    a:after { content:''; }
+    a[href]:after { content: none !important; }
+
+}
+
 .logged_badge{
-background-color: #27ae60;
-display: inline-block;
-min-width: 30px;
-padding: 3px 7px;
-line-height: 1;
-white-space: nowrap;
-vertical-align: middle;
-border-radius: 10px;
+    background-color: #27ae60;
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
 }
 
 .sick_leave_badge {
     background-color: #f00;
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.uncommented_badge {
+    background-color: #f39c12;
     display: inline-block;
     min-width: 30px;
     padding: 3px 7px;
@@ -164,29 +209,4 @@ border-radius: 10px;
 
 .indicator p {
     display: inline-block;
-}
-
-.sick_leave a {
-    background-color: #f00;
-    color: #ffffff;
-}
-
-.responsive-calendar .day.not_commented a {
-    background-color: #f1c40f;
-    color: #ffffff;
-}
-
-.responsive-calendar .day.not_commented a {
-    background-color: #f39c12;
-    color: #ffffff;
-}
-
-.future {
-    pointer-events: none;
-}
-
-.responsive-calendar .day.invalid a {
-    pointer-events: none;
-    background-color: #2C3E50;
-    color: #ecf0f1;
 }

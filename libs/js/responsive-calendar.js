@@ -223,7 +223,10 @@
                 if (dayType === weekend[0] || dayType === weekend[1]) {
                     day.append($("<a class='disabled'>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
                 } else {
-                    day.append($("<a>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                        //day.append($("<a>" + dayNum+ holidays[1]['holidayDescr']+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+
+                        day.append($("<a>" + dayNum+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+
                 }
 
                 if (this.options.monthChangeAnimation) {

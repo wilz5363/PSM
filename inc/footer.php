@@ -15,6 +15,10 @@
     <script type="text/javascript">
         var weekend = <?= json_encode($weekend);?>;
         var sessionDates = <?=json_encode($dates);?>;
+////            echo '"' . $holiday['dt'] . '":{"class":"holiday", "dayEvents":{"name":"'.$holiday['holidayDescr'].'"}},';
+////                       var_dump($holiday);
+//
+//            var holidays = <?//=json_encode($holidays)?>
 
         <?php
         if($_SESSION['userType'] != 'STUDENT'){?>
@@ -39,7 +43,7 @@
                     <?php
                     if($_SESSION['userType'] == 'STUDENT' ){?>
                     window.location.href = "daily.php?date=" + thisDay;
-                    <?php }else if($_SESSION['userType'] == 'LECTURER'){?>
+                    <?php }else if($_SESSION['userType'] != 'STUDENT'){?>
                     window.location.href = "daily.php?id=" + stud_id + "&date=" + thisDay;
                     <?php }
                     ?>
@@ -47,17 +51,29 @@
                 }, events: {
                     <?php
                     if ($_SESSION['userType'] == 'STUDENT') {
-                        foreach ($datas as $log) {
-                            echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
-                        }
-                        $logs->closeCursor();
-                    } else if ($_SESSION['userType'] == 'LECTURER') {
-                        foreach ($lec_stmt as $log) {
-                            echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_lecturer_comment']) === 'not_commented' ? 'not_commented' : 'logged') . '"},';
-                        }
-                        $lec_stmt->closeCursor();
-                    }
+                       if(isset($datas)){
+                           foreach ($datas as $log) {
+                               echo '"' . $log['dailylog_date'] . '":{"class": "' . strtolower($log['dailylog_status']) . '"},';
+                           }
+                           $logs->closeCursor();
+                       }
 
+
+                    } else if ($_SESSION['userType'] == 'LECTURER') {
+                            if(isset($lec_stmt)){
+                                foreach ($lec_stmt as $log) {
+                                    echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_lecturer_comment']) == 'not_commented' ? 'not_commented' : strtolower($log['dailylog_status'])) . '"},';
+                                }
+                                $lec_stmt->closeCursor();
+                        }
+                    }else if ($_SESSION['userType'] == 'IND_ADV') {
+                        if(isset($ind_stmt)){
+                            foreach ($ind_stmt as $log) {
+                                echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_industry_comment']) == 'not_commented' ? 'not_commented' : strtolower($log['dailylog_status'])) . '"},';
+                            }
+                            $ind_stmt->closeCursor();
+                        }
+                    }
                     ?>
 
                 }

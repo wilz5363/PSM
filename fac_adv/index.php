@@ -18,7 +18,8 @@ foreach($getStudent as $data){
                 <p class="card-text">Matric No: <?php echo $student['student_id'];?></p>
                 <p class="card-text">Company Name: </p>
                 <p class="card-text">State: </p>
-                <a href="<?php echo BASE_URL.'log/index.php?id=B031310166';?>" class="btn btn-primary">View Students</a>
+                <?php $stud_id = $student['student_id'];?>
+                <a href="<?php echo BASE_URL.'log/index.php?id='.$stud_id;?>" class="btn btn-primary">View Students</a>
             </div>
         </div>
         <?php

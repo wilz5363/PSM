@@ -13,7 +13,6 @@ include '../inc/head.php';
 
 $weekend;
 $stud_id;
-
 if($_SESSION['userType'] == 'STUDENT'){
     try {
         $logs = $dbh->prepare("call get_log_student(:stud_id)");
@@ -98,7 +97,49 @@ else if($_SESSION['userType'] == 'LECTURER' and isset($_GET['id'])){
     }catch(PDOException $e){
         echo $e->getMessage();
     }
-}else{
+}
+else if($_SESSION['userType'] == 'IND_ADV' and isset($_GET['id'])){
+
+    $stud_id = $_GET['id'];
+
+    try{
+
+        $stmt = $dbh->prepare("call get_weekends(?)");
+        $stmt->bindParam('1',$_GET['id']);
+        $stmt->execute();
+
+        foreach ($stmt as $s) {
+            $weekend[] = $s['weekend_day'];
+        }
+        $stmt->closeCursor();
+    }catch(PDOException $e){
+        $e->getMessage();
+    }
+
+    try{
+        $getSessions = $dbh->prepare("call get_session_dates(?)");
+        $getSessions->bindParam(1, $_GET['id']);
+        $getSessions->execute();
+        $sessionDates = $getSessions->fetchAll(PDO::FETCH_ASSOC);
+        foreach($sessionDates as $date){
+            $dates[] = $date['session_start_date'];
+            $dates[] = $date['session_end_date'];
+        }
+        $getSessions->closeCursor();
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
+
+
+    try{
+        $ind_stmt = $dbh->prepare("call get_log_ind(:stud_id)");
+        $ind_stmt->bindParam(':stud_id',$_GET['id']);
+        $ind_stmt->execute();
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
+}
+else{
     echo 'smth wrong';
     exit();
 }
@@ -133,6 +174,7 @@ else if($_SESSION['userType'] == 'LECTURER' and isset($_GET['id'])){
     <div class="pull-right">
         <span class="logged_badge"></span> Logged
         <span class="sick_leave_badge"></span> Sick Leave
+        <span class="uncommented_badge"></span> Uncommented
         <span class="today_badge"></span>Today
         <span class="session_range_badge"></span> Invalid Date
         <span class="weekend_badge"></span> Weekends

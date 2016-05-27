@@ -1,5 +1,7 @@
 <?php
-$title = 'Daily Log';
+
+$title_date = $_GET['date'];
+$title = 'Daily Log ('.$title_date.')';
 $section = 'dailylog';
 include '../inc/head.php';
 $imgMsg;
@@ -21,6 +23,13 @@ if (!isset($_GET['date']) || trim($_GET['date'] === '')) {
             echo $e->getMessage();
         }
     }
+        else if ($_SESSION['userType'] == 'IND_ADV' AND isset($_GET['id'])) {
+        try {
+            $logRecord = $dbh->query("call get_dailylog_lec('" . $_GET['id'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -29,7 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($_SESSION['userType'] == 'STUDENT') {
 
             if ($_FILES['fileToUpload']['tmp_name']) {
-                $file = fopen($_FILES['fileToUpload']['tmp_name'], 'rb');
+                $image = addslashes($_FILES['fileToUpload']['tmp_name']);
+                $image = file_get_contents($image);
+                $image = base64_encode($image);
                 $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
                 if ($_FILES['fileToUpload']['size'] > 500000) {
                     $imgMsg = "Image size must be less than 500MB";
@@ -37,13 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $title = $_POST['titleInput'];
                     $desc = $_POST['descInput'];
 
+
                     try {
-                        $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
+                        $stmt = $dbh->prepare('call dailylog_log_proc(?,?,?,?,?)');
                         $stmt->bindParam(1, $_SESSION['user']);
                         $stmt->bindParam(2, $selectedDate);
                         $stmt->bindParam(3, $title);
                         $stmt->bindParam(4, $desc);
-                        $stmt->bindParam(5, $file);
+                        $stmt->bindParam(5, $image);
                         $stmt->execute();
 
                         header('location:daily.php?date=' . $selectedDate);
@@ -61,12 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $desc = $_POST['descInput'];
 
                 try {
-                    $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
+                    $stmt = $dbh->prepare('call dailylog_log_no_image_proc(?,?,?,?)');
                     $stmt->bindParam(1, $_SESSION['user']);
                     $stmt->bindParam(2, $selectedDate);
                     $stmt->bindParam(3, $title);
                     $stmt->bindParam(4, $desc);
-                    $stmt->bindValue(5, "NO_IMAGE");
                     $stmt->execute();
                     header('location:daily.php?date=' . $selectedDate);
 
@@ -82,20 +93,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $lecturer_comment = $_POST['lec_comment_input'];
 
             try {
-                $stmt = $dbh->prepare("update dailylog set dailylog_lecturer_comment = ?where student_id = ? and dailylog_date = ?");
+                $stmt = $dbh->prepare("update dailylog set dailylog_lecturer_comment = ? where student_id = ? and dailylog_date = ?");
                 $stmt->bindParam(1, $lecturer_comment);
                 $stmt->bindParam(2, $stud_id);
                 $stmt->bindParam(3, $selectedDate);
                 $stmt->execute();
 
-                header('location:index.php?id=' . $stud_id);
+                header('location:daily.php?id=' . $stud_id.'&date='.$selectedDate);
             } catch (PDOException $e) {
                 echo $e->getMessage();
             }
         }
     } elseif (isset($_POST['onLeaveBtn'])) {
         if ($_FILES['fileToUpload']['tmp_name']) {
-            $file = fopen($_FILES['fileToUpload']['tmp_name'], 'rb');
+            $image = addslashes($_FILES['fileToUpload']['tmp_name']);
+            $image = file_get_contents($image);
+            $image = base64_encode($image);
             $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
             if ($_FILES['fileToUpload']['size'] > 500000) {
                 $imgMsg = "Image size must be less than 500MB";
@@ -103,19 +116,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $title = "On Medical Leave";
                 $desc = "On Medical Leave";
 
-
-
-                $stmt = $dbh->prepare('INSERT INTO dailylog (student_id, dailylog_date, dailylog_title, dailylog_content, dailylog_img) VALUES (?,?,?,?,?)');
-                $stmt->bindParam(1, $_SESSION['user']);
-                $stmt->bindParam(2, $selectedDate);
-                $stmt->bindParam(3, $title);
-                $stmt->bindParam(4, $desc);
-                $stmt->bindValue(5, "NO_IMAGE");
-                $stmt->execute();
+                try {
+                    $stmt = $dbh->prepare('call utem_intern.dailylog_sick_leave_proc(?,?,?,?,?)');
+                    $stmt->bindParam(1, $_SESSION['user']);
+                    $stmt->bindParam(2, $selectedDate);
+                    $stmt->bindParam(3, $title);
+                    $stmt->bindParam(4, $desc);
+                    $stmt->bindValue(5, $image);
+                    $stmt->execute();
+                    header('location:daily.php?date=' . $selectedDate);
+                } catch (PDOException $e) {
+                    echo '<div class="alert alert-warning">
+                    	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    	<strong>Warning!</strong>' . $e->getMessage() . '
+                    </div>';
+                }
             } else {
                 $imgMsg = "Image type must be in JPG/JPEG format only";
             }
-        }else{
+        } else {
             $imgMsg = 'Picture of Medical Check / Leave must be submitted as prove of leave.';
         }
     }
@@ -170,13 +189,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="form-group">
                         <label for="fileToUpload" class="col-sm-2 control-label">Images</label>
                         <div class="col-sm-10">
-                            <?php if (isset($logRecord['dailylog_img'])) {
-                                if ($logRecord['dailylog_img'] == 'NO_IMAGE') {
+                            <?php if (isset($logRecord['dailylog_title'])) {
+                                if ($logRecord['dailylog_img'] == null || $logRecord['dailylog_img'] == 'NULL' || $logRecord['dailylog_img'] == '' || $logRecord['dailylog_img'] == " " || !isset($logRecord['dailylog_img']) || is_null($logRecord['dailylog_img'])) {
                                     echo 'NO IMAGE SUBBMITTED';
                                 } else {
-                                    echo '<img src="displayImg.php?d=' . $selectedDate . '&m=x' . $_SESSION['user'] . '" class="img-responsive" alt="Image">';
+
+                                    if($_SESSION['userType'] == 'STUDENT'){
+                                        $showStmt = $dbh->query("select dailylog_img from dailylog where student_id = '" . $_SESSION['user'] . "' and dailylog_date = '" . $_GET['date'] . "'");
+                                    }else{
+                                        $showStmt = $dbh->query("select dailylog_img from dailylog where student_id = '" . $_GET['id'] . "' and dailylog_date = '" . $_GET['date'] . "'");
+                                    }
+                                    foreach ($showStmt as $dataStmt) {
+                                        $data[] = $dataStmt;
+                                    }
+                                    if ($showStmt) {
+                                        foreach ($data as $show) {
+                                            echo '<img class="img-responsive img-rounded" src = "data:image;base64,' . $show['dailylog_img'] . '"<br>';
+                                        }
+                                    }
+
+//                                    echo '<img src="displayImg.php?d=' . $selectedDate . '&m=x' . $_SESSION['user'] . '" class="img-responsive" alt="Image">';
                                 }
-                            } else { ?>
+                            } else {
+                                echo $logRecord['dailylog_img'];?>
                                 <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
                                 <?php if (isset($imgMsg)) {
                                     echo "<span>" . $imgMsg . "</span>";
@@ -187,14 +222,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php
                     if (isset($logRecord['dailylog_lecturer_comment'])) {
                     ?>
+
                     <div class="form-group">
                         <label for="lec_comment" class="col-sm-2 control-label">Lecturer Comment</label>
                         <div class="col-sm-10">
                        <textarea class="form-control" rows="5" name="lec_comment_input"
-                                 id="lec_comment"<?php if ($_SESSION['userType'] == 'STUDENT' || $logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
+                                 id="lec_comment"<?php if ($_SESSION['userType'] !== 'LECTURER') {echo 'readonly';
+                       } ?>><?php if ($logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED'){echo htmlspecialchars($logRecord['dailylog_lecturer_comment']);} echo '</textarea>'?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind_adv_comment_input" class="col-sm-2 control-label">Industry Adviser Comment</label>
+                        <div class="col-sm-10">
+                       <textarea class="form-control" rows="5" name="ind_adv_comment_input"
+                                 id="lec_comment"<?php if ($_SESSION['userType'] !== 'IND_ADV' || $logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
                            echo 'readonly';
-                       } ?>><?php if ($logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
-                               echo htmlspecialchars($logRecord['dailylog_lecturer_comment']);
+                       } ?>><?php if ($logRecord['dailylog_industry_comment'] != 'NOT_COMMENTED') {
+                               echo htmlspecialchars($logRecord['dailylog_industry_comment']);
                            } ?>
                        </textarea>
                         </div>
@@ -203,15 +248,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php
                         }
                         ?>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-default"
-                                   name="submit" value="Submit"
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-success"
+                                   name="submit"
                                 <?php if ($_SESSION['userType'] == 'STUDENT' AND isset($logRecord['dailylog_status'])) {
-                                    echo 'disabled';
+                                    echo 'value="Submit" disabled';
                                 } elseif
                                 ($_SESSION['userType'] == 'LECTURER' AND $logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED'
                                 ) {
-                                    echo 'disabled';
+                                    echo 'value = "Update"';
                                 }
                                 ?>>
                             <a class="btn btn-primary" name="cancel"
@@ -225,7 +270,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input type="submit" class="btn btn-danger" name="onLeaveBtn" formnovalidate
                                        value="On Leave">
                                 <?php
-                            } ?>
+                            }
+                            if (!$logRecord['dailylog_title'] != 'NULL'){
+                                ?>
+                                <input type="button" onclick="javascript:window.print()" class="btn btn-default"
+                                       name="onLeaveBtn" value="Print">
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </form>
