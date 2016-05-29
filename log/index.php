@@ -174,7 +174,9 @@ else{
     <div class="pull-right">
         <span class="logged_badge"></span> Logged
         <span class="sick_leave_badge"></span> Sick Leave
-        <span class="uncommented_badge"></span> Uncommented
+       <?php if($_SESSION['userType']!='STUDENT'){
+          echo '<span class="uncommented_badge"></span> Uncommented';
+       }?>
         <span class="today_badge"></span>Today
         <span class="session_range_badge"></span> Invalid Date
         <span class="weekend_badge"></span> Weekends

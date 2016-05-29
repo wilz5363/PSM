@@ -203,7 +203,6 @@
                     liRangeClass = "invalid";
                 }
 
-                //add day class
                 dayType = this.weekDays[i % 7];
                 day.addClass(dayType);
                 day.addClass(pastFutureClass);
@@ -274,6 +273,8 @@
                     dayNum = dayBase - firstDayOfMonth;
                     i = thisRef.options.startFromSunday ? 0 : 1;
                     while (dayNum < loopBase - firstDayOfMonth + dayBase) {
+
+                        
                         thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, i);
                         dayNum = dayNum + 1;
                         i = i + 1;
