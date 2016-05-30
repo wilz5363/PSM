@@ -18,7 +18,7 @@
 ////            echo '"' . $holiday['dt'] . '":{"class":"holiday", "dayEvents":{"name":"'.$holiday['holidayDescr'].'"}},';
 ////                       var_dump($holiday);
 //
-//            var holidays = <?//=json_encode($holidays)?>
+            var holidays = <?=json_encode($holidays)?>
 
         <?php
         if($_SESSION['userType'] != 'STUDENT'){?>

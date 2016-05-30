@@ -196,10 +196,10 @@
                     pastFutureClass = "future";
                 }
 
-                if(dayDate.getTime() <   Date.parse(sessionDates[0])){
+                if (dayDate.getTime() < Date.parse(sessionDates[0])) {
                     liRangeClass = "invalid";
                 }
-                if(dayDate.getTime() > Date.parse(sessionDates[1])){
+                if (dayDate.getTime() > Date.parse(sessionDates[1])) {
                     liRangeClass = "invalid";
                 }
 
@@ -222,9 +222,62 @@
                 if (dayType === weekend[0] || dayType === weekend[1]) {
                     day.append($("<a class='disabled'>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
                 } else {
-                        //day.append($("<a>" + dayNum+ holidays[1]['holidayDescr']+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                    //day.append($("<a>" + dayNum+ holidays[1]['holidayDescr']+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
 
-                        day.append($("<a>" + dayNum+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                    day.append($("<a>" + dayNum + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+
+                }
+
+                if (this.options.monthChangeAnimation) {
+                    this.applyTransform(day, 'rotateY(180deg)');
+                    this.applyBackfaceVisibility(day);
+                }
+                day = this.makeActive(day, this.options.events[dateString]);
+                return this.$element.find('[data-group="days"]').append(day);
+            },
+            drawDayWithHoliday: function (lastDayOfMonth, yearNum, monthNum, dayNum, i, descr) {
+                var calcDate, dateNow, dateString, day, dayDate, pastFutureClass, dayType, liRangeClass;
+                day = $("<div></div>").addClass("day holiday");
+                dateNow = new Date();
+                dateNow.setHours(0, 0, 0, 0);
+                dayDate = new Date(yearNum, monthNum - 1, dayNum);
+                if (dayDate.getTime() < dateNow.getTime()) {
+                    pastFutureClass = "past";
+                } else if (dayDate.getTime() === dateNow.getTime()) {
+                    pastFutureClass = "today";
+                } else {
+                    pastFutureClass = "future";
+                }
+
+                if (dayDate.getTime() < Date.parse(sessionDates[0])) {
+                    liRangeClass = "invalid";
+                }
+                if (dayDate.getTime() > Date.parse(sessionDates[1])) {
+                    liRangeClass = "invalid";
+                }
+
+                dayType = this.weekDays[i % 7];
+                day.addClass(dayType);
+                day.addClass(pastFutureClass);
+                day.addClass(liRangeClass);
+                dateString = yearNum + "-" + this.addLeadingZero(monthNum) + "-" + this.addLeadingZero(dayNum);
+                if (dayNum <= 0 || dayNum > lastDayOfMonth) {
+                    calcDate = new Date(yearNum, monthNum - 1, dayNum);
+                    dayNum = calcDate.getDate();
+                    monthNum = calcDate.getMonth() + 1;
+                    yearNum = calcDate.getFullYear();
+                    day.addClass("not-current").addClass(pastFutureClass);
+                    if (this.options.activateNonCurrentMonths) {
+                        dateString = yearNum + "-" + this.addLeadingZero(monthNum) + "-" + this.addLeadingZero(dayNum);
+                    }
+                }
+
+                if (dayType === weekend[0] || dayType === weekend[1]) {
+                    day.append($("<a class='disabled holiday'>" + dayNum+" " + descr + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                } else {
+                    //day.append($("<a>" + dayNum+ holidays[1]['holidayDescr']+ "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+
+                    day.append($("<a class='holiday'>" + dayNum+" "+ descr + "</a>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
 
                 }
 
@@ -273,9 +326,30 @@
                     dayNum = dayBase - firstDayOfMonth;
                     i = thisRef.options.startFromSunday ? 0 : 1;
                     while (dayNum < loopBase - firstDayOfMonth + dayBase) {
+                        //if(holidays[1]['d'] == dayNum && holidays[1]['m'] == monthNum){
+                        //    thisRef.drawDayWithHoliday(lastDayOfMonth, yearNum, monthNum, dayNum, i,holidays[1]['holidayDescr']);
+                        //}else {
+                        //    thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, i);
+                        //}
+                        //dayNum = dayNum + 1;
+                        //i = i + 1;
+                        //
+                        var des = "";
+                        for(var j=0; j<holidays.length; j++){
+                            if(holidays[j]['d'] == dayNum && holidays[j]['m'] == monthNum && holidays[j]['y'] == yearNum){
+                                des = holidays[j]['holidayDescr'];
+                                break;
+                            }else {
+                                des = "";
+                                continue;
+                            }
+                        }
+                        if(des == ""){
+                            thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, i);
+                        }else{
+                            thisRef.drawDayWithHoliday(lastDayOfMonth, yearNum, monthNum, dayNum, i,des);
+                        }
 
-                        
-                        thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, i);
                         dayNum = dayNum + 1;
                         i = i + 1;
                     }

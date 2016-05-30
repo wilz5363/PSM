@@ -10,7 +10,7 @@ $title = 'Daily Log';
 $section = 'log';
 $subsection = 'dailog';
 include '../inc/head.php';
-
+include 'getHolidays.php';
 $weekend;
 $stud_id;
 if($_SESSION['userType'] == 'STUDENT'){

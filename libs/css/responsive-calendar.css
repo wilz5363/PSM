@@ -210,3 +210,9 @@
 .indicator p {
     display: inline-block;
 }
+
+.responsive-calendar .day.holiday a {
+    background-color: #0f0f0f;
+    pointer-events: none;
+    color: white;
+}
