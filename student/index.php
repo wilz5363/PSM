@@ -2,7 +2,7 @@
 $numOfDate;
 $date = '2016-05-01';
 try{
-    $getDateDiff = $dbh->prepare("select (datediff(now(),'".$date."')-count(*)) as datediff from dailylog where student_id = ?");
+    $getDateDiff = $dbh->prepare("select utem_intern.cal_diff_date_func('B031310166') as date_diff");
     $getDateDiff->bindParam(1, $_SESSION['user']);
     $getDateDiff->execute();
     $dateDiff = $getDateDiff->fetch(PDO::FETCH_ASSOC);
@@ -16,9 +16,9 @@ try{
 
 
 <?php
-if ($dateDiff['datediff'] > 0) {
-echo '<div class="alert alert-warning">
-	<strong>Attention!! </strong> You have approximately late to log for '.$dateDiff['datediff'].' day(s). Please log your daily log now.
+if ($dateDiff['date_diff'] > 0) {
+echo '<div class="alert alert-danger">
+	<strong>Attention!! </strong> You have approximately late to log for '.$dateDiff['date_diff'].' day(s). Please log your daily log now.
 </div>';
 }else{
     echo '<div class="alert alert-success">

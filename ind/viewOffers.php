@@ -10,8 +10,9 @@ $title = 'Offers';
 $section = 'index';
 include '../inc/head.php';
 
-$viewOffersStmt = $dbh->prepare('call utem_intern.show_all_inter_offer(?)');
+$viewOffersStmt = $dbh->prepare('call utem_intern.show_all_inter_offer(?,?)');
 $viewOffersStmt->bindParam(1, $location_id);
+$viewOffersStmt->bindParam(2, $_SESSION['user']);
 $viewOffersStmt->execute();
 $offerResult = $viewOffersStmt->fetchAll(PDO::FETCH_ASSOC);
 $offerResultCount = $viewOffersStmt->rowCount();
@@ -27,8 +28,10 @@ $offerResultCount = $viewOffersStmt->rowCount();
     <div class="row">
         <?php
         if ($offerResultCount == 0) {
-            echo '<h3 class="text-center">No location added in profile</h3>';
-        } else {
+            echo '<h3 class="text-center">No such branch added</h3>';
+        } else if($offerResult[0]['internship_id'] == ""){
+            echo '<h3 class="text-center">No offer added in this location</h3>';
+        }else {
             foreach ($offerResult as $location) { ?>
                 <div class="col-md-3 col-sm-5 col-xs-12 col-sm-offset-1 col-sm-offset-2 col">
                     <div class="card card-block">
@@ -37,7 +40,7 @@ $offerResultCount = $viewOffersStmt->rowCount();
                         <p class="card-text">No of Interns: <?php echo $location['stud_amount'];?></p>
                         <a href="<?php echo BASE_URL . 'ind/viewInterns.php?id=' . $location['internship_id']; ?>"
                            class="btn btn-primary">View Students</a>
-                        <a href="#" class="btn btn-success">Edit Address</a>
+<!--                        <a href="#" class="btn btn-success">Edit Offers</a>-->
                     </div>
                 </div>
                 <?php

@@ -22,6 +22,11 @@ function searchPostcode(){
                     var select = document.getElementById("citySelection");
                     select.removeAttribute("readonly");
                     select.removeAttribute("disabled");
+                    if(select.length >0){
+                        for (var i=0; i<select.length;i++){
+                            select.remove(select.options[i]);
+                        }
+                    }
                     for(var i =0; i<result.length; i++){
                         var option = document.createElement('option');
                         option.value = result[i].city_id;
@@ -36,7 +41,7 @@ function searchPostcode(){
                 }
             }
         };
-        xmlhttp.open("GET","../psm/ind_adv/checkPostcode.php?q=" + locPostcode.value, true);
+        xmlhttp.open("GET","../ind/checkPostcode.php?q=" + locPostcode.value, true);
         xmlhttp.send();
     }
 }

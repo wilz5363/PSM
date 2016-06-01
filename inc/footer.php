@@ -62,14 +62,14 @@
                     } else if ($_SESSION['userType'] == 'LECTURER') {
                             if(isset($lec_stmt)){
                                 foreach ($lec_stmt as $log) {
-                                    echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_status']) == 'sick_leave' ? 'sick_leave' : (strtolower($log['dailylog_lecturer_comment']) != 'not_commented' ? strtolower($log['dailylog_status']) : 'not_commented')). '"},';
+                                    echo '"' . $log['dailylog_date'] . '":{"class": "' . (strtolower($log['dailylog_status']) == 'sick_leave' ? 'sick_leave' : ((strtolower($log['dailylog_industry_comment']) != 'not_commented' || strtolower($log['dailylog_lecturer_comment']) != 'not_commented') ? strtolower($log['dailylog_status']) : 'not_commented')). '"},';
                                 }
                                 $lec_stmt->closeCursor();
                         }
                     }else if ($_SESSION['userType'] == 'IND_ADV') {
                         if(isset($ind_stmt)){
                             foreach ($ind_stmt as $log) {
-                                echo '"' . $log['dailylog_date'] . '":{"class":"' . (strtolower($log['dailylog_status']) == 'sick_leave' ? 'sick_leave' : (strtolower($log['dailylog_industry_comment']) != 'not_commented' ? strtolower($log['dailylog_status']) : 'not_commented')). '"},';
+                                echo '"' . $log['dailylog_date'] . '":{"class": "' . (strtolower($log['dailylog_status']) == 'sick_leave' ? 'sick_leave' : ((strtolower($log['dailylog_industry_comment']) != 'not_commented' || strtolower($log['dailylog_lecturer_comment']) != 'not_commented') ? strtolower($log['dailylog_status']) : 'not_commented')). '"},';
                             }
                             $ind_stmt->closeCursor();
                         }

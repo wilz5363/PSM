@@ -34,9 +34,7 @@
                         </li>
                         <?php
                     } else if ($_SESSION['userType'] == 'LECTURER') { ?>
-                        <li class="<?php if ($section == 'lec_list_student') echo "active"; ?>">
-                            <a href="<?php echo BASE_URL . 'log' ?>">Student List <span class="sr-only">(current)</span></a>
-                        </li>
+
                     <?php }
                     ?>
 
@@ -46,10 +44,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Settings</a>
                         <ul class="dropdown-menu">
-                            <?php if ($_SESSION['userType'] === 'STUDENT' OR $_SESSION['userType'] === 'COMPANY') { ?>
-                                <li><a href="<?php echo BASE_URL . 'profile'; ?>">Profile</a></li>
-                                <li role="separator" class="divider"></li>
-                            <?php } ?>
+<!--                            --><?php //if ($_SESSION['userType'] === 'STUDENT') { ?>
+<!--                                <li><a href="--><?php //echo BASE_URL . 'profile'; ?><!--">Profile</a></li>-->
+<!--                                <li role="separator" class="divider"></li>-->
+<!--                            --><?php //} ?>
                             <li><a href="<?php echo BASE_URL . 'logout' ?>">Log Out</a></li>
                         </ul>
                     </li>

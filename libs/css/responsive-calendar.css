@@ -89,7 +89,10 @@
 
 .disabled {
     pointer-events: none;
-    background-color: #EBEBE4;
+    background-color: #ABB7B7;
+}
+.not-current{
+    pointer-events: none;
 }
 
 /*.responsive-calendar .day.logged a {*/
@@ -197,7 +200,18 @@
 }
 
 .weekend_badge {
-    background-color: #EBEBE4;
+    background-color: #ABB7B7;
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.holiday_badge{
+    background-color: #0f0f0f;
     display: inline-block;
     min-width: 30px;
     padding: 3px 7px;

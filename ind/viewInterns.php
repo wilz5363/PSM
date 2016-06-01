@@ -31,7 +31,7 @@ try {
             </li>
             <li class="active">List Of Students</li>
         </ol>
-        <h1 class="page-header text-center">List of Students in <?php echo $internId; ?></h1>
+        <h1 class="page-header text-center">List of Students</h1>
         <?php if ($row == 0) { ?>
             <h1 class="text-center">No Students in this Offer</h1>
         <?php } else { ?>
@@ -41,6 +41,7 @@ try {
                     <th>Student ID</th>
                     <th>Name</th>
                     <th>NRIC</th>
+                    <th>Contact No.</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -50,6 +51,7 @@ try {
                         . '<td>' . $result['student_id'] . '</td>'
                         . '<td>' . $result['student_name'] . '</td>'
                         . '<td>' . $result['student_nric'] . '</td>'
+                        . '<td>' . $result['contact_no'] . '</td>'
                         . '</tr>';
                 }
                 ?>
