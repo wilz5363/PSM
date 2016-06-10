@@ -19,7 +19,7 @@
                 <button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal"
                         data-target="#myModal">Sign in
                 </button>
-                <a href=<?php echo BASE_URL.'registration'?> class="btn btn-default navbar-btn navbar-right">Company Registration
+<!--                <a href=--><?php //echo BASE_URL.'registration'?><!-- class="btn btn-default navbar-btn navbar-right">Company Registration-->
                 </a>
             <?php } else { ?>
                 <ul class="nav navbar-nav">

@@ -8,12 +8,17 @@ $imgMsg;
 $selectedDate = $_GET['date'];
 
 if ($_SESSION['userType'] == 'STUDENT') {
-    echo '<h1 class="text-center text-danger"><strong>Important! </strong>Once submitted, the input can\'t be edit.</h1>';
+
     try {
         $logRecord = $dbh->query("call get_dailylog_stud('" . $_SESSION['user'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         echo $e->getMessage();
     }
+
+    if($logRecord['dailylog_title'] == ""){
+        echo '<h1 class="text-center text-danger"><strong>Important! </strong>Once submitted, the input can\'t be edit.</h1>';
+    }
+
 } else {
     if (isset($_GET['id'])) {
         $search_stud = $dbh->prepare("call search_students(?)");
@@ -40,130 +45,133 @@ if ($_SESSION['userType'] == 'STUDENT') {
                 }
 
             }
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                if (isset($_POST['submit'])) {
-                    if ($_SESSION['userType'] == 'STUDENT') {
-
-                        if ($_FILES['fileToUpload']['tmp_name']) {
-                            $image = addslashes($_FILES['fileToUpload']['tmp_name']);
-                            $image = file_get_contents($image);
-                            $image = base64_encode($image);
-                            $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
-                            if ($_FILES['fileToUpload']['size'] > 500000) {
-                                $imgMsg = "Image size must be less than 500MB";
-                            } elseif ($file_type == 'jpg' || $file_type == 'jpeg') {
-                                $title = $_POST['titleInput'];
-                                $desc = $_POST['descInput'];
+        } else {
+            header("location:" . BASE_URL . "inc/errorPage.html");
+        }
+    }
+}
 
 
-                                try {
-                                    $stmt = $dbh->prepare('call dailylog_log_proc(?,?,?,?,?)');
-                                    $stmt->bindParam(1, $_SESSION['user']);
-                                    $stmt->bindParam(2, $selectedDate);
-                                    $stmt->bindParam(3, $title);
-                                    $stmt->bindParam(4, $desc);
-                                    $stmt->bindParam(5, $image);
-                                    $stmt->execute();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                                    header('location:daily.php?date=' . $selectedDate);
+    if (isset($_POST['submit'])) {
+        if ($_SESSION['userType'] == 'STUDENT') {
 
-                                } catch (PDOException $e) {
-                                    echo $e->getMessage();
-                                    exit();
-                                }
-                            } else {
-                                $imgMsg = "Image type must be in JPG/JPEG format only";
-                            }
-
-                        } else {
-                            $title = $_POST['titleInput'];
-                            $desc = $_POST['descInput'];
-
-                            try {
-                                $stmt = $dbh->prepare('call dailylog_log_no_image_proc(?,?,?,?)');
-                                $stmt->bindParam(1, $_SESSION['user']);
-                                $stmt->bindParam(2, $selectedDate);
-                                $stmt->bindParam(3, $title);
-                                $stmt->bindParam(4, $desc);
-                                $stmt->execute();
-                                header('location:daily.php?date=' . $selectedDate);
-
-                            } catch (PDOException $e) {
-                                echo $e->getMessage();
-                                exit();
-                            }
-                        }
+            if ($_FILES['fileToUpload']['tmp_name']) {
+                $image = addslashes($_FILES['fileToUpload']['tmp_name']);
+                $image = file_get_contents($image);
+                $image = base64_encode($image);
+                $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
+                if ($_FILES['fileToUpload']['size'] > 500000) {
+                    $imgMsg = "Image size must be less than 500MB";
+                } elseif ($file_type == 'jpg' || $file_type == 'jpeg') {
+                    $title = $_POST['titleInput'];
+                    $desc = $_POST['descInput'];
 
 
-                    } elseif ($_SESSION['userType'] == 'LECTURER') {
-                        $stud_id = $_GET['id'];
-                        $lecturer_comment = $_POST['lec_comment_input'];
+                    try {
+                        $stmt = $dbh->prepare('call dailylog_log_proc(?,?,?,?,?)');
+                        $stmt->bindParam(1, $_SESSION['user']);
+                        $stmt->bindParam(2, $selectedDate);
+                        $stmt->bindParam(3, $title);
+                        $stmt->bindParam(4, $desc);
+                        $stmt->bindParam(5, $image);
+                        $stmt->execute();
 
-                        try {
-                            $stmt = $dbh->prepare("update dailylog set dailylog_lecturer_comment = ? where student_id = ? and dailylog_date = ?");
-                            $stmt->bindParam(1, $lecturer_comment);
-                            $stmt->bindParam(2, $stud_id);
-                            $stmt->bindParam(3, $selectedDate);
-                            $stmt->execute();
+                        header('location:daily.php?date=' . $selectedDate);
 
-                            header('location:daily.php?id=' . $stud_id . '&date=' . $selectedDate);
-                        } catch (PDOException $e) {
-                            echo $e->getMessage();
-                        }
-                    }elseif ($_SESSION['userType'] == 'IND_ADV') {
-                        $stud_id = $_GET['id'];
-                        $ind_adv_comment = $_POST['ind_adv_comment_input'];
-
-                        try {
-                            $stmt = $dbh->prepare("update dailylog set dailylog_industry_comment = ? where student_id = ? and dailylog_date = ?");
-                            $stmt->bindParam(1, $ind_adv_comment);
-                            $stmt->bindParam(2, $stud_id);
-                            $stmt->bindParam(3, $selectedDate);
-                            $stmt->execute();
-
-                            header('location:daily.php?id=' . $stud_id . '&date=' . $selectedDate);
-                        } catch (PDOException $e) {
-                            echo $e->getMessage();
-                        }
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                        exit();
                     }
-                } elseif (isset($_POST['onLeaveBtn'])) {
-                    if ($_FILES['fileToUpload']['tmp_name']) {
-                        $image = addslashes($_FILES['fileToUpload']['tmp_name']);
-                        $image = file_get_contents($image);
-                        $image = base64_encode($image);
-                        $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
-                        if ($_FILES['fileToUpload']['size'] > 500000) {
-                            $imgMsg = "Image size must be less than 500MB";
-                        } else if ($file_type == 'jpg' || $file_type == 'jpeg') {
-                            $title = "On Medical Leave";
-                            $desc = "On Medical Leave";
+                } else {
+                    $imgMsg = "Image type must be in JPG/JPEG format only";
+                }
 
-                            try {
-                                $stmt = $dbh->prepare('call utem_intern.dailylog_sick_leave_proc(?,?,?,?,?)');
-                                $stmt->bindParam(1, $_SESSION['user']);
-                                $stmt->bindParam(2, $selectedDate);
-                                $stmt->bindParam(3, $title);
-                                $stmt->bindParam(4, $desc);
-                                $stmt->bindValue(5, $image);
-                                $stmt->execute();
-                                header('location:daily.php?date=' . $selectedDate);
-                            } catch (PDOException $e) {
-                                echo '<div class="alert alert-warning">
+            } else {
+                $title = $_POST['titleInput'];
+                $desc = $_POST['descInput'];
+
+                try {
+                    $stmt = $dbh->prepare('call dailylog_log_no_image_proc(?,?,?,?)');
+                    $stmt->bindParam(1, $_SESSION['user']);
+                    $stmt->bindParam(2, $selectedDate);
+                    $stmt->bindParam(3, $title);
+                    $stmt->bindParam(4, $desc);
+                    $stmt->execute();
+                    header('location:daily.php?date=' . $selectedDate);
+
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                    exit();
+                }
+            }
+
+
+        } elseif ($_SESSION['userType'] == 'LECTURER') {
+            $stud_id = $_GET['id'];
+            $lecturer_comment = $_POST['lec_comment_input'];
+
+            try {
+                $stmt = $dbh->prepare("update dailylog set dailylog_lecturer_comment = ? where student_id = ? and dailylog_date = ?");
+                $stmt->bindParam(1, $lecturer_comment);
+                $stmt->bindParam(2, $stud_id);
+                $stmt->bindParam(3, $selectedDate);
+                $stmt->execute();
+
+                header('location:daily.php?id=' . $stud_id . '&date=' . $selectedDate);
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        } elseif ($_SESSION['userType'] == 'IND_ADV') {
+            $stud_id = $_GET['id'];
+            $ind_adv_comment = $_POST['ind_adv_comment_input'];
+
+            try {
+                $stmt = $dbh->prepare("update dailylog set dailylog_industry_comment = ? where student_id = ? and dailylog_date = ?");
+                $stmt->bindParam(1, $ind_adv_comment);
+                $stmt->bindParam(2, $stud_id);
+                $stmt->bindParam(3, $selectedDate);
+                $stmt->execute();
+
+                header('location:daily.php?id=' . $stud_id . '&date=' . $selectedDate);
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+    } elseif (isset($_POST['onLeaveBtn'])) {
+        if ($_FILES['fileToUpload']['tmp_name']) {
+            $image = addslashes($_FILES['fileToUpload']['tmp_name']);
+            $image = file_get_contents($image);
+            $image = base64_encode($image);
+            $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
+            if ($_FILES['fileToUpload']['size'] > 500000) {
+                $imgMsg = "Image size must be less than 500MB";
+            } else if ($file_type == 'jpg' || $file_type == 'jpeg') {
+                $title = "On Medical Leave";
+                $desc = "On Medical Leave";
+
+                try {
+                    $stmt = $dbh->prepare('call utem_intern.dailylog_sick_leave_proc(?,?,?,?,?)');
+                    $stmt->bindParam(1, $_SESSION['user']);
+                    $stmt->bindParam(2, $selectedDate);
+                    $stmt->bindParam(3, $title);
+                    $stmt->bindParam(4, $desc);
+                    $stmt->bindValue(5, $image);
+                    $stmt->execute();
+                    header('location:daily.php?date=' . $selectedDate);
+                } catch (PDOException $e) {
+                    echo '<div class="alert alert-warning">
                     	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     	<strong>Warning!</strong>' . $e->getMessage() . '
                     </div>';
-                            }
-                        } else {
-                            $imgMsg = "Image type must be in JPG/JPEG format only";
-                        }
-                    } else {
-                        $imgMsg = 'Picture of Medical Check / Leave must be submitted as prove of leave.';
-                    }
                 }
+            } else {
+                $imgMsg = "Image type must be in JPG/JPEG format only";
             }
         } else {
-            header("location:" . BASE_URL . "inc/errorPage.html");
+            $imgMsg = 'Picture of Medical Check / Leave must be submitted as prove of leave.';
         }
     }
 }
@@ -205,6 +213,17 @@ if ($_SESSION['userType'] == 'STUDENT') {
                                    readonly>
                         </div>
                     </div>
+                    <?php
+                    if ($_SESSION['userType'] != 'STUDENT') {
+                        echo '<div class="form-group">'
+                            . '<label for="showDate" class="col-sm-2 control-label">Date of Log</label>'
+                            . '<div class="col-sm-10">'
+                            . '<input type="text" class="form-control" id="showDate" value="'.$logRecord['dailylog_log_date'].'"
+                                   readonly>'
+                            . '</div>'
+                            . '</div>';
+                    }
+                    ?>
                     <div class="form-group">
                         <label for="desc" class="col-sm-2 control-label">Description</label>
                         <div class="col-sm-10">
@@ -275,7 +294,7 @@ if ($_SESSION['userType'] == 'STUDENT') {
                        } ?>><?php if ($logRecord['dailylog_industry_comment'] != 'NOT_COMMENTED') {
                                echo htmlspecialchars($logRecord['dailylog_industry_comment']);
                            }
-                       echo '</textarea>';?>
+                           echo '</textarea>'; ?>
                         </div>
                     </div>
                     <div class="col-sm-offset-2 col-sm-10">

@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             try {
                 $stmt = $dbh->prepare("call utem_intern.company_registration_proc(?, ?, ?, ?, ?, ?, ?);");
-                $stmt->bindValue(1, $company_id);
-                $stmt->bindValue(2, $company_name);
+                $stmt->bindValue(1, $company_name);
+                $stmt->bindValue(2, $company_id);
                 $stmt->bindValue(3, $company_password);
                 $stmt->bindValue(4, $company_contact);
                 $stmt->bindValue(5, $company_email);
