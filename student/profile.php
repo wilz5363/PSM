@@ -43,14 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if($rowCount >0){
             $updateMessage = "Successfully updated profile";
             $_SESSION['user'] = $matricNo;
-            $_SESSION['name'] = $name;
-            $_SESSION['password'] = $password;
-            $_SESSION['nric'] = $nric;
         }else{
             $updateMessage = "Update profile unsuccessful.";
         }
 
     }
+}else if($_SERVER['REQUEST_METHOD'] == "GET"){
+    $getUserSql = "select * from student where student_id =?";
+
 }
 $title = 'Profile';
 $section = 'profile';

@@ -7,9 +7,9 @@
  */
 ini_set('display_errors', 'On');
 
-$dsn = 'mysql:host=localhost;port=3307;dbname=utem_intern';
+$dsn = 'mysql:host=localhost;port=3306;dbname=utem_intern';
 $username = 'root';
-$password = 'password';
+$password = '';
 
 try {
 

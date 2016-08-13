@@ -34,7 +34,9 @@
                         </li>
                         <?php
                     } else if ($_SESSION['userType'] == 'LECTURER') { ?>
-
+                            <li  class="<?php if ($section == 'stat') echo "active"; ?>">
+                                <a href="<?php echo BASE_URL.'fac_adv/fac_stat.php'?>">Overall Statistics</a>
+                            </li>
                     <?php }
                     ?>
 
@@ -45,7 +47,7 @@
                            aria-expanded="false">Settings</a>
                         <ul class="dropdown-menu">
 <!--                            --><?php //if ($_SESSION['userType'] === 'STUDENT') { ?>
-<!--                                <li><a href="--><?php //echo BASE_URL . 'profile'; ?><!--">Profile</a></li>-->
+<!--                                <li><a href="--><?php //echo BASE_URL . 'student/profile.php'; ?><!--">Profile</a></li>-->
 <!--                                <li role="separator" class="divider"></li>-->
 <!--                            --><?php //} ?>
                             <li><a href="<?php echo BASE_URL . 'logout' ?>">Log Out</a></li>

@@ -6,52 +6,75 @@ $section = 'dailylog';
 include '../inc/head.php';
 $imgMsg;
 $selectedDate = $_GET['date'];
-
-if ($_SESSION['userType'] == 'STUDENT') {
+$valid;
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     try {
-        $logRecord = $dbh->query("call get_dailylog_stud('" . $_SESSION['user'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        echo $e->getMessage();
-    }
+        $validate_date = $dbh->prepare('call date_validation_proc(?,?,@valid)');
+        if(isset($_GET['id'])){
+            $validate_date->bindParam(1, $_GET['id']);
+        }else{
+            $validate_date->bindParam(1, $_SESSION['user']);
+        }
+        $validate_date->bindParam(2, $selectedDate);
+        $validate_date->execute();
+        $validate_date->closeCursor();
 
-    if($logRecord['dailylog_title'] == ""){
-        echo '<h1 class="text-center text-danger"><strong>Important! </strong>Once submitted, the input can\'t be edit.</h1>';
-    }
+        $valid = $dbh->query("select @valid")->fetch(PDO::FETCH_ASSOC);
+        if ($valid['@valid'] == 1) {
+            echo '<div class="alert alert-danger">' .
+                '<strong>Warning!</strong> Invalid Date Choosen.' .
+                '</div>';
+            exit();
+        } else {
 
-} else {
-    if (isset($_GET['id'])) {
-        $search_stud = $dbh->prepare("call search_students(?)");
-        $search_stud->bindParam(1, $_GET['id']);
-        $search_stud->execute();
-        $search_result = $search_stud->fetch(PDO::FETCH_ASSOC);
-        $search_stud->closeCursor();
-        if ($search_result['count'] > 0) {
-            if (!isset($_GET['date']) || trim($_GET['date'] === '') || ($_GET['date'] > date("Y-m-d"))) {
-                header("Location:" . ROOT_PATH . "log/");
-            } else {
-                if ($_SESSION['userType'] == 'LECTURER' AND isset($_GET['id'])) {
-                    try {
-                        $logRecord = $dbh->query("call get_dailylog_lec('" . $_GET['id'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
-                    } catch (PDOException $e) {
-                        echo $e->getMessage();
-                    }
-                } else if ($_SESSION['userType'] == 'IND_ADV' AND isset($_GET['id'])) {
-                    try {
-                        $logRecord = $dbh->query("call get_dailylog_lec('" . $_GET['id'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
-                    } catch (PDOException $e) {
-                        echo $e->getMessage();
-                    }
+            if ($_SESSION['userType'] == 'STUDENT') {
+
+                try {
+                    $logRecord = $dbh->query("call get_dailylog_stud('" . $_SESSION['user'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
+
+
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
                 }
 
+            } else {
+                if (isset($_GET['id'])) {
+                    $search_stud = $dbh->prepare("call search_students(?)");
+                    $search_stud->bindParam(1, $_GET['id']);
+                    $search_stud->execute();
+                    $search_result = $search_stud->fetch(PDO::FETCH_ASSOC);
+                    $search_stud->closeCursor();
+                    if ($search_result['count'] > 0) {
+                        if (!isset($_GET['date']) || trim($_GET['date'] === '') || ($_GET['date'] > date("Y-m-d"))) {
+                            header("Location:" . ROOT_PATH . "log/");
+                        } else {
+                            if ($_SESSION['userType'] == 'LECTURER' AND isset($_GET['id'])) {
+                                try {
+                                    $logRecord = $dbh->query("call get_dailylog_lec('" . $_GET['id'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
+                                } catch (PDOException $e) {
+                                    echo $e->getMessage();
+                                }
+                            } else if ($_SESSION['userType'] == 'IND_ADV' AND isset($_GET['id'])) {
+                                try {
+                                    $logRecord = $dbh->query("call get_dailylog_lec('" . $_GET['id'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
+                                } catch (PDOException $e) {
+                                    echo $e->getMessage();
+                                }
+                            }
+
+                        }
+
+                    } else {
+                        header("location:" . BASE_URL . "inc/errorPage.html");
+                    }
+                }
             }
 
-        } else {
-            header("location:" . BASE_URL . "inc/errorPage.html");
         }
+    } catch (PDOException $e) {
     }
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -114,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $lecturer_comment = $_POST['lec_comment_input'];
 
             try {
-                $stmt = $dbh->prepare("update dailylog set dailylog_lecturer_comment = ? where student_id = ? and dailylog_date = ?");
+                $stmt = $dbh->prepare('call insert_lect_comment(?,?,?)');
                 $stmt->bindParam(1, $lecturer_comment);
                 $stmt->bindParam(2, $stud_id);
                 $stmt->bindParam(3, $selectedDate);
@@ -129,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $ind_adv_comment = $_POST['ind_adv_comment_input'];
 
             try {
-                $stmt = $dbh->prepare("update dailylog set dailylog_industry_comment = ? where student_id = ? and dailylog_date = ?");
+                $stmt = $dbh->prepare('call insert_ind_comment(?,?,?)');
                 $stmt->bindParam(1, $ind_adv_comment);
                 $stmt->bindParam(2, $stud_id);
                 $stmt->bindParam(3, $selectedDate);
@@ -176,6 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
+
 ?>
 <div class="container">
     <div class="row">
@@ -218,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         echo '<div class="form-group">'
                             . '<label for="showDate" class="col-sm-2 control-label">Date of Log</label>'
                             . '<div class="col-sm-10">'
-                            . '<input type="text" class="form-control" id="showDate" value="'.$logRecord['dailylog_log_date'].'"
+                            . '<input type="text" class="form-control" id="showDate" value="' . $logRecord['dailylog_log_date'] . '"
                                    readonly>'
                             . '</div>'
                             . '</div>';
