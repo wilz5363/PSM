@@ -65,14 +65,14 @@ if (isset($err_msg)) {
                             <label for="inputMatricNo" class="col-sm-2 control-label">Matric No. / Company ID</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputMatricNo" name="inputMatricNo"
-                                       placeholder="Matric No./ Company Username">
+                                       placeholder="Matric No./ Company Username" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputPassword" name="inputPassword"
-                                       placeholder="Password">
+                                       placeholder="Password" required>
                             </div>
                         </div>
                         <div class="form-group">

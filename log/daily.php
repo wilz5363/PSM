@@ -7,13 +7,13 @@ include '../inc/head.php';
 $imgMsg;
 $selectedDate = $_GET['date'];
 $valid;
-if($_SERVER['REQUEST_METHOD'] == 'GET'){
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     try {
         $validate_date = $dbh->prepare('call date_validation_proc(?,?,@valid)');
-        if(isset($_GET['id'])){
+        if (isset($_GET['id'])) {
             $validate_date->bindParam(1, $_GET['id']);
-        }else{
+        } else {
             $validate_date->bindParam(1, $_SESSION['user']);
         }
         $validate_date->bindParam(2, $selectedDate);
@@ -32,7 +32,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
                 try {
                     $logRecord = $dbh->query("call get_dailylog_stud('" . $_SESSION['user'] . "','" . $selectedDate . "')")->fetch(PDO::FETCH_ASSOC);
-
 
                 } catch (PDOException $e) {
                     echo $e->getMessage();
@@ -86,9 +85,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $image = file_get_contents($image);
                 $image = base64_encode($image);
                 $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
-                if ($_FILES['fileToUpload']['size'] > 500000) {
-                    $imgMsg = "Image size must be less than 500MB";
-                } elseif ($file_type == 'jpg' || $file_type == 'jpeg') {
+
+                if (strtolower($file_type) != "jpg" AND strtolower($file_type) != "jpeg") {
+                    $imgMsg = "Image type must be in JPG/JPEG format only";
+                } else if ($_FILES['fileToUpload']['size'] > 500000) {
+                    $imgMsg = "Image size must be less than 500KB";
+                } else {
+
                     $title = $_POST['titleInput'];
                     $desc = $_POST['descInput'];
 
@@ -108,8 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         echo $e->getMessage();
                         exit();
                     }
-                } else {
-                    $imgMsg = "Image type must be in JPG/JPEG format only";
+
+                    var_dump("gone case");
                 }
 
             } else {
@@ -169,9 +172,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $image = file_get_contents($image);
             $image = base64_encode($image);
             $file_type = pathinfo($_FILES['fileToUpload']['name'], PATHINFO_EXTENSION);
-            if ($_FILES['fileToUpload']['size'] > 500000) {
-                $imgMsg = "Image size must be less than 500MB";
-            } else if ($file_type == 'jpg' || $file_type == 'jpeg') {
+            if (strtolower($file_type) != "jpg" AND strtolower($file_type) != "jpeg") {
+                $imgMsg = "Image type must be in JPG/JPEG format only";
+            } else if ($_FILES['fileToUpload']['size'] > 500000) {
+                $imgMsg = "Image size must be less than 500KB";
+            } else {
                 $title = "On Medical Leave";
                 $desc = "On Medical Leave";
 
@@ -190,8 +195,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     	<strong>Warning!</strong>' . $e->getMessage() . '
                     </div>';
                 }
-            } else {
-                $imgMsg = "Image type must be in JPG/JPEG format only";
             }
         } else {
             $imgMsg = 'Picture of Medical Check / Leave must be submitted as prove of leave.';
@@ -286,7 +289,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 echo $logRecord['dailylog_img']; ?>
                                 <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
                                 <?php if (isset($imgMsg)) {
-                                    echo "<span style='color: red;'>" . $imgMsg . "</span>";
+                                    echo "<span class='text-danger'>" . $imgMsg . "</span>";
                                 }
                             } ?>
                         </div>
@@ -299,7 +302,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="lec_comment" class="col-sm-2 control-label">Lecturer Comment</label>
                         <div class="col-sm-10">
                        <textarea class="form-control" rows="5" name="lec_comment_input"
-                                 id="lec_comment"<?php if ($_SESSION['userType'] !== 'LECTURER') {
+                                 id="lec_comment" required <?php if ($_SESSION['userType'] !== 'LECTURER') {
                            echo 'readonly';
                        } ?>><?php if ($logRecord['dailylog_lecturer_comment'] != 'NOT_COMMENTED') {
                                echo htmlspecialchars($logRecord['dailylog_lecturer_comment']);
